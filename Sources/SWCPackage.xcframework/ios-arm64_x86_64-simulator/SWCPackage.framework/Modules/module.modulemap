@@ -1,0 +1,11 @@
+framework module SWCPackage {
+  umbrella header "SWCPackage.h"
+
+  export *
+  module * { export * }
+}
+
+module SWCPackage.Swift {
+  header "SWCPackage-Swift.h"
+  requires objc
+}

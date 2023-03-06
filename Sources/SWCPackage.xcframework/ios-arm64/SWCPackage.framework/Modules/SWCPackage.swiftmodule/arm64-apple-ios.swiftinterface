@@ -1,0 +1,981 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)
+// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name SWCPackage
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import Combine
+import CommonCrypto
+import CoreGraphics
+import CryptoKit
+import Foundation
+@_exported import SWCPackage
+import Security
+import Swift
+import SwiftUI
+import UIKit
+import _Concurrency
+import _StringProcessing
+public protocol SWCRequestSource {
+  func generateRequest() -> Foundation.URLRequest
+  var showLoader: Swift.Bool { get }
+  var validateTokenTimeStamp: Swift.Bool { get }
+}
+extension SWCPackage.SWCRequestSource {
+  public var validateTokenTimeStamp: Swift.Bool {
+    get
+  }
+  public var showLoader: Swift.Bool {
+    get
+  }
+}
+public enum ContentTypes : Swift.String {
+  case json
+  case jsonOdataVerbose
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum HTTPHeaders : Swift.String {
+  case accept
+  case contentType
+  case xRequestDigest
+  case XHTTPMethod
+  case iFMATCH
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum HTTPMethod : Swift.String {
+  case post, get
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers public class SwiftRSA {
+  @objc deinit
+}
+public struct SWCResponseValidator {
+  public let isValid: Swift.Bool
+  public let error: Swift.Error?
+  public init(isValid: Swift.Bool, error: Swift.Error?)
+}
+extension SWCPackage.SWCResponseValidator {
+  public static let `default`: SWCPackage.SWCResponseValidatorDelegate
+  public static let none: SWCPackage.SWCResponseValidatorDelegate
+}
+public struct SWCAttachment : Swift.Encodable {
+  public let fileId: Swift.String
+  public let fileName: Swift.String
+  public let mimeType: Swift.String
+  public let fileData: Swift.String
+  public let fileDescription: Swift.String
+  public let status: Swift.String
+  public init(fileId: Swift.String, fileName: Swift.String, mimeType: Swift.String, fileData: Swift.String, fileDescription: Swift.String, status: Swift.String = "")
+  public func encode(to encoder: Swift.Encoder) throws
+}
+@objc @_inheritsConvenienceInitializers public class SWCUploadEngine : ObjectiveC.NSObject {
+  public static let shared: SWCPackage.SWCUploadEngine
+  public func upload<T>(with source: T) -> SWCPackage.SWCProgressPublisher where T : SWCPackage.SWCUploadSource
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension SWCPackage.SWCUploadEngine : Foundation.URLSessionTaskDelegate {
+  @objc dynamic public func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, didSendBodyData bytesSent: Swift.Int64, totalBytesSent: Swift.Int64, totalBytesExpectedToSend: Swift.Int64)
+}
+extension SWCPackage.SWCUploadEngine : Foundation.URLSessionDelegate {
+  @objc dynamic public func urlSession(_ session: Foundation.URLSession, didReceive challenge: Foundation.URLAuthenticationChallenge, completionHandler: @escaping (Foundation.URLSession.AuthChallengeDisposition, Foundation.URLCredential?) -> Swift.Void)
+}
+public struct SWCRequestBody : Swift.Encodable {
+  public var otherParams: [Swift.String : Swift.String]?
+  public let reqGuId: Swift.String
+  public var apiKey: Swift.String? {
+    get
+    set
+  }
+  public var thakkolKey: Swift.String? {
+    get
+  }
+  public var requester: Swift.String? {
+    get
+  }
+  public var loginPassword: Swift.String?
+  public var loginUsername: Swift.String?
+  public var attachments: [SWCPackage.SWCAttachment]?
+  public var values: [SWCPackage.SWCRequestValues]?
+  public var encryptionType: SWCPackage.EncryptionType
+  public var moduleId: Swift.String?
+  public var additionalChunks: [Swift.String : Any]
+  public var kpiLogs: [SWCPackage.KPINetworkModel]?
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public struct DDriveUploadGenerator : SWCPackage.SWCUploadSource {
+  public var showLoader: Swift.Bool
+  public var fromFileURL: Foundation.URL
+  public init(urlString: Swift.String, fromFileURL: Foundation.URL, digestKey: Swift.String)
+  public func generateRequest() -> Foundation.URLRequest
+}
+public class PublicKey : SWCPackage.Key {
+  final public let key: Security.SecKey
+  required public init(key: Security.SecKey)
+  required public init?(der data: Foundation.Data)
+  public func pemString() throws -> Swift.String
+  @objc deinit
+}
+open class KeychainWrapper {
+  @available(*, deprecated, message: "KeychainWrapper.defaultKeychainWrapper is deprecated since version 2.2.1, use KeychainWrapper.standard instead")
+  public static let defaultKeychainWrapper: SWCPackage.KeychainWrapper
+  public static let standard: SWCPackage.KeychainWrapper
+  public var serviceName: Swift.String {
+    get
+  }
+  public var accessGroup: Swift.String? {
+    get
+  }
+  public init(serviceName: Swift.String, accessGroup: Swift.String? = nil)
+  open func hasValue(forKey key: Swift.String, withAccessibility accessibility: SWCPackage.KeychainItemAccessibility? = nil, isSynchronizable: Swift.Bool = false) -> Swift.Bool
+  open func accessibilityOfKey(_ key: Swift.String) -> SWCPackage.KeychainItemAccessibility?
+  open func allKeys() -> Swift.Set<Swift.String>
+  open func integer(forKey key: Swift.String, withAccessibility accessibility: SWCPackage.KeychainItemAccessibility? = nil, isSynchronizable: Swift.Bool = false) -> Swift.Int?
+  open func float(forKey key: Swift.String, withAccessibility accessibility: SWCPackage.KeychainItemAccessibility? = nil, isSynchronizable: Swift.Bool = false) -> Swift.Float?
+  open func double(forKey key: Swift.String, withAccessibility accessibility: SWCPackage.KeychainItemAccessibility? = nil, isSynchronizable: Swift.Bool = false) -> Swift.Double?
+  open func bool(forKey key: Swift.String, withAccessibility accessibility: SWCPackage.KeychainItemAccessibility? = nil, isSynchronizable: Swift.Bool = false) -> Swift.Bool?
+  open func string(forKey key: Swift.String, withAccessibility accessibility: SWCPackage.KeychainItemAccessibility? = nil, isSynchronizable: Swift.Bool = false) -> Swift.String?
+  open func object(forKey key: Swift.String, withAccessibility accessibility: SWCPackage.KeychainItemAccessibility? = nil, isSynchronizable: Swift.Bool = false) -> Foundation.NSCoding?
+  open func data(forKey key: Swift.String, withAccessibility accessibility: SWCPackage.KeychainItemAccessibility? = nil, isSynchronizable: Swift.Bool = false) -> Foundation.Data?
+  open func dataRef(forKey key: Swift.String, withAccessibility accessibility: SWCPackage.KeychainItemAccessibility? = nil, isSynchronizable: Swift.Bool = false) -> Foundation.Data?
+  @discardableResult
+  open func set(_ value: Swift.Int, forKey key: Swift.String, withAccessibility accessibility: SWCPackage.KeychainItemAccessibility? = nil, isSynchronizable: Swift.Bool = false) -> Swift.Bool
+  @discardableResult
+  open func set(_ value: Swift.Float, forKey key: Swift.String, withAccessibility accessibility: SWCPackage.KeychainItemAccessibility? = nil, isSynchronizable: Swift.Bool = false) -> Swift.Bool
+  @discardableResult
+  open func set(_ value: Swift.Double, forKey key: Swift.String, withAccessibility accessibility: SWCPackage.KeychainItemAccessibility? = nil, isSynchronizable: Swift.Bool = false) -> Swift.Bool
+  @discardableResult
+  open func set(_ value: Swift.Bool, forKey key: Swift.String, withAccessibility accessibility: SWCPackage.KeychainItemAccessibility? = nil, isSynchronizable: Swift.Bool = false) -> Swift.Bool
+  @discardableResult
+  open func set(_ value: Swift.String, forKey key: Swift.String, withAccessibility accessibility: SWCPackage.KeychainItemAccessibility? = nil, isSynchronizable: Swift.Bool = false) -> Swift.Bool
+  @discardableResult
+  open func set(_ value: Foundation.NSCoding, forKey key: Swift.String, withAccessibility accessibility: SWCPackage.KeychainItemAccessibility? = nil, isSynchronizable: Swift.Bool = false) -> Swift.Bool
+  @discardableResult
+  open func set(_ value: Foundation.Data, forKey key: Swift.String, withAccessibility accessibility: SWCPackage.KeychainItemAccessibility? = nil, isSynchronizable: Swift.Bool = false) -> Swift.Bool
+  @available(*, deprecated, message: "remove is deprecated since version 2.2.1, use removeObject instead")
+  @discardableResult
+  open func remove(key: Swift.String, withAccessibility accessibility: SWCPackage.KeychainItemAccessibility? = nil, isSynchronizable: Swift.Bool = false) -> Swift.Bool
+  @discardableResult
+  open func removeObject(forKey key: Swift.String, withAccessibility accessibility: SWCPackage.KeychainItemAccessibility? = nil, isSynchronizable: Swift.Bool = false) -> Swift.Bool
+  @discardableResult
+  open func removeAllKeys() -> Swift.Bool
+  open class func wipeKeychain()
+  @objc deinit
+}
+public struct SWCRequestComponents {
+  public var url: Swift.String
+  public var contentType: SWCPackage.ContentTypes
+  public var accept: SWCPackage.ContentTypes
+  public var httpMethod: SWCPackage.HTTPMethod
+  public var body: SWCPackage.SWCRequestBody
+  public init(url: Swift.String)
+}
+public class ClearText {
+  final public let data: Foundation.Data
+  public var stringValue: Swift.String {
+    get
+  }
+  required public init(data: Foundation.Data)
+  required public init(string: Swift.String)
+  public func encrypted(with key: SWCPackage.PublicKey, by algorithm: Security.SecKeyAlgorithm) throws -> SWCPackage.EncryptedText
+  public static func maxClearTextInLength(_ key: Security.SecKey, algorithm: Security.SecKeyAlgorithm) throws -> Swift.Int
+  @objc deinit
+}
+public protocol Key : AnyObject {
+  var key: Security.SecKey { get }
+  init(key: Security.SecKey)
+  init?(der data: Foundation.Data)
+  init?(pemEncoded pemString: Swift.String)
+  init?(base64Encoded base64String: Swift.String)
+  func data() throws -> Foundation.Data
+  func pemString() throws -> Swift.String
+  func base64String() throws -> Swift.String
+}
+extension SWCPackage.Key {
+  public init?(base64Encoded base64String: Swift.String)
+  public init?(pemEncoded pemString: Swift.String)
+  public func data() throws -> Foundation.Data
+  public func base64String() throws -> Swift.String
+}
+public class EncryptedText {
+  final public let data: Foundation.Data
+  required public init(data: Foundation.Data, by algo: Security.SecKeyAlgorithm)
+  public func decrypted(with key: SWCPackage.PrivateKey) throws -> SWCPackage.ClearText
+  @objc deinit
+}
+public enum SWCResponseCode : Swift.Int, Swift.Error {
+  case success
+  case invalidToken
+  case expiredToken
+  case badReqeust
+  case failedRequest
+  case noDataFound
+  case invalidUsercredentials
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public enum Language : Swift.String {
+  case english
+  case arabic
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers public class AppLanguage {
+  public static var current: SWCPackage.Language {
+    get
+  }
+  public static func didChangeLanguage() -> Swift.Bool
+  @objc deinit
+}
+public struct Random {
+  public static func generate(_ upperBound: Swift.Int) -> Swift.Int
+}
+@_hasMissingDesignatedInitializers final public class AES256CBC {
+  final public class func encryptString(_ str: Swift.String, key: Swift.String, iv: Swift.String) -> Swift.String?
+  final public class func encrypt(string: Swift.String, password: Swift.String) -> (encryptedData: Foundation.Data, IV: Swift.String)?
+  final public class func decryptString(_ str: Swift.String, password: Swift.String) -> Swift.String?
+  final public class func decryptString(_ data: Foundation.Data, iv: Foundation.Data, key: Swift.String) -> Swift.String?
+  final public class func generatePassword() -> Swift.String
+  final public class func randomText(_ length: Swift.Int, justLowerCase: Swift.Bool = false, whitespace: Swift.Bool = false) -> Swift.String
+  @objc deinit
+}
+public enum NetworkError : Swift.Error, Swift.Equatable {
+  case invalidResponseFormat, unknown
+  case missingResponseCode
+  case noDataFound(error: Swift.String)
+  case customError(error: Swift.String)
+  case httpError(Foundation.HTTPURLResponse)
+  case urlError(Foundation.URLError)
+  case passwordExpiry(error: Swift.String)
+  public static func == (a: SWCPackage.NetworkError, b: SWCPackage.NetworkError) -> Swift.Bool
+}
+extension SWCPackage.NetworkError : Foundation.LocalizedError {
+  public var errorDescription: Swift.String? {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers public class XMLHashOptions {
+  public var shouldProcessLazily: Swift.Bool
+  public var shouldProcessNamespaces: Swift.Bool
+  public var caseInsensitive: Swift.Bool
+  public var encoding: Swift.String.Encoding
+  public var userInfo: [Swift.CodingUserInfoKey : Any]
+  public var detectParsingErrors: Swift.Bool
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class XMLHash {
+  public class func config(_ configAction: (SWCPackage.XMLHashOptions) -> Swift.Void) -> SWCPackage.XMLHash
+  public func parse(_ xml: Swift.String) -> SWCPackage.XMLIndexer
+  public func parse(_ data: Foundation.Data) -> SWCPackage.XMLIndexer
+  public class func parse(_ xml: Swift.String) -> SWCPackage.XMLIndexer
+  public class func parse(_ data: Foundation.Data) -> SWCPackage.XMLIndexer
+  public class func lazy(_ xml: Swift.String) -> SWCPackage.XMLIndexer
+  public class func lazy(_ data: Foundation.Data) -> SWCPackage.XMLIndexer
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class IndexOp {
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class IndexOps {
+  @objc deinit
+}
+public struct ParsingError : Swift.Error {
+  public let line: Swift.Int
+  public let column: Swift.Int
+}
+public enum IndexingError : Swift.Error {
+  case attribute(attr: Swift.String)
+  case attributeValue(attr: Swift.String, value: Swift.String)
+  case key(key: Swift.String)
+  case index(idx: Swift.Int)
+  case initialize(instance: Swift.AnyObject)
+  case encoding
+  case error
+  @available(*, unavailable, renamed: "attribute(attr:)")
+  public static func Attribute(attr: Swift.String) -> SWCPackage.IndexingError
+  @available(*, unavailable, renamed: "attributeValue(attr:value:)")
+  public static func AttributeValue(attr: Swift.String, value: Swift.String) -> SWCPackage.IndexingError
+  @available(*, unavailable, renamed: "key(key:)")
+  public static func Key(key: Swift.String) -> SWCPackage.IndexingError
+  @available(*, unavailable, renamed: "index(idx:)")
+  public static func Index(idx: Swift.Int) -> SWCPackage.IndexingError
+  @available(*, unavailable, renamed: "initialize(instance:)")
+  public static func Init(instance: Swift.AnyObject) -> SWCPackage.IndexingError
+  @available(*, unavailable, renamed: "error")
+  public static var Error: SWCPackage.IndexingError {
+    get
+  }
+}
+public enum XMLIndexer {
+  case element(SWCPackage.XMLElement)
+  case list([SWCPackage.XMLElement])
+  case stream(SWCPackage.IndexOps)
+  case xmlError(SWCPackage.IndexingError)
+  case parsingError(SWCPackage.ParsingError)
+  @available(*, unavailable, renamed: "element(_:)")
+  public static func Element(_: SWCPackage.XMLElement) -> SWCPackage.XMLIndexer
+  @available(*, unavailable, renamed: "list(_:)")
+  public static func List(_: [SWCPackage.XMLElement]) -> SWCPackage.XMLIndexer
+  @available(*, unavailable, renamed: "stream(_:)")
+  public static func Stream(_: SWCPackage.IndexOps) -> SWCPackage.XMLIndexer
+  @available(*, unavailable, renamed: "xmlError(_:)")
+  public static func XMLError(_: SWCPackage.IndexingError) -> SWCPackage.XMLIndexer
+  @available(*, unavailable, renamed: "withAttribute(_:_:)")
+  public static func withAttr(_ attr: Swift.String, _ value: Swift.String) throws -> SWCPackage.XMLIndexer
+  public var element: SWCPackage.XMLElement? {
+    get
+  }
+  public var unwrappedValue: Swift.String {
+    get
+  }
+  public var all: [SWCPackage.XMLIndexer] {
+    get
+  }
+  public var children: [SWCPackage.XMLIndexer] {
+    get
+  }
+  @available(*, unavailable, renamed: "filterChildren(_:)")
+  public func filter(_ included: (_ elem: SWCPackage.XMLElement, _ index: Swift.Int) -> Swift.Bool) -> SWCPackage.XMLIndexer
+  public func filterChildren(_ included: (_ elem: SWCPackage.XMLElement, _ index: Swift.Int) -> Swift.Bool) -> SWCPackage.XMLIndexer
+  public func filterAll(_ included: (_ elem: SWCPackage.XMLElement, _ index: Swift.Int) -> Swift.Bool) -> SWCPackage.XMLIndexer
+  public var userInfo: [Swift.CodingUserInfoKey : Any] {
+    get
+  }
+  public func withAttribute(_ attr: Swift.String, _ value: Swift.String) throws -> SWCPackage.XMLIndexer
+  public init(_ rawObject: Swift.AnyObject) throws
+  public init(_ elem: SWCPackage.XMLElement)
+  public func byKey(_ key: Swift.String) throws -> SWCPackage.XMLIndexer
+  public subscript(key: Swift.String) -> SWCPackage.XMLIndexer {
+    get
+  }
+  public func byIndex(_ index: Swift.Int) throws -> SWCPackage.XMLIndexer
+  public subscript(index: Swift.Int) -> SWCPackage.XMLIndexer {
+    get
+  }
+}
+extension SWCPackage.XMLIndexer : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+}
+extension SWCPackage.IndexingError : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+}
+public protocol XMLContent : Swift.CustomStringConvertible {
+}
+@_hasMissingDesignatedInitializers public class TextElement : SWCPackage.XMLContent {
+  final public let text: Swift.String
+  @objc deinit
+}
+public struct XMLAttribute {
+  public let name: Swift.String
+  public let text: Swift.String
+}
+@_hasMissingDesignatedInitializers public class XMLElement : SWCPackage.XMLContent {
+  final public let name: Swift.String
+  public var caseInsensitive: Swift.Bool {
+    get
+  }
+  public var allAttributes: [Swift.String : SWCPackage.XMLAttribute]
+  public func attribute(by name: Swift.String) -> SWCPackage.XMLAttribute?
+  public var text: Swift.String {
+    get
+  }
+  public var recursiveText: Swift.String {
+    get
+  }
+  public var innerXML: Swift.String {
+    get
+  }
+  public var children: [SWCPackage.XMLContent]
+  @objc deinit
+}
+extension SWCPackage.TextElement : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+}
+extension SWCPackage.XMLAttribute : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+}
+extension SWCPackage.XMLElement : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+}
+extension SWCPackage.XMLHash {
+  public typealias XMLElement = SWCPackage.XMLHashXMLElement
+}
+public typealias XMLHashXMLElement = SWCPackage.XMLElement
+extension SWCPackage.XMLIndexer {
+  public func withAttribute<A, V>(_ attr: A, _ value: V) throws -> SWCPackage.XMLIndexer where A : Swift.RawRepresentable, V : Swift.RawRepresentable, A.RawValue == Swift.String, V.RawValue == Swift.String
+  public func byKey<K>(_ key: K) throws -> SWCPackage.XMLIndexer where K : Swift.RawRepresentable, K.RawValue == Swift.String
+  public subscript<K>(key: K) -> SWCPackage.XMLIndexer where K : Swift.RawRepresentable, K.RawValue == Swift.String {
+    get
+  }
+}
+extension SWCPackage.XMLElement {
+  public func attribute<N>(by name: N) -> SWCPackage.XMLAttribute? where N : Swift.RawRepresentable, N.RawValue == Swift.String
+}
+public struct KPINetworkModel : Swift.Encodable {
+  public init(moduleKey: Swift.String?, operationKey: Swift.String?, logType: Swift.String?, requestId: Swift.String?, remarks: Swift.String?, logDate: Swift.String?, recordId: Swift.String?)
+  public func encode(to encoder: Swift.Encoder) throws
+}
+extension SWCPackage.SWCPackageHandler {
+  public struct UserData {
+    public init(userName: Swift.String, password: Swift.String, userGUID: Swift.String, prNumber: Swift.String? = nil)
+  }
+  public struct Configuration {
+    public init(tokenURL: Swift.String)
+  }
+}
+extension UIKit.UIColor {
+  public struct SWCTheme {
+    public static let activeTabs: UIKit.UIColor
+    public static let arrows: UIKit.UIColor
+    public static let background: UIKit.UIColor
+    public static let blue: UIKit.UIColor
+    public static let cardBorder: UIKit.UIColor
+    public static let cards: UIKit.UIColor
+    public static let error: UIKit.UIColor
+    public static let greyIcons: UIKit.UIColor
+    public static let header: UIKit.UIColor
+    public static let inputFields: UIKit.UIColor
+    public static let lines: UIKit.UIColor
+    public static let orange: UIKit.UIColor
+    public static let placeholder: UIKit.UIColor
+    public static let primary: UIKit.UIColor
+    public static let primaryText: UIKit.UIColor
+    public static let secondaryText: UIKit.UIColor
+    public static let tabs: UIKit.UIColor
+    public static let userCharacter: UIKit.UIColor
+    public static let userIconBg: UIKit.UIColor
+    public static let warning: UIKit.UIColor
+  }
+}
+extension SwiftUI.Color {
+  public struct SWCTheme {
+    public static let activeTabs: SwiftUI.Color
+    public static let arrows: SwiftUI.Color
+    public static let background: SwiftUI.Color
+    public static let blue: SwiftUI.Color
+    public static let cardBorder: SwiftUI.Color
+    public static let cards: SwiftUI.Color
+    public static let error: SwiftUI.Color
+    public static let greyIcons: SwiftUI.Color
+    public static let header: SwiftUI.Color
+    public static let inputFields: SwiftUI.Color
+    public static let lines: SwiftUI.Color
+    public static let orange: SwiftUI.Color
+    public static let placeholder: SwiftUI.Color
+    public static let primary: SwiftUI.Color
+    public static let primaryText: SwiftUI.Color
+    public static let secondaryText: SwiftUI.Color
+    public static let tabs: SwiftUI.Color
+    public static let userCharacter: SwiftUI.Color
+    public static let userIconBg: SwiftUI.Color
+    public static let warning: SwiftUI.Color
+  }
+}
+@_hasMissingDesignatedInitializers final public class SWCPackageHandler {
+  public static func generateSWCIdentifier(for identifier: Swift.String) -> Swift.String?
+  public static func configure(_ configuration: SWCPackage.SWCPackageHandler.Configuration? = nil)
+  public static func set(userData: SWCPackage.SWCPackageHandler.UserData)
+  public static func set(aesKey: Swift.String, aesIV: Swift.String)
+  public static func set(rsaPublicKey: Swift.String)
+  public static func set(moduleApiKey: Swift.String)
+  public static func update(password: Swift.String)
+  @objc deinit
+}
+public enum SwiftRSAError : Swift.Error {
+  case emptyPEMKey
+  case invalidBase64String
+  case algorithmIsNotSupported
+  case clearTextTooLong
+  case addKeyFailed(error: CoreFoundation.CFError?)
+  case encryptionFailed(error: CoreFoundation.CFError?)
+  case decryptionFailed(error: CoreFoundation.CFError?)
+  case externalRepresentationFailed(error: CoreFoundation.CFError?)
+}
+extension SWCPackage.KeychainWrapper {
+  public func remove(forKey key: SWCPackage.KeychainWrapper.Key)
+}
+extension SWCPackage.KeychainWrapper {
+  public subscript(key: SWCPackage.KeychainWrapper.Key) -> Swift.String? {
+    get
+    set
+  }
+  public subscript(key: SWCPackage.KeychainWrapper.Key) -> Swift.Bool? {
+    get
+    set
+  }
+  public subscript(key: SWCPackage.KeychainWrapper.Key) -> Swift.Int? {
+    get
+    set
+  }
+  public subscript(key: SWCPackage.KeychainWrapper.Key) -> Swift.Double? {
+    get
+    set
+  }
+  public subscript(key: SWCPackage.KeychainWrapper.Key) -> Swift.Float? {
+    get
+    set
+  }
+  public subscript(key: SWCPackage.KeychainWrapper.Key) -> CoreFoundation.CGFloat? {
+    get
+    set
+  }
+  public subscript(key: SWCPackage.KeychainWrapper.Key) -> Foundation.Data? {
+    get
+    set
+  }
+}
+extension SWCPackage.KeychainWrapper {
+  public func data(forKey key: SWCPackage.KeychainWrapper.Key) -> Foundation.Data?
+  public func bool(forKey key: SWCPackage.KeychainWrapper.Key) -> Swift.Bool?
+  public func integer(forKey key: SWCPackage.KeychainWrapper.Key) -> Swift.Int?
+  public func float(forKey key: SWCPackage.KeychainWrapper.Key) -> Swift.Float?
+  public func cgFloat(forKey key: SWCPackage.KeychainWrapper.Key) -> CoreFoundation.CGFloat?
+  public func double(forKey key: SWCPackage.KeychainWrapper.Key) -> Swift.Double?
+  public func string(forKey key: SWCPackage.KeychainWrapper.Key) -> Swift.String?
+}
+extension SWCPackage.KeychainWrapper {
+  public struct Key : Swift.Hashable, Swift.RawRepresentable, Swift.ExpressibleByStringLiteral {
+    public var rawValue: Swift.String
+    public init(rawValue: Swift.String)
+    public init(stringLiteral value: Swift.String)
+    public typealias ExtendedGraphemeClusterLiteralType = Swift.String
+    public typealias RawValue = Swift.String
+    public typealias StringLiteralType = Swift.String
+    public typealias UnicodeScalarLiteralType = Swift.String
+  }
+}
+@objc @_inheritsConvenienceInitializers final public class UserDefaultsManager : ObjectiveC.NSObject {
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension SWCPackage.UserDefaultsManager {
+  public static func save(value: Any, forKey key: Swift.String)
+  public static func save(bool value: Swift.Bool, forKey key: Swift.String)
+  public static func save(value: Any, forKey key: Foundation.UserDefaults.Key)
+  public static func saveEncodable<T>(value: T, forKey key: Swift.String) where T : Swift.Encodable
+  public static func saveEncodable<T>(value: T, forKey key: Foundation.UserDefaults.Key) where T : Swift.Encodable
+}
+extension SWCPackage.UserDefaultsManager {
+  public static func value<T>(forType type: T.Type, forKey key: Swift.String) -> T? where T : Swift.Decodable
+  public static func anyValue(forKey key: Swift.String) -> Any?
+  public static func string(forKey key: Swift.String) -> Swift.String?
+  public static func bool(forKey key: Swift.String) -> Swift.Bool
+  public static func integer(forKey key: Swift.String) -> Swift.Int?
+  public static func float(forKey key: Swift.String) -> Swift.Float?
+  public static func removeObject(forKey key: Swift.String)
+  public static func remoAllValues()
+}
+extension SWCPackage.UserDefaultsManager {
+  public static func value<T>(forType type: T.Type, forKey key: Foundation.UserDefaults.Key) -> T? where T : Swift.Decodable
+  public static func value(forKey key: Foundation.UserDefaults.Key) -> Any?
+  public static func string(forKey key: Foundation.UserDefaults.Key) -> Swift.String?
+  public static func bool(forKey key: Foundation.UserDefaults.Key) -> Swift.Bool
+  public static func integer(forKey key: Foundation.UserDefaults.Key) -> Swift.Int?
+  public static func float(forKey key: Foundation.UserDefaults.Key) -> Swift.Float?
+  public static func removeObject(forKey key: Foundation.UserDefaults.Key)
+}
+extension Foundation.UserDefaults {
+  public struct Key : Swift.ExpressibleByStringLiteral {
+    public var rawValue: Swift.String
+    public init(stringLiteral value: Swift.String)
+    public typealias ExtendedGraphemeClusterLiteralType = Swift.String
+    public typealias StringLiteralType = Swift.String
+    public typealias UnicodeScalarLiteralType = Swift.String
+  }
+}
+public typealias UserDefaultsKey = Foundation.UserDefaults.Key
+public struct SWCRequestValues : Swift.Encodable {
+  public let value: Swift.String
+  public var additionalValue: Swift.String
+  public let propertyName: Swift.String
+  public init(value: Swift.String, additionalValue: Swift.String = "", propertyName: Swift.String)
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public enum EncryptionType {
+  case rsa, aes, none
+  public static func == (a: SWCPackage.EncryptionType, b: SWCPackage.EncryptionType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public struct SWCRequestGenerator {
+  public var request: SWCPackage.SWCRequestComponents
+  public var showLoader: Swift.Bool
+  public var validateTokenTimeStamp: Swift.Bool
+  public let engine: SWCPackage.SWCNetworkEngine
+  public init(url: Swift.String, disablePasswordExpiryNotification: Swift.Bool = false)
+}
+extension SWCPackage.SWCRequestGenerator {
+  public func getResponse<U>(responseType: U.Type, responseQueue: Dispatch.DispatchQueue = .main, jsonDecoder: Foundation.JSONDecoder = JSONDecoder()) -> SWCPackage.SWCResultObserver<U> where U : Swift.Decodable
+  public func getResponse(responseQueue: Dispatch.DispatchQueue = .main) -> SWCPackage.SWCDictionaryResultObserver
+}
+extension SWCPackage.SWCRequestGenerator : SWCPackage.SWCRequestSource {
+  public func generateRequest() -> Foundation.URLRequest
+}
+extension SWCPackage.SWCRequestGenerator {
+  #if compiler(>=5.3) && $AsyncAwait
+  public func getResponse<T>(responseType: T.Type, responseQueue: Dispatch.DispatchQueue = .main, jsonDecoder: Foundation.JSONDecoder = JSONDecoder()) async throws -> T where T : Swift.Decodable
+  #endif
+}
+public protocol SWCBackgroundDownloaderDelegate : AnyObject {
+  func backgroundDownload(didCompleteWithError error: Swift.Error, identifier: Swift.String)
+  func backgroundDownload(didFinishDownloadingTo location: Foundation.URL, identifier: Swift.String)
+}
+@objc public class SWCBackgroundDownloader : ObjectiveC.NSObject {
+  public var backgroundCompletionHandler: (() -> Swift.Void)?
+  public init(identifier: Swift.String, urlString: Swift.String, delegate: SWCPackage.SWCBackgroundDownloaderDelegate?)
+  @discardableResult
+  public func start() -> Foundation.URLSessionDownloadTask
+  @objc deinit
+}
+extension SWCPackage.SWCBackgroundDownloader : Foundation.URLSessionDelegate {
+  @objc dynamic public func urlSessionDidFinishEvents(forBackgroundURLSession session: Foundation.URLSession)
+  @objc dynamic public func urlSession(_ session: Foundation.URLSession, didBecomeInvalidWithError error: Swift.Error?)
+  @objc dynamic public func urlSession(_ session: Foundation.URLSession, didReceive challenge: Foundation.URLAuthenticationChallenge, completionHandler: @escaping (Foundation.URLSession.AuthChallengeDisposition, Foundation.URLCredential?) -> Swift.Void)
+}
+extension SWCPackage.SWCBackgroundDownloader : Foundation.URLSessionDownloadDelegate, Foundation.URLSessionTaskDelegate {
+  @objc dynamic public func urlSession(_ session: Foundation.URLSession, downloadTask: Foundation.URLSessionDownloadTask, didFinishDownloadingTo location: Foundation.URL)
+  @objc dynamic public func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, didCompleteWithError error: Swift.Error?)
+}
+@objc final public class SWCNetworkEngine : ObjectiveC.NSObject {
+  final public var moduleId: Swift.String?
+  final public var validateTokenTimeStamp: Swift.Bool
+  public init(moduleId: Swift.String? = nil, validateTokenTimeStamp: Swift.Bool = true, session: Foundation.URLSession? = nil)
+  @objc deinit
+  final public func getResponse<T, U>(with generator: T, responseType: U.Type, responseQueue: Dispatch.DispatchQueue = .main, jsonDecoder: Foundation.JSONDecoder = JSONDecoder()) -> SWCPackage.SWCResultObserver<U> where T : SWCPackage.SWCRequestSource, U : Swift.Decodable
+  final public func getResponse<T>(with generator: T, responseQueue: Dispatch.DispatchQueue = .main) -> SWCPackage.SWCDictionaryResultObserver where T : SWCPackage.SWCRequestSource
+}
+extension SWCPackage.SWCNetworkEngine {
+  final public func setResponseValidator(_ validator: SWCPackage.SWCResponseValidatorDelegate?)
+  final public func disablePasswordExpiryNotification()
+}
+extension SWCPackage.SWCNetworkEngine {
+  public static func clearAllRequests()
+  public static func cancelCalls(for url: Swift.String)
+}
+extension SWCPackage.SWCNetworkEngine {
+  #if compiler(>=5.3) && $AsyncAwait
+  final public func getResponse<T, U>(with generator: T, responseType: U.Type, responseQueue: Dispatch.DispatchQueue = .main, jsonDecoder: Foundation.JSONDecoder = JSONDecoder()) async throws -> U where T : SWCPackage.SWCRequestSource, U : Swift.Decodable
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  final public func getResponse<T>(with generator: T, responseQueue: Dispatch.DispatchQueue = .main) async throws -> [Swift.String : Any] where T : SWCPackage.SWCRequestSource
+  #endif
+}
+extension SWCPackage.SWCNetworkEngine {
+  final public func getResponse<T>(with generator: T, queue: Dispatch.DispatchQueue = .main) -> SWCPackage.SWCXMLResultObserver where T : SWCPackage.SWCRequestSource
+  final public func getResponse<T, U>(with generator: T, responseType: U.Type, queue: Foundation.RunLoop = .main) -> SWCPackage.SWCXMLObserver<U> where T : SWCPackage.SWCRequestSource, U : SWCPackage.XMLParsable
+}
+public enum KeychainItemAccessibility {
+  @available(iOS 4, *)
+  case afterFirstUnlock
+  @available(iOS 4, *)
+  case afterFirstUnlockThisDeviceOnly
+  @available(iOS 4, *)
+  case always
+  @available(iOS 8, *)
+  case whenPasscodeSetThisDeviceOnly
+  @available(iOS 4, *)
+  case alwaysThisDeviceOnly
+  @available(iOS 4, *)
+  case whenUnlocked
+  @available(iOS 4, *)
+  case whenUnlockedThisDeviceOnly
+  public static func == (a: SWCPackage.KeychainItemAccessibility, b: SWCPackage.KeychainItemAccessibility) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension SWCPackage.SWCNetworkEngine {
+  public struct Observers {
+    public static let requestStarted: Combine.PassthroughSubject<SWCPackage.SWCRequestSource, Swift.Never>
+    public static let requestEnded: Combine.PassthroughSubject<(SWCPackage.SWCRequestSource, Swift.Error?), Swift.Never>
+  }
+}
+public protocol SWCCustomTypeConverter {
+}
+extension Swift.Dictionary : SWCPackage.SWCCustomTypeConverter {
+}
+extension Foundation.NSDictionary : SWCPackage.SWCCustomTypeConverter {
+}
+extension Swift.Array : SWCPackage.SWCCustomTypeConverter {
+}
+extension Swift.Int : SWCPackage.SWCCustomTypeConverter {
+}
+extension Swift.Float : SWCPackage.SWCCustomTypeConverter {
+}
+extension Swift.Double : SWCPackage.SWCCustomTypeConverter {
+}
+extension Swift.String : SWCPackage.SWCCustomTypeConverter {
+}
+public typealias KeychainKey = SWCPackage.KeychainWrapper.Key
+@objc @_inheritsConvenienceInitializers final public class KeychainManager : ObjectiveC.NSObject {
+  public static var keychainWrapper: SWCPackage.KeychainWrapper {
+    get
+  }
+  public static func save(value: Swift.Int, forKey key: Swift.String)
+  public static func save(value: Swift.Float, forKey key: Swift.String)
+  public static func save(value: Swift.Double, forKey key: Swift.String)
+  public static func save(value: Swift.Bool, forKey key: Swift.String)
+  public static func save(value: Swift.String, forKey key: Swift.String)
+  public static func save(value: Swift.Int, forKey key: SWCPackage.KeychainKey)
+  public static func save(value: Swift.Float, forKey key: SWCPackage.KeychainKey)
+  public static func save(value: Swift.Double, forKey key: SWCPackage.KeychainKey)
+  public static func save(value: Swift.Bool, forKey key: SWCPackage.KeychainKey)
+  public static func save(value: Swift.String, forKey key: SWCPackage.KeychainKey)
+  public static func removeValue(forKey key: Swift.String)
+  public static func removeValue(forKey key: SWCPackage.KeychainWrapper.Key)
+  public static func removeAllKeys()
+  public static func string(forKey key: Swift.String) -> Swift.String?
+  public static func integer(forKey key: Swift.String) -> Swift.Int?
+  public static func float(forKey key: Swift.String) -> Swift.Float?
+  public static func double(forKey key: Swift.String) -> Swift.Double?
+  public static func bool(forKey key: Swift.String) -> Swift.Bool?
+  public static func string(forKey key: SWCPackage.KeychainWrapper.Key) -> Swift.String?
+  public static func integer(forKey key: SWCPackage.KeychainWrapper.Key) -> Swift.Int?
+  public static func float(forKey key: SWCPackage.KeychainWrapper.Key) -> Swift.Float?
+  public static func double(forKey key: SWCPackage.KeychainWrapper.Key) -> Swift.Double?
+  public static func bool(forKey key: SWCPackage.KeychainWrapper.Key) -> Swift.Bool?
+  public static func removeAllValues()
+  @objc override dynamic public init()
+  @objc deinit
+}
+public typealias SWCResultObserver<T> = Combine.AnyPublisher<T, SWCPackage.NetworkError> where T : Swift.Decodable
+public typealias SWCDictionaryResultObserver = Combine.AnyPublisher<[Swift.String : Any], SWCPackage.NetworkError>
+public typealias SWCProgressPublisher = Combine.AnyPublisher<Swift.Double, SWCPackage.NetworkError>
+public typealias SWCXMLObserver<T> = Combine.AnyPublisher<T.Element, SWCPackage.NetworkError> where T : SWCPackage.XMLParsable
+public typealias SWCXMLResultObserver = Combine.AnyPublisher<SWCPackage.XMLIndexer, SWCPackage.NetworkError>
+@objc @_inheritsConvenienceInitializers public class CommonLoader : ObjectiveC.NSObject {
+  public class func showSpinner()
+  public class var window: UIKit.UIWindow? {
+    get
+  }
+  public class func hideSpinner()
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension UIKit.UIWindow {
+  @_Concurrency.MainActor(unsafe) public var visibleViewController: UIKit.UIViewController? {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public static func getVisibleViewControllerFrom(_ vc: UIKit.UIViewController?) -> UIKit.UIViewController?
+}
+public struct SWCURLRequest : SWCPackage.SWCRequestSource {
+  public var validateTokenTimeStamp: Swift.Bool
+  public var showLoader: Swift.Bool
+  public var urlRequest: Foundation.URLRequest
+  public init(urlRequest: Foundation.URLRequest)
+  public func generateRequest() -> Foundation.URLRequest
+}
+public protocol RootKeyParsable {
+  static func rootKey() -> Swift.String
+}
+extension SWCPackage.RootKeyParsable {
+  public static func rootKey() -> Swift.String
+}
+@objc @_inheritsConvenienceInitializers public class SWCDownloadEngine : ObjectiveC.NSObject {
+  public var session: Foundation.URLSession {
+    get
+    set
+  }
+  public static let shared: SWCPackage.SWCDownloadEngine
+  public func downloadTaskPublisher(with url: Swift.String, withLoader: Swift.Bool = false) -> Combine.AnyPublisher<SWCPackage.DownloadOutput, Swift.Error>
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension SWCPackage.SWCDownloadEngine : Foundation.URLSessionDelegate {
+  @objc dynamic public func urlSession(_ session: Foundation.URLSession, didReceive challenge: Foundation.URLAuthenticationChallenge, completionHandler: @escaping (Foundation.URLSession.AuthChallengeDisposition, Foundation.URLCredential?) -> Swift.Void)
+}
+public class PrivateKey : SWCPackage.Key {
+  final public let key: Security.SecKey
+  required public init(key: Security.SecKey)
+  required public init?(der: Foundation.Data)
+  public func pemString() throws -> Swift.String
+  @objc deinit
+}
+public protocol XMLIndexerDeserializable {
+  static func deserialize(_ element: SWCPackage.XMLIndexer) throws -> Self
+  func validate() throws
+}
+extension SWCPackage.XMLIndexerDeserializable {
+  public static func deserialize(_ element: SWCPackage.XMLIndexer) throws -> Self
+  public func validate() throws
+}
+public protocol XMLElementDeserializable {
+  static func deserialize(_ element: SWCPackage.XMLElement) throws -> Self
+  func validate() throws
+}
+extension SWCPackage.XMLElementDeserializable {
+  public static func deserialize(_ element: SWCPackage.XMLElement) throws -> Self
+  public func validate() throws
+}
+public protocol XMLAttributeDeserializable {
+  static func deserialize(_ attribute: SWCPackage.XMLAttribute) throws -> Self
+  func validate() throws
+}
+extension SWCPackage.XMLAttributeDeserializable {
+  public static func deserialize(attribute: SWCPackage.XMLAttribute) throws -> Self
+  public func validate() throws
+}
+extension SWCPackage.XMLIndexer {
+  public func value<T>(ofAttribute attr: Swift.String) throws -> T where T : SWCPackage.XMLAttributeDeserializable
+  public func value<T>(ofAttribute attr: Swift.String) -> T? where T : SWCPackage.XMLAttributeDeserializable
+  public func value<T>(ofAttribute attr: Swift.String) throws -> [T] where T : SWCPackage.XMLAttributeDeserializable
+  public func value<T>(ofAttribute attr: Swift.String) throws -> [T]? where T : SWCPackage.XMLAttributeDeserializable
+  public func value<T>(ofAttribute attr: Swift.String) throws -> [T?] where T : SWCPackage.XMLAttributeDeserializable
+  public func value<T>() throws -> T where T : SWCPackage.XMLElementDeserializable
+  public func value<T>() throws -> T? where T : SWCPackage.XMLElementDeserializable
+  public func value<T>() throws -> [T] where T : SWCPackage.XMLElementDeserializable
+  public func value<T>() throws -> [T]? where T : SWCPackage.XMLElementDeserializable
+  public func value<T>() throws -> [T?] where T : SWCPackage.XMLElementDeserializable
+  public func value<T>() throws -> T where T : SWCPackage.XMLIndexerDeserializable
+  public func value<T>() throws -> T? where T : SWCPackage.XMLIndexerDeserializable
+  public func value<T>() throws -> [T] where T : SWCPackage.XMLIndexerDeserializable
+  public func value<T>() throws -> [T]? where T : SWCPackage.XMLIndexerDeserializable
+  public func value<T>() throws -> [T?] where T : SWCPackage.XMLIndexerDeserializable
+}
+extension SWCPackage.XMLIndexer {
+  public func value<T, A>(ofAttribute attr: A) throws -> T where T : SWCPackage.XMLAttributeDeserializable, A : Swift.RawRepresentable, A.RawValue == Swift.String
+  public func value<T, A>(ofAttribute attr: A) -> T? where T : SWCPackage.XMLAttributeDeserializable, A : Swift.RawRepresentable, A.RawValue == Swift.String
+  public func value<T, A>(ofAttribute attr: A) throws -> [T] where T : SWCPackage.XMLAttributeDeserializable, A : Swift.RawRepresentable, A.RawValue == Swift.String
+  public func value<T, A>(ofAttribute attr: A) throws -> [T]? where T : SWCPackage.XMLAttributeDeserializable, A : Swift.RawRepresentable, A.RawValue == Swift.String
+  public func value<T, A>(ofAttribute attr: A) throws -> [T?] where T : SWCPackage.XMLAttributeDeserializable, A : Swift.RawRepresentable, A.RawValue == Swift.String
+}
+extension SWCPackage.XMLElement {
+  public func value<T>(ofAttribute attr: Swift.String) throws -> T where T : SWCPackage.XMLAttributeDeserializable
+  public func value<T>(ofAttribute attr: Swift.String) -> T? where T : SWCPackage.XMLAttributeDeserializable
+}
+extension SWCPackage.XMLElement {
+  public func value<T, A>(ofAttribute attr: A) throws -> T where T : SWCPackage.XMLAttributeDeserializable, A : Swift.RawRepresentable, A.RawValue == Swift.String
+  public func value<T, A>(ofAttribute attr: A) -> T? where T : SWCPackage.XMLAttributeDeserializable, A : Swift.RawRepresentable, A.RawValue == Swift.String
+}
+public enum XMLDeserializationError : Swift.Error, Swift.CustomStringConvertible {
+  case implementationIsMissing(method: Swift.String)
+  case nodeIsInvalid(node: SWCPackage.XMLIndexer)
+  case nodeHasNoValue
+  case typeConversionFailed(type: Swift.String, element: SWCPackage.XMLElement)
+  case attributeDoesNotExist(element: SWCPackage.XMLElement, attribute: Swift.String)
+  case attributeDeserializationFailed(type: Swift.String, attribute: SWCPackage.XMLAttribute)
+  @available(*, unavailable, renamed: "implementationIsMissing(method:)")
+  public static func ImplementationIsMissing(method: Swift.String) -> SWCPackage.XMLDeserializationError
+  @available(*, unavailable, renamed: "nodeHasNoValue(_:)")
+  public static func NodeHasNoValue(_: SWCPackage.IndexOps) -> SWCPackage.XMLDeserializationError
+  @available(*, unavailable, renamed: "typeConversionFailed(_:)")
+  public static func TypeConversionFailed(_: SWCPackage.IndexingError) -> SWCPackage.XMLDeserializationError
+  @available(*, unavailable, renamed: "attributeDoesNotExist(_:_:)")
+  public static func AttributeDoesNotExist(_ attr: Swift.String, _ value: Swift.String) throws -> SWCPackage.XMLDeserializationError
+  @available(*, unavailable, renamed: "attributeDeserializationFailed(_:_:)")
+  public static func AttributeDeserializationFailed(_ attr: Swift.String, _ value: Swift.String) throws -> SWCPackage.XMLDeserializationError
+  public var description: Swift.String {
+    get
+  }
+}
+extension Swift.String : SWCPackage.XMLElementDeserializable, SWCPackage.XMLAttributeDeserializable {
+  public static func deserialize(_ element: SWCPackage.XMLElement) -> Swift.String
+  public static func deserialize(_ attribute: SWCPackage.XMLAttribute) -> Swift.String
+  public func validate()
+}
+extension Swift.Int : SWCPackage.XMLElementDeserializable, SWCPackage.XMLAttributeDeserializable {
+  public static func deserialize(_ element: SWCPackage.XMLElement) throws -> Swift.Int
+  public static func deserialize(_ attribute: SWCPackage.XMLAttribute) throws -> Swift.Int
+  public func validate()
+}
+extension Swift.Double : SWCPackage.XMLElementDeserializable, SWCPackage.XMLAttributeDeserializable {
+  public static func deserialize(_ element: SWCPackage.XMLElement) throws -> Swift.Double
+  public static func deserialize(_ attribute: SWCPackage.XMLAttribute) throws -> Swift.Double
+  public func validate()
+}
+extension Swift.Float : SWCPackage.XMLElementDeserializable, SWCPackage.XMLAttributeDeserializable {
+  public static func deserialize(_ element: SWCPackage.XMLElement) throws -> Swift.Float
+  public static func deserialize(_ attribute: SWCPackage.XMLAttribute) throws -> Swift.Float
+  public func validate()
+}
+extension Swift.Bool : SWCPackage.XMLElementDeserializable, SWCPackage.XMLAttributeDeserializable {
+  public static func deserialize(_ element: SWCPackage.XMLElement) throws -> Swift.Bool
+  public static func deserialize(_ attribute: SWCPackage.XMLAttribute) throws -> Swift.Bool
+  public func validate()
+}
+public protocol SWCResponseValidatorDelegate {
+  func validate(for response: [Swift.String : Any]) -> SWCPackage.SWCResponseValidator
+}
+public protocol SWCUploadSource {
+  func generateRequest() -> Foundation.URLRequest
+  var showLoader: Swift.Bool { get }
+  var fromFileURL: Foundation.URL { get }
+}
+public enum DownloadOutput {
+  case complete(Foundation.URL)
+  case downloading(progress: Swift.Double)
+}
+public struct SWCExternalRequestGenerator {
+  public var httpBody: Foundation.Data?
+  public var showLoader: Swift.Bool
+  public var contentType: SWCPackage.ContentTypes
+  public var accept: SWCPackage.ContentTypes
+  public var httpMethod: SWCPackage.HTTPMethod
+  public init(url: Swift.String, body: [Swift.String : Any]?)
+  public mutating func setHeader(value: Swift.String, field: SWCPackage.HTTPHeaders)
+}
+extension SWCPackage.SWCExternalRequestGenerator : SWCPackage.SWCRequestSource {
+  public func generateRequest() -> Foundation.URLRequest
+  public var validateTokenTimeStamp: Swift.Bool {
+    get
+  }
+}
+public protocol XMLParsable {
+  associatedtype Element
+  static func initWith(dict: Foundation.NSDictionary) throws -> Self.Element
+}
+public enum UploadDownloadResponse {
+  case progress(percentage: Swift.Double)
+  case response(data: Foundation.Data?)
+}
+extension Foundation.NSNotification.Name {
+  public static let passwordExpired: Foundation.Notification.Name
+}
+extension SWCPackage.ContentTypes : Swift.Equatable {}
+extension SWCPackage.ContentTypes : Swift.Hashable {}
+extension SWCPackage.ContentTypes : Swift.RawRepresentable {}
+extension SWCPackage.HTTPHeaders : Swift.Equatable {}
+extension SWCPackage.HTTPHeaders : Swift.Hashable {}
+extension SWCPackage.HTTPHeaders : Swift.RawRepresentable {}
+extension SWCPackage.HTTPMethod : Swift.Equatable {}
+extension SWCPackage.HTTPMethod : Swift.Hashable {}
+extension SWCPackage.HTTPMethod : Swift.RawRepresentable {}
+extension SWCPackage.SWCResponseCode : Swift.Equatable {}
+extension SWCPackage.SWCResponseCode : Swift.Hashable {}
+extension SWCPackage.SWCResponseCode : Swift.RawRepresentable {}
+extension SWCPackage.Language : Swift.Equatable {}
+extension SWCPackage.Language : Swift.Hashable {}
+extension SWCPackage.Language : Swift.RawRepresentable {}
+extension SWCPackage.EncryptionType : Swift.Equatable {}
+extension SWCPackage.EncryptionType : Swift.Hashable {}
+extension SWCPackage.KeychainItemAccessibility : Swift.Equatable {}
+extension SWCPackage.KeychainItemAccessibility : Swift.Hashable {}
