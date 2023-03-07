@@ -126,10 +126,10 @@ public class PublicKey : SWCPackage.Key {
   public func pemString() throws -> Swift.String
   @objc deinit
 }
-open class KeychainWrapper {
+open class SWCKeychainWrapper {
   @available(*, deprecated, message: "KeychainWrapper.defaultKeychainWrapper is deprecated since version 2.2.1, use KeychainWrapper.standard instead")
-  public static let defaultKeychainWrapper: SWCPackage.KeychainWrapper
-  public static let standard: SWCPackage.KeychainWrapper
+  public static let defaultKeychainWrapper: SWCPackage.SWCKeychainWrapper
+  public static let standard: SWCPackage.SWCKeychainWrapper
   public var serviceName: Swift.String {
     get
   }
@@ -255,7 +255,7 @@ public struct Random {
   final public class func randomText(_ length: Swift.Int, justLowerCase: Swift.Bool = false, whitespace: Swift.Bool = false) -> Swift.String
   @objc deinit
 }
-public enum NetworkError : Swift.Error, Swift.Equatable {
+public enum SWCNetworkError : Swift.Error, Swift.Equatable {
   case invalidResponseFormat, unknown
   case missingResponseCode
   case noDataFound(error: Swift.String)
@@ -263,9 +263,9 @@ public enum NetworkError : Swift.Error, Swift.Equatable {
   case httpError(Foundation.HTTPURLResponse)
   case urlError(Foundation.URLError)
   case passwordExpiry(error: Swift.String)
-  public static func == (a: SWCPackage.NetworkError, b: SWCPackage.NetworkError) -> Swift.Bool
+  public static func == (a: SWCPackage.SWCNetworkError, b: SWCPackage.SWCNetworkError) -> Swift.Bool
 }
-extension SWCPackage.NetworkError : Foundation.LocalizedError {
+extension SWCPackage.SWCNetworkError : Foundation.LocalizedError {
   public var errorDescription: Swift.String? {
     get
   }
@@ -517,49 +517,49 @@ public enum SwiftRSAError : Swift.Error {
   case decryptionFailed(error: CoreFoundation.CFError?)
   case externalRepresentationFailed(error: CoreFoundation.CFError?)
 }
-extension SWCPackage.KeychainWrapper {
-  public func remove(forKey key: SWCPackage.KeychainWrapper.Key)
+extension SWCPackage.SWCKeychainWrapper {
+  public func remove(forKey key: SWCPackage.SWCKeychainWrapper.Key)
 }
-extension SWCPackage.KeychainWrapper {
-  public subscript(key: SWCPackage.KeychainWrapper.Key) -> Swift.String? {
+extension SWCPackage.SWCKeychainWrapper {
+  public subscript(key: SWCPackage.SWCKeychainWrapper.Key) -> Swift.String? {
     get
     set
   }
-  public subscript(key: SWCPackage.KeychainWrapper.Key) -> Swift.Bool? {
+  public subscript(key: SWCPackage.SWCKeychainWrapper.Key) -> Swift.Bool? {
     get
     set
   }
-  public subscript(key: SWCPackage.KeychainWrapper.Key) -> Swift.Int? {
+  public subscript(key: SWCPackage.SWCKeychainWrapper.Key) -> Swift.Int? {
     get
     set
   }
-  public subscript(key: SWCPackage.KeychainWrapper.Key) -> Swift.Double? {
+  public subscript(key: SWCPackage.SWCKeychainWrapper.Key) -> Swift.Double? {
     get
     set
   }
-  public subscript(key: SWCPackage.KeychainWrapper.Key) -> Swift.Float? {
+  public subscript(key: SWCPackage.SWCKeychainWrapper.Key) -> Swift.Float? {
     get
     set
   }
-  public subscript(key: SWCPackage.KeychainWrapper.Key) -> CoreFoundation.CGFloat? {
+  public subscript(key: SWCPackage.SWCKeychainWrapper.Key) -> CoreFoundation.CGFloat? {
     get
     set
   }
-  public subscript(key: SWCPackage.KeychainWrapper.Key) -> Foundation.Data? {
+  public subscript(key: SWCPackage.SWCKeychainWrapper.Key) -> Foundation.Data? {
     get
     set
   }
 }
-extension SWCPackage.KeychainWrapper {
-  public func data(forKey key: SWCPackage.KeychainWrapper.Key) -> Foundation.Data?
-  public func bool(forKey key: SWCPackage.KeychainWrapper.Key) -> Swift.Bool?
-  public func integer(forKey key: SWCPackage.KeychainWrapper.Key) -> Swift.Int?
-  public func float(forKey key: SWCPackage.KeychainWrapper.Key) -> Swift.Float?
-  public func cgFloat(forKey key: SWCPackage.KeychainWrapper.Key) -> CoreFoundation.CGFloat?
-  public func double(forKey key: SWCPackage.KeychainWrapper.Key) -> Swift.Double?
-  public func string(forKey key: SWCPackage.KeychainWrapper.Key) -> Swift.String?
+extension SWCPackage.SWCKeychainWrapper {
+  public func data(forKey key: SWCPackage.SWCKeychainWrapper.Key) -> Foundation.Data?
+  public func bool(forKey key: SWCPackage.SWCKeychainWrapper.Key) -> Swift.Bool?
+  public func integer(forKey key: SWCPackage.SWCKeychainWrapper.Key) -> Swift.Int?
+  public func float(forKey key: SWCPackage.SWCKeychainWrapper.Key) -> Swift.Float?
+  public func cgFloat(forKey key: SWCPackage.SWCKeychainWrapper.Key) -> CoreFoundation.CGFloat?
+  public func double(forKey key: SWCPackage.SWCKeychainWrapper.Key) -> Swift.Double?
+  public func string(forKey key: SWCPackage.SWCKeychainWrapper.Key) -> Swift.String?
 }
-extension SWCPackage.KeychainWrapper {
+extension SWCPackage.SWCKeychainWrapper {
   public struct Key : Swift.Hashable, Swift.RawRepresentable, Swift.ExpressibleByStringLiteral {
     public var rawValue: Swift.String
     public init(rawValue: Swift.String)
@@ -570,18 +570,17 @@ extension SWCPackage.KeychainWrapper {
     public typealias UnicodeScalarLiteralType = Swift.String
   }
 }
-@objc @_inheritsConvenienceInitializers final public class UserDefaultsManager : ObjectiveC.NSObject {
+@objc @_inheritsConvenienceInitializers final public class SWCUserDefaultsManager : ObjectiveC.NSObject {
   @objc override dynamic public init()
   @objc deinit
 }
-extension SWCPackage.UserDefaultsManager {
+extension SWCPackage.SWCUserDefaultsManager {
   public static func save(value: Any, forKey key: Swift.String)
-  public static func save(bool value: Swift.Bool, forKey key: Swift.String)
   public static func save(value: Any, forKey key: Foundation.UserDefaults.Key)
   public static func saveEncodable<T>(value: T, forKey key: Swift.String) where T : Swift.Encodable
   public static func saveEncodable<T>(value: T, forKey key: Foundation.UserDefaults.Key) where T : Swift.Encodable
 }
-extension SWCPackage.UserDefaultsManager {
+extension SWCPackage.SWCUserDefaultsManager {
   public static func value<T>(forType type: T.Type, forKey key: Swift.String) -> T? where T : Swift.Decodable
   public static func anyValue(forKey key: Swift.String) -> Any?
   public static func string(forKey key: Swift.String) -> Swift.String?
@@ -591,7 +590,7 @@ extension SWCPackage.UserDefaultsManager {
   public static func removeObject(forKey key: Swift.String)
   public static func remoAllValues()
 }
-extension SWCPackage.UserDefaultsManager {
+extension SWCPackage.SWCUserDefaultsManager {
   public static func value<T>(forType type: T.Type, forKey key: Foundation.UserDefaults.Key) -> T? where T : Swift.Decodable
   public static func value(forKey key: Foundation.UserDefaults.Key) -> Any?
   public static func string(forKey key: Foundation.UserDefaults.Key) -> Swift.String?
@@ -609,7 +608,7 @@ extension Foundation.UserDefaults {
     public typealias UnicodeScalarLiteralType = Swift.String
   }
 }
-public typealias UserDefaultsKey = Foundation.UserDefaults.Key
+public typealias SWCUserDefaultsKey = Foundation.UserDefaults.Key
 public struct SWCRequestValues : Swift.Encodable {
   public let value: Swift.String
   public var additionalValue: Swift.String
@@ -643,6 +642,9 @@ extension SWCPackage.SWCRequestGenerator {
   #if compiler(>=5.3) && $AsyncAwait
   public func getResponse<T>(responseType: T.Type, responseQueue: Dispatch.DispatchQueue = .main, jsonDecoder: Foundation.JSONDecoder = JSONDecoder()) async throws -> T where T : Swift.Decodable
   #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func getResponse(responseQueue: Dispatch.DispatchQueue = .main) async throws -> [Swift.String : Any]
+  #endif
 }
 public protocol SWCBackgroundDownloaderDelegate : AnyObject {
   func backgroundDownload(didCompleteWithError error: Swift.Error, identifier: Swift.String)
@@ -668,9 +670,9 @@ extension SWCPackage.SWCBackgroundDownloader : Foundation.URLSessionDownloadDele
   final public var moduleId: Swift.String?
   final public var validateTokenTimeStamp: Swift.Bool
   public init(moduleId: Swift.String? = nil, validateTokenTimeStamp: Swift.Bool = true, session: Foundation.URLSession? = nil)
-  @objc deinit
   final public func getResponse<T, U>(with generator: T, responseType: U.Type, responseQueue: Dispatch.DispatchQueue = .main, jsonDecoder: Foundation.JSONDecoder = JSONDecoder()) -> SWCPackage.SWCResultObserver<U> where T : SWCPackage.SWCRequestSource, U : Swift.Decodable
   final public func getResponse<T>(with generator: T, responseQueue: Dispatch.DispatchQueue = .main) -> SWCPackage.SWCDictionaryResultObserver where T : SWCPackage.SWCRequestSource
+  @objc deinit
 }
 extension SWCPackage.SWCNetworkEngine {
   final public func setResponseValidator(_ validator: SWCPackage.SWCResponseValidatorDelegate?)
@@ -719,25 +721,9 @@ extension SWCPackage.SWCNetworkEngine {
     public static let requestEnded: Combine.PassthroughSubject<(SWCPackage.SWCRequestSource, Swift.Error?), Swift.Never>
   }
 }
-public protocol SWCCustomTypeConverter {
-}
-extension Swift.Dictionary : SWCPackage.SWCCustomTypeConverter {
-}
-extension Foundation.NSDictionary : SWCPackage.SWCCustomTypeConverter {
-}
-extension Swift.Array : SWCPackage.SWCCustomTypeConverter {
-}
-extension Swift.Int : SWCPackage.SWCCustomTypeConverter {
-}
-extension Swift.Float : SWCPackage.SWCCustomTypeConverter {
-}
-extension Swift.Double : SWCPackage.SWCCustomTypeConverter {
-}
-extension Swift.String : SWCPackage.SWCCustomTypeConverter {
-}
-public typealias KeychainKey = SWCPackage.KeychainWrapper.Key
-@objc @_inheritsConvenienceInitializers final public class KeychainManager : ObjectiveC.NSObject {
-  public static var keychainWrapper: SWCPackage.KeychainWrapper {
+public typealias SWCKeychainKey = SWCPackage.SWCKeychainWrapper.Key
+@objc @_inheritsConvenienceInitializers final public class SWCKeychainManager : ObjectiveC.NSObject {
+  public static var keychainWrapper: SWCPackage.SWCKeychainWrapper {
     get
   }
   public static func save(value: Swift.Int, forKey key: Swift.String)
@@ -745,33 +731,33 @@ public typealias KeychainKey = SWCPackage.KeychainWrapper.Key
   public static func save(value: Swift.Double, forKey key: Swift.String)
   public static func save(value: Swift.Bool, forKey key: Swift.String)
   public static func save(value: Swift.String, forKey key: Swift.String)
-  public static func save(value: Swift.Int, forKey key: SWCPackage.KeychainKey)
-  public static func save(value: Swift.Float, forKey key: SWCPackage.KeychainKey)
-  public static func save(value: Swift.Double, forKey key: SWCPackage.KeychainKey)
-  public static func save(value: Swift.Bool, forKey key: SWCPackage.KeychainKey)
-  public static func save(value: Swift.String, forKey key: SWCPackage.KeychainKey)
+  public static func save(value: Swift.Int, forKey key: SWCPackage.SWCKeychainKey)
+  public static func save(value: Swift.Float, forKey key: SWCPackage.SWCKeychainKey)
+  public static func save(value: Swift.Double, forKey key: SWCPackage.SWCKeychainKey)
+  public static func save(value: Swift.Bool, forKey key: SWCPackage.SWCKeychainKey)
+  public static func save(value: Swift.String, forKey key: SWCPackage.SWCKeychainKey)
   public static func removeValue(forKey key: Swift.String)
-  public static func removeValue(forKey key: SWCPackage.KeychainWrapper.Key)
+  public static func removeValue(forKey key: SWCPackage.SWCKeychainWrapper.Key)
   public static func removeAllKeys()
   public static func string(forKey key: Swift.String) -> Swift.String?
   public static func integer(forKey key: Swift.String) -> Swift.Int?
   public static func float(forKey key: Swift.String) -> Swift.Float?
   public static func double(forKey key: Swift.String) -> Swift.Double?
   public static func bool(forKey key: Swift.String) -> Swift.Bool?
-  public static func string(forKey key: SWCPackage.KeychainWrapper.Key) -> Swift.String?
-  public static func integer(forKey key: SWCPackage.KeychainWrapper.Key) -> Swift.Int?
-  public static func float(forKey key: SWCPackage.KeychainWrapper.Key) -> Swift.Float?
-  public static func double(forKey key: SWCPackage.KeychainWrapper.Key) -> Swift.Double?
-  public static func bool(forKey key: SWCPackage.KeychainWrapper.Key) -> Swift.Bool?
+  public static func string(forKey key: SWCPackage.SWCKeychainWrapper.Key) -> Swift.String?
+  public static func integer(forKey key: SWCPackage.SWCKeychainWrapper.Key) -> Swift.Int?
+  public static func float(forKey key: SWCPackage.SWCKeychainWrapper.Key) -> Swift.Float?
+  public static func double(forKey key: SWCPackage.SWCKeychainWrapper.Key) -> Swift.Double?
+  public static func bool(forKey key: SWCPackage.SWCKeychainWrapper.Key) -> Swift.Bool?
   public static func removeAllValues()
   @objc override dynamic public init()
   @objc deinit
 }
-public typealias SWCResultObserver<T> = Combine.AnyPublisher<T, SWCPackage.NetworkError> where T : Swift.Decodable
-public typealias SWCDictionaryResultObserver = Combine.AnyPublisher<[Swift.String : Any], SWCPackage.NetworkError>
-public typealias SWCProgressPublisher = Combine.AnyPublisher<Swift.Double, SWCPackage.NetworkError>
-public typealias SWCXMLObserver<T> = Combine.AnyPublisher<T.Element, SWCPackage.NetworkError> where T : SWCPackage.XMLParsable
-public typealias SWCXMLResultObserver = Combine.AnyPublisher<SWCPackage.XMLIndexer, SWCPackage.NetworkError>
+public typealias SWCResultObserver<T> = Combine.AnyPublisher<T, SWCPackage.SWCNetworkError> where T : Swift.Decodable
+public typealias SWCDictionaryResultObserver = Combine.AnyPublisher<[Swift.String : Any], SWCPackage.SWCNetworkError>
+public typealias SWCProgressPublisher = Combine.AnyPublisher<Swift.Double, SWCPackage.SWCNetworkError>
+public typealias SWCXMLObserver<T> = Combine.AnyPublisher<T.Element, SWCPackage.SWCNetworkError> where T : SWCPackage.XMLParsable
+public typealias SWCXMLResultObserver = Combine.AnyPublisher<SWCPackage.XMLIndexer, SWCPackage.SWCNetworkError>
 @objc @_inheritsConvenienceInitializers public class CommonLoader : ObjectiveC.NSObject {
   public class func showSpinner()
   public class var window: UIKit.UIWindow? {
@@ -806,7 +792,7 @@ extension SWCPackage.RootKeyParsable {
     set
   }
   public static let shared: SWCPackage.SWCDownloadEngine
-  public func downloadTaskPublisher(with url: Swift.String, withLoader: Swift.Bool = false) -> Combine.AnyPublisher<SWCPackage.DownloadOutput, Swift.Error>
+  public func downloadTaskPublisher(with url: Swift.String, showLoader: Swift.Bool = false) -> Combine.AnyPublisher<SWCPackage.SWCDownloadOutput, Swift.Error>
   @objc override dynamic public init()
   @objc deinit
 }
@@ -930,8 +916,8 @@ public protocol SWCUploadSource {
   var showLoader: Swift.Bool { get }
   var fromFileURL: Foundation.URL { get }
 }
-public enum DownloadOutput {
-  case complete(Foundation.URL)
+public enum SWCDownloadOutput {
+  case completed(Foundation.URL)
   case downloading(progress: Swift.Double)
 }
 public struct SWCExternalRequestGenerator {
@@ -952,10 +938,6 @@ extension SWCPackage.SWCExternalRequestGenerator : SWCPackage.SWCRequestSource {
 public protocol XMLParsable {
   associatedtype Element
   static func initWith(dict: Foundation.NSDictionary) throws -> Self.Element
-}
-public enum UploadDownloadResponse {
-  case progress(percentage: Swift.Double)
-  case response(data: Foundation.Data?)
 }
 extension Foundation.NSNotification.Name {
   public static let passwordExpired: Foundation.Notification.Name

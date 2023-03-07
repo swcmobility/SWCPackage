@@ -259,13 +259,6 @@ SWIFT_CLASS("_TtC10SWCPackage12CommonLoader")
 @end
 
 
-SWIFT_CLASS("_TtC10SWCPackage15KeychainManager")
-@interface KeychainManager : NSObject
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-
 SWIFT_CLASS("_TtC10SWCPackage23SWCBackgroundDownloader")
 @interface SWCBackgroundDownloader : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
@@ -292,6 +285,7 @@ SWIFT_CLASS("_TtC10SWCPackage23SWCBackgroundDownloader")
 @end
 
 
+/// Used to manage Download functionalatiy
 SWIFT_CLASS("_TtC10SWCPackage17SWCDownloadEngine")
 @interface SWCDownloadEngine : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
@@ -303,7 +297,14 @@ SWIFT_CLASS("_TtC10SWCPackage17SWCDownloadEngine")
 @end
 
 
-/// To send an network request, you should create an object for NetworkEngine.
+/// Used to handle storage and retrieval of data from Keychain
+SWIFT_CLASS("_TtC10SWCPackage18SWCKeychainManager")
+@interface SWCKeychainManager : NSObject
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+/// To send an network request, you should create an object for SWCNetworkEngine.
 /// Then use the <code>getResponse</code> method
 SWIFT_CLASS("_TtC10SWCPackage16SWCNetworkEngine")
 @interface SWCNetworkEngine : NSObject
@@ -319,6 +320,7 @@ SWIFT_CLASS("_TtC10SWCPackage16SWCNetworkEngine")
 
 
 
+/// Per
 SWIFT_CLASS("_TtC10SWCPackage15SWCUploadEngine")
 @interface SWCUploadEngine : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
@@ -335,15 +337,16 @@ SWIFT_CLASS("_TtC10SWCPackage15SWCUploadEngine")
 @end
 
 
-
-
-
-
-
-SWIFT_CLASS("_TtC10SWCPackage19UserDefaultsManager")
-@interface UserDefaultsManager : NSObject
+/// Used to handle storage and retrieval of data from UserDefaults
+SWIFT_CLASS("_TtC10SWCPackage22SWCUserDefaultsManager")
+@interface SWCUserDefaultsManager : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
+
+
+
+
+
 
 
 
