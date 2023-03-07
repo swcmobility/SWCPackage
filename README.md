@@ -2,7 +2,6 @@
 
 ## Getting Started
 
-Smart Office Work Center Package
 ### Requirements
 
 * iOS 13.0+
