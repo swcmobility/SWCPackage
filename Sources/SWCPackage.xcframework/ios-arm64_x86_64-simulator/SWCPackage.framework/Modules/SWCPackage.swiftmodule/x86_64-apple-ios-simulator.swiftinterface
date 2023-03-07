@@ -500,6 +500,7 @@ extension SwiftUI.Color {
 @_hasMissingDesignatedInitializers final public class SWCPackageHandler {
   public static func generateSWCIdentifier(for identifier: Swift.String) -> Swift.String?
   public static func configure(_ configuration: SWCPackage.SWCPackageHandler.Configuration? = nil)
+  public static func set(token: Swift.String, timeStamp: Swift.String)
   public static func set(userData: SWCPackage.SWCPackageHandler.UserData)
   public static func set(aesKey: Swift.String, aesIV: Swift.String)
   public static func set(rsaPublicKey: Swift.String)

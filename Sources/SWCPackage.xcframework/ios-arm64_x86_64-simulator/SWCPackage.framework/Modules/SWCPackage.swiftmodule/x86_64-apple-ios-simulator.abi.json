@@ -14069,6 +14069,40 @@
           {
             "kind": "Function",
             "name": "set",
+            "printedName": "set(token:timeStamp:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10SWCPackage0A7HandlerC3set5token9timeStampySS_SStFZ",
+            "mangledName": "$s10SWCPackage0A7HandlerC3set5token9timeStampySS_SStFZ",
+            "moduleName": "SWCPackage",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "set",
             "printedName": "set(userData:)",
             "children": [
               {
@@ -29581,91 +29615,91 @@
     {
       "filePath": "\/Users\/yasheed\/Documents\/SmartOffice\/SWCPackage\/SWCFrameworkDemo\/SWCPackage\/Source\/NetworkEngine\/SOEngineLocalDataHandler\/SOEngineLocalDataHandler.swift",
       "kind": "StringLiteral",
-      "offset": 4757,
+      "offset": 4709,
       "length": 13,
       "value": "\"SWCUserName\""
     },
     {
       "filePath": "\/Users\/yasheed\/Documents\/SmartOffice\/SWCPackage\/SWCFrameworkDemo\/SWCPackage\/Source\/NetworkEngine\/SOEngineLocalDataHandler\/SOEngineLocalDataHandler.swift",
       "kind": "StringLiteral",
-      "offset": 4813,
+      "offset": 4765,
       "length": 13,
       "value": "\"SWCPassword\""
     },
     {
       "filePath": "\/Users\/yasheed\/Documents\/SmartOffice\/SWCPackage\/SWCFrameworkDemo\/SWCPackage\/Source\/NetworkEngine\/SOEngineLocalDataHandler\/SOEngineLocalDataHandler.swift",
       "kind": "StringLiteral",
-      "offset": 4869,
+      "offset": 4821,
       "length": 13,
       "value": "\"SWCDeviceID\""
     },
     {
       "filePath": "\/Users\/yasheed\/Documents\/SmartOffice\/SWCPackage\/SWCFrameworkDemo\/SWCPackage\/Source\/NetworkEngine\/SOEngineLocalDataHandler\/SOEngineLocalDataHandler.swift",
       "kind": "StringLiteral",
-      "offset": 4922,
+      "offset": 4874,
       "length": 10,
       "value": "\"SWCToken\""
     },
     {
       "filePath": "\/Users\/yasheed\/Documents\/SmartOffice\/SWCPackage\/SWCFrameworkDemo\/SWCPackage\/Source\/NetworkEngine\/SOEngineLocalDataHandler\/SOEngineLocalDataHandler.swift",
       "kind": "StringLiteral",
-      "offset": 4973,
+      "offset": 4925,
       "length": 11,
       "value": "\"SWCAESKey\""
     },
     {
       "filePath": "\/Users\/yasheed\/Documents\/SmartOffice\/SWCPackage\/SWCFrameworkDemo\/SWCPackage\/Source\/NetworkEngine\/SOEngineLocalDataHandler\/SOEngineLocalDataHandler.swift",
       "kind": "StringLiteral",
-      "offset": 5076,
+      "offset": 5028,
       "length": 13,
       "value": "\"SWCUserGuId\""
     },
     {
       "filePath": "\/Users\/yasheed\/Documents\/SmartOffice\/SWCPackage\/SWCFrameworkDemo\/SWCPackage\/Source\/NetworkEngine\/SOEngineLocalDataHandler\/SOEngineLocalDataHandler.swift",
       "kind": "StringLiteral",
-      "offset": 5136,
+      "offset": 5088,
       "length": 13,
       "value": "\"SWCPRNumber\""
     },
     {
       "filePath": "\/Users\/yasheed\/Documents\/SmartOffice\/SWCPackage\/SWCFrameworkDemo\/SWCPackage\/Source\/NetworkEngine\/SOEngineLocalDataHandler\/SOEngineLocalDataHandler.swift",
       "kind": "StringLiteral",
-      "offset": 5202,
+      "offset": 5154,
       "length": 19,
       "value": "\"SWCTokenTimeStamp\""
     },
     {
       "filePath": "\/Users\/yasheed\/Documents\/SmartOffice\/SWCPackage\/SWCFrameworkDemo\/SWCPackage\/Source\/NetworkEngine\/SOEngineLocalDataHandler\/SOEngineLocalDataHandler.swift",
       "kind": "StringLiteral",
-      "offset": 5306,
+      "offset": 5258,
       "length": 18,
       "value": "\"SWCRenewTokenURL\""
     },
     {
       "filePath": "\/Users\/yasheed\/Documents\/SmartOffice\/SWCPackage\/SWCFrameworkDemo\/SWCPackage\/Source\/NetworkEngine\/SOEngineLocalDataHandler\/SOEngineLocalDataHandler.swift",
       "kind": "StringLiteral",
-      "offset": 5396,
+      "offset": 5348,
       "length": 22,
       "value": "\"SWCLastKnownBundleID\""
     },
     {
       "filePath": "\/Users\/yasheed\/Documents\/SmartOffice\/SWCPackage\/SWCFrameworkDemo\/SWCPackage\/Source\/NetworkEngine\/SOEngineLocalDataHandler\/SOEngineLocalDataHandler.swift",
       "kind": "StringLiteral",
-      "offset": 5470,
+      "offset": 5422,
       "length": 18,
       "value": "\"SWCDidCallConfig\""
     },
     {
       "filePath": "\/Users\/yasheed\/Documents\/SmartOffice\/SWCPackage\/SWCFrameworkDemo\/SWCPackage\/Source\/NetworkEngine\/SOEngineLocalDataHandler\/SOEngineLocalDataHandler.swift",
       "kind": "StringLiteral",
-      "offset": 5557,
+      "offset": 5509,
       "length": 12,
       "value": "\"SWCThakkol\""
     },
     {
       "filePath": "\/Users\/yasheed\/Documents\/SmartOffice\/SWCPackage\/SWCFrameworkDemo\/SWCPackage\/Source\/NetworkEngine\/SOEngineLocalDataHandler\/SOEngineLocalDataHandler.swift",
       "kind": "StringLiteral",
-      "offset": 5616,
+      "offset": 5568,
       "length": 17,
       "value": "\"SWCPothuThakkol\""
     }
