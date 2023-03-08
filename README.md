@@ -47,23 +47,23 @@
 * To generate Custom URLRequest, confirm to `SWCRequestSource` protocol and use this new model with `SWCNetworkEngine`
 
 ```
-struct CustomRequestGenerator: SWCRequestSource {
-    func generateRequest() -> URLRequest {
-        /// implement your own URLRequest
-    }
-}
+        struct CustomRequestGenerator: SWCRequestSource {
+            func generateRequest() -> URLRequest {
+                /// implement your own URLRequest
+            }
+        }
 
 ```
 * Using `CustomRequestGenerator` with `SWCNetworkEngine`
 
 ```
-    let engine = SWCNetworkEngine()
-    let request = CustomRequestGenerator()
-    do {
-        let response = try await engine.getResponse(with: request, responseType: ExpectedResponseModel.self)
-    } catch let error {
-        print(error.localizedDescription)
-    }
+        let engine = SWCNetworkEngine()
+        let request = CustomRequestGenerator()
+        do {
+                let response = try await engine.getResponse(with: request, responseType: ExpectedResponseModel.self)
+        } catch let error {
+                print(error.localizedDescription)
+        }
     
 ```
 
@@ -91,17 +91,17 @@ struct CustomRequestGenerator: SWCRequestSource {
 * Create extenion for particular item
 * Example
 ```
-extension HTTPHeaderValue {
-    static let json: HTTPHeaderValue = "application/json"
-}
+        extension HTTPHeaderValue {
+                static let json: HTTPHeaderValue = "application/json"
+        }
 
-extension HTTPHeader {
-    static let accept: HTTPHeader = "Accept"
-}
+        extension HTTPHeader {
+                static let accept: HTTPHeader = "Accept"
+        }
 
-extension HTTPMethod {
-    static let post: HTTPMethod = "POST"
-}
+        extension HTTPMethod {
+                static let post: HTTPMethod = "POST"
+        }
 ```
 #### Upload Task
 
@@ -110,19 +110,19 @@ extension HTTPMethod {
 * Example for request generation
 
 ```
-    struct MyUploadRequest: SWCUploadSource {
-        let serverURL: URL
-        var showLoader: Bool = true
-        var fromFileURL: URL
-        init(serverURL: URL, localFileURL: URL) {
-            fromFileURL = localFileURL
-            self.serverURL = serverURL
+        struct MyUploadRequest: SWCUploadSource {
+                let serverURL: URL
+                var showLoader: Bool = true
+                var fromFileURL: URL
+                init(serverURL: URL, localFileURL: URL) {
+                        fromFileURL = localFileURL
+                        self.serverURL = serverURL
+                }
+                func generateRequest() -> URLRequest {
+                        let request = URLRequest(url: serverURL)
+                        return request
+                }
         }
-        func generateRequest() -> URLRequest {
-            let request = URLRequest(url: serverURL)
-            return request
-        }
-    }
 
 ```
 * `SWCUploadEngine` usage example
@@ -189,19 +189,19 @@ extension HTTPMethod {
 * Example for storing and retrieving values
 
 ```
-    /// Storing
-    SWCUserDefaultsManager.save(value: "Value one", forKey: .keyOne)
+        /// Storing
+        SWCUserDefaultsManager.save(value: "Value one", forKey: .keyOne)
     
-    /// Accessing stored value
-    let value = SWCUserDefaultsManager.string(forKey: .keyOne)
+        /// Accessing stored value
+        let value = SWCUserDefaultsManager.string(forKey: .keyOne)
 ```
 
 * You can create key for SWCUserDefaultsManager by giving `extension` to `SWCUserDefaultsKey`
 
 ```
-extension SWCUserDefaultsKey {
-    static let keyOne: SWCUserDefaultsKey = "KeyOne"
-}
+        extension SWCUserDefaultsKey {
+                static let keyOne: SWCUserDefaultsKey = "KeyOne"
+        }
 
 ```
 
@@ -212,17 +212,17 @@ extension SWCUserDefaultsKey {
 
 
 ```
-    /// Storing
-    SWCKeychainManager.save(value: "Value One", forKey: .keyOne)
+        /// Storing
+        SWCKeychainManager.save(value: "Value One", forKey: .keyOne)
     
-    /// Accessing stored value
-    let value = SWCKeychainManager.string(forKey: .keyOne)
+        /// Accessing stored value
+        let value = SWCKeychainManager.string(forKey: .keyOne)
 ```
 * You can create key for SWCKeychainManager by giving `extension` to `SWCKeychainKey`
 
 ```
-extension SWCKeychainKey {
-    static let keyOne: SWCKeychainKey = "KeyOne"
-}
+        extension SWCKeychainKey {
+                static let keyOne: SWCKeychainKey = "KeyOne"
+        }
 
 ```
