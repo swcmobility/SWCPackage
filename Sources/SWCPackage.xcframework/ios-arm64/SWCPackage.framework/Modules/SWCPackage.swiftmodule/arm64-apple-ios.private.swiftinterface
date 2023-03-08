@@ -27,32 +27,60 @@ extension SWCPackage.SWCRequestSource {
     get
   }
 }
-public enum ContentTypes : Swift.String {
-  case json
-  case jsonOdataVerbose
-  public init?(rawValue: Swift.String)
-  public typealias RawValue = Swift.String
-  public var rawValue: Swift.String {
+public struct HTTPHeaderValue : Swift.ExpressibleByStringLiteral {
+  public var rawValue: Swift.String
+  public init(stringLiteral value: Swift.String)
+  public typealias ExtendedGraphemeClusterLiteralType = Swift.String
+  public typealias StringLiteralType = Swift.String
+  public typealias UnicodeScalarLiteralType = Swift.String
+}
+extension SWCPackage.HTTPHeaderValue : Swift.Hashable {
+  public func hash(into hasher: inout Swift.Hasher)
+  public static func == (a: SWCPackage.HTTPHeaderValue, b: SWCPackage.HTTPHeaderValue) -> Swift.Bool
+  public var hashValue: Swift.Int {
     get
   }
 }
-public enum HTTPHeaders : Swift.String {
-  case accept
-  case contentType
-  case xRequestDigest
-  case XHTTPMethod
-  case iFMATCH
-  public init?(rawValue: Swift.String)
-  public typealias RawValue = Swift.String
-  public var rawValue: Swift.String {
+extension SWCPackage.HTTPHeaderValue {
+  public static let json: SWCPackage.HTTPHeaderValue
+  public static let jsonOdataVerbose: SWCPackage.HTTPHeaderValue
+}
+public struct HTTPHeader : Swift.ExpressibleByStringLiteral {
+  public var rawValue: Swift.String
+  public init(stringLiteral value: Swift.String)
+  public typealias ExtendedGraphemeClusterLiteralType = Swift.String
+  public typealias StringLiteralType = Swift.String
+  public typealias UnicodeScalarLiteralType = Swift.String
+}
+extension SWCPackage.HTTPHeader : Swift.Hashable {
+  public func hash(into hasher: inout Swift.Hasher)
+  public static func == (a: SWCPackage.HTTPHeader, b: SWCPackage.HTTPHeader) -> Swift.Bool
+  public var hashValue: Swift.Int {
     get
   }
 }
-public enum HTTPMethod : Swift.String {
-  case post, get
-  public init?(rawValue: Swift.String)
-  public typealias RawValue = Swift.String
-  public var rawValue: Swift.String {
+extension SWCPackage.HTTPHeader {
+  public static let accept: SWCPackage.HTTPHeader
+  public static let contentType: SWCPackage.HTTPHeader
+  public static let xRequestDigest: SWCPackage.HTTPHeader
+  public static let XHTTPMethod: SWCPackage.HTTPHeader
+  public static let iFMATCH: SWCPackage.HTTPHeader
+}
+public struct HTTPMethod : Swift.ExpressibleByStringLiteral {
+  public var rawValue: Swift.String
+  public init(stringLiteral value: Swift.String)
+  public typealias ExtendedGraphemeClusterLiteralType = Swift.String
+  public typealias StringLiteralType = Swift.String
+  public typealias UnicodeScalarLiteralType = Swift.String
+}
+extension SWCPackage.HTTPMethod {
+  public static let post: SWCPackage.HTTPMethod
+  public static let get: SWCPackage.HTTPMethod
+}
+extension SWCPackage.HTTPMethod : Swift.Hashable {
+  public func hash(into hasher: inout Swift.Hasher)
+  public static func == (a: SWCPackage.HTTPMethod, b: SWCPackage.HTTPMethod) -> Swift.Bool
+  public var hashValue: Swift.Int {
     get
   }
 }
@@ -78,17 +106,16 @@ public struct SWCAttachment : Swift.Encodable {
   public init(fileId: Swift.String, fileName: Swift.String, mimeType: Swift.String, fileData: Swift.String, fileDescription: Swift.String, status: Swift.String = "")
   public func encode(to encoder: Swift.Encoder) throws
 }
-@objc @_inheritsConvenienceInitializers public class SWCUploadEngine : ObjectiveC.NSObject {
-  public static let shared: SWCPackage.SWCUploadEngine
-  public func upload<T>(with source: T) -> SWCPackage.SWCProgressPublisher where T : SWCPackage.SWCUploadSource
-  @objc override dynamic public init()
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers final public class SWCUploadEngine : ObjectiveC.NSObject {
+  public static let prepare: SWCPackage.SWCUploadEngine
+  final public func upload(with source: some SWCUploadSource) -> SWCPackage.SWCProgressPublisher
   @objc deinit
 }
 extension SWCPackage.SWCUploadEngine : Foundation.URLSessionTaskDelegate {
-  @objc dynamic public func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, didSendBodyData bytesSent: Swift.Int64, totalBytesSent: Swift.Int64, totalBytesExpectedToSend: Swift.Int64)
+  @objc final public func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, didSendBodyData bytesSent: Swift.Int64, totalBytesSent: Swift.Int64, totalBytesExpectedToSend: Swift.Int64)
 }
 extension SWCPackage.SWCUploadEngine : Foundation.URLSessionDelegate {
-  @objc dynamic public func urlSession(_ session: Foundation.URLSession, didReceive challenge: Foundation.URLAuthenticationChallenge, completionHandler: @escaping (Foundation.URLSession.AuthChallengeDisposition, Foundation.URLCredential?) -> Swift.Void)
+  @objc final public func urlSession(_ session: Foundation.URLSession, didReceive challenge: Foundation.URLAuthenticationChallenge, completionHandler: @escaping (Foundation.URLSession.AuthChallengeDisposition, Foundation.URLCredential?) -> Swift.Void)
 }
 public struct SWCRequestBody : Swift.Encodable {
   public var otherParams: [Swift.String : Swift.String]?
@@ -112,12 +139,6 @@ public struct SWCRequestBody : Swift.Encodable {
   public var additionalChunks: [Swift.String : Any]
   public var kpiLogs: [SWCPackage.KPINetworkModel]?
   public func encode(to encoder: Swift.Encoder) throws
-}
-public struct DDriveUploadGenerator : SWCPackage.SWCUploadSource {
-  public var showLoader: Swift.Bool
-  public var fromFileURL: Foundation.URL
-  public init(urlString: Swift.String, fromFileURL: Foundation.URL, digestKey: Swift.String)
-  public func generateRequest() -> Foundation.URLRequest
 }
 public class PublicKey : SWCPackage.Key {
   final public let key: Security.SecKey
@@ -174,8 +195,8 @@ open class SWCKeychainWrapper {
 }
 public struct SWCRequestComponents {
   public var url: Swift.String
-  public var contentType: SWCPackage.ContentTypes
-  public var accept: SWCPackage.ContentTypes
+  public var contentType: SWCPackage.HTTPHeaderValue
+  public var accept: SWCPackage.HTTPHeaderValue
   public var httpMethod: SWCPackage.HTTPMethod
   public var body: SWCPackage.SWCRequestBody
   public init(url: Swift.String)
@@ -236,7 +257,7 @@ public enum Language : Swift.String {
     get
   }
 }
-@_hasMissingDesignatedInitializers public class AppLanguage {
+@_hasMissingDesignatedInitializers final public class AppLanguage {
   public static var current: SWCPackage.Language {
     get
   }
@@ -497,16 +518,17 @@ extension SwiftUI.Color {
     public static let warning: SwiftUI.Color
   }
 }
-@_hasMissingDesignatedInitializers final public class SWCPackageHandler {
+public struct SWCPackageHandler {
   public static func generateSWCIdentifier(for identifier: Swift.String) -> Swift.String?
   public static func configure(_ configuration: SWCPackage.SWCPackageHandler.Configuration? = nil)
+  public static func setToDebugMode()
   public static func set(token: Swift.String, timeStamp: Swift.String)
   public static func set(userData: SWCPackage.SWCPackageHandler.UserData)
+  public static func getUserData() -> SWCPackage.SWCPackageHandler.UserData?
   public static func set(aesKey: Swift.String, aesIV: Swift.String)
   public static func set(rsaPublicKey: Swift.String)
   public static func set(moduleApiKey: Swift.String)
   public static func update(password: Swift.String)
-  @objc deinit
 }
 public enum SwiftRSAError : Swift.Error {
   case emptyPEMKey
@@ -647,26 +669,6 @@ extension SWCPackage.SWCRequestGenerator {
   public func getResponse(responseQueue: Dispatch.DispatchQueue = .main) async throws -> [Swift.String : Any]
   #endif
 }
-public protocol SWCBackgroundDownloaderDelegate : AnyObject {
-  func backgroundDownload(didCompleteWithError error: Swift.Error, identifier: Swift.String)
-  func backgroundDownload(didFinishDownloadingTo location: Foundation.URL, identifier: Swift.String)
-}
-@objc public class SWCBackgroundDownloader : ObjectiveC.NSObject {
-  public var backgroundCompletionHandler: (() -> Swift.Void)?
-  public init(identifier: Swift.String, urlString: Swift.String, delegate: SWCPackage.SWCBackgroundDownloaderDelegate?)
-  @discardableResult
-  public func start() -> Foundation.URLSessionDownloadTask
-  @objc deinit
-}
-extension SWCPackage.SWCBackgroundDownloader : Foundation.URLSessionDelegate {
-  @objc dynamic public func urlSessionDidFinishEvents(forBackgroundURLSession session: Foundation.URLSession)
-  @objc dynamic public func urlSession(_ session: Foundation.URLSession, didBecomeInvalidWithError error: Swift.Error?)
-  @objc dynamic public func urlSession(_ session: Foundation.URLSession, didReceive challenge: Foundation.URLAuthenticationChallenge, completionHandler: @escaping (Foundation.URLSession.AuthChallengeDisposition, Foundation.URLCredential?) -> Swift.Void)
-}
-extension SWCPackage.SWCBackgroundDownloader : Foundation.URLSessionDownloadDelegate, Foundation.URLSessionTaskDelegate {
-  @objc dynamic public func urlSession(_ session: Foundation.URLSession, downloadTask: Foundation.URLSessionDownloadTask, didFinishDownloadingTo location: Foundation.URL)
-  @objc dynamic public func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, didCompleteWithError error: Swift.Error?)
-}
 @objc final public class SWCNetworkEngine : ObjectiveC.NSObject {
   final public var moduleId: Swift.String?
   final public var validateTokenTimeStamp: Swift.Bool
@@ -759,12 +761,12 @@ public typealias SWCDictionaryResultObserver = Combine.AnyPublisher<[Swift.Strin
 public typealias SWCProgressPublisher = Combine.AnyPublisher<Swift.Double, SWCPackage.SWCNetworkError>
 public typealias SWCXMLObserver<T> = Combine.AnyPublisher<T.Element, SWCPackage.SWCNetworkError> where T : SWCPackage.XMLParsable
 public typealias SWCXMLResultObserver = Combine.AnyPublisher<SWCPackage.XMLIndexer, SWCPackage.SWCNetworkError>
-@objc @_inheritsConvenienceInitializers public class CommonLoader : ObjectiveC.NSObject {
-  public class func showSpinner()
-  public class var window: UIKit.UIWindow? {
+@objc @_inheritsConvenienceInitializers final public class CommonLoader : ObjectiveC.NSObject {
+  final public class func showSpinner()
+  final public class var window: UIKit.UIWindow? {
     get
   }
-  public class func hideSpinner()
+  final public class func hideSpinner()
   @objc override dynamic public init()
   @objc deinit
 }
@@ -787,18 +789,17 @@ public protocol RootKeyParsable {
 extension SWCPackage.RootKeyParsable {
   public static func rootKey() -> Swift.String
 }
-@objc @_inheritsConvenienceInitializers public class SWCDownloadEngine : ObjectiveC.NSObject {
-  public var session: Foundation.URLSession {
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers final public class SWCDownloadEngine : ObjectiveC.NSObject {
+  final public var session: Foundation.URLSession {
     get
     set
   }
-  public static let shared: SWCPackage.SWCDownloadEngine
-  public func downloadTaskPublisher(with url: Swift.String, showLoader: Swift.Bool = false) -> Combine.AnyPublisher<SWCPackage.SWCDownloadOutput, Swift.Error>
-  @objc override dynamic public init()
+  public static let prepare: SWCPackage.SWCDownloadEngine
+  final public func download(from url: Swift.String, showLoader: Swift.Bool = false) -> Combine.AnyPublisher<SWCPackage.SWCDownloadOutput, Swift.Error>
   @objc deinit
 }
 extension SWCPackage.SWCDownloadEngine : Foundation.URLSessionDelegate {
-  @objc dynamic public func urlSession(_ session: Foundation.URLSession, didReceive challenge: Foundation.URLAuthenticationChallenge, completionHandler: @escaping (Foundation.URLSession.AuthChallengeDisposition, Foundation.URLCredential?) -> Swift.Void)
+  @objc final public func urlSession(_ session: Foundation.URLSession, didReceive challenge: Foundation.URLAuthenticationChallenge, completionHandler: @escaping (Foundation.URLSession.AuthChallengeDisposition, Foundation.URLCredential?) -> Swift.Void)
 }
 public class PrivateKey : SWCPackage.Key {
   final public let key: Security.SecKey
@@ -924,11 +925,11 @@ public enum SWCDownloadOutput {
 public struct SWCExternalRequestGenerator {
   public var httpBody: Foundation.Data?
   public var showLoader: Swift.Bool
-  public var contentType: SWCPackage.ContentTypes
-  public var accept: SWCPackage.ContentTypes
+  public var contentType: SWCPackage.HTTPHeaderValue
+  public var accept: SWCPackage.HTTPHeaderValue
   public var httpMethod: SWCPackage.HTTPMethod
   public init(url: Swift.String, body: [Swift.String : Any]?)
-  public mutating func setHeader(value: Swift.String, field: SWCPackage.HTTPHeaders)
+  public mutating func setHeader(value: SWCPackage.HTTPHeaderValue, field: SWCPackage.HTTPHeader)
 }
 extension SWCPackage.SWCExternalRequestGenerator : SWCPackage.SWCRequestSource {
   public func generateRequest() -> Foundation.URLRequest
@@ -943,15 +944,6 @@ public protocol XMLParsable {
 extension Foundation.NSNotification.Name {
   public static let passwordExpired: Foundation.Notification.Name
 }
-extension SWCPackage.ContentTypes : Swift.Equatable {}
-extension SWCPackage.ContentTypes : Swift.Hashable {}
-extension SWCPackage.ContentTypes : Swift.RawRepresentable {}
-extension SWCPackage.HTTPHeaders : Swift.Equatable {}
-extension SWCPackage.HTTPHeaders : Swift.Hashable {}
-extension SWCPackage.HTTPHeaders : Swift.RawRepresentable {}
-extension SWCPackage.HTTPMethod : Swift.Equatable {}
-extension SWCPackage.HTTPMethod : Swift.Hashable {}
-extension SWCPackage.HTTPMethod : Swift.RawRepresentable {}
 extension SWCPackage.SWCResponseCode : Swift.Equatable {}
 extension SWCPackage.SWCResponseCode : Swift.Hashable {}
 extension SWCPackage.SWCResponseCode : Swift.RawRepresentable {}

@@ -259,38 +259,16 @@ SWIFT_CLASS("_TtC10SWCPackage12CommonLoader")
 @end
 
 
-SWIFT_CLASS("_TtC10SWCPackage23SWCBackgroundDownloader")
-@interface SWCBackgroundDownloader : NSObject
+/// Used to manage Download functionalatiy
+SWIFT_CLASS("_TtC10SWCPackage17SWCDownloadEngine")
+@interface SWCDownloadEngine : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
 @class NSURLSession;
-@class NSURLSessionDownloadTask;
-@class NSURL;
-@class NSURLSessionTask;
-
-@interface SWCBackgroundDownloader (SWIFT_EXTENSION(SWCPackage)) <NSURLSessionDownloadDelegate>
-- (void)URLSession:(NSURLSession * _Nonnull)session downloadTask:(NSURLSessionDownloadTask * _Nonnull)downloadTask didFinishDownloadingToURL:(NSURL * _Nonnull)location;
-- (void)URLSession:(NSURLSession * _Nonnull)session task:(NSURLSessionTask * _Nonnull)task didCompleteWithError:(NSError * _Nullable)error;
-@end
-
 @class NSURLAuthenticationChallenge;
 @class NSURLCredential;
-
-@interface SWCBackgroundDownloader (SWIFT_EXTENSION(SWCPackage)) <NSURLSessionDelegate>
-- (void)URLSessionDidFinishEventsForBackgroundURLSession:(NSURLSession * _Nonnull)session;
-- (void)URLSession:(NSURLSession * _Nonnull)session didBecomeInvalidWithError:(NSError * _Nullable)error;
-- (void)URLSession:(NSURLSession * _Nonnull)session didReceiveChallenge:(NSURLAuthenticationChallenge * _Nonnull)challenge completionHandler:(void (^ _Nonnull)(NSURLSessionAuthChallengeDisposition, NSURLCredential * _Nullable))completionHandler;
-@end
-
-
-/// Used to manage Download functionalatiy
-SWIFT_CLASS("_TtC10SWCPackage17SWCDownloadEngine")
-@interface SWCDownloadEngine : NSObject
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
-
 
 @interface SWCDownloadEngine (SWIFT_EXTENSION(SWCPackage)) <NSURLSessionDelegate>
 - (void)URLSession:(NSURLSession * _Nonnull)session didReceiveChallenge:(NSURLAuthenticationChallenge * _Nonnull)challenge completionHandler:(void (^ _Nonnull)(NSURLSessionAuthChallengeDisposition, NSURLCredential * _Nullable))completionHandler;
@@ -320,12 +298,14 @@ SWIFT_CLASS("_TtC10SWCPackage16SWCNetworkEngine")
 
 
 
-/// Per
+/// Wrapper for uploadTask
 SWIFT_CLASS("_TtC10SWCPackage15SWCUploadEngine")
 @interface SWCUploadEngine : NSObject
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
+@class NSURLSessionTask;
 
 @interface SWCUploadEngine (SWIFT_EXTENSION(SWCPackage)) <NSURLSessionTaskDelegate>
 - (void)URLSession:(NSURLSession * _Nonnull)session task:(NSURLSessionTask * _Nonnull)task didSendBodyData:(int64_t)bytesSent totalBytesSent:(int64_t)totalBytesSent totalBytesExpectedToSend:(int64_t)totalBytesExpectedToSend;
@@ -620,38 +600,16 @@ SWIFT_CLASS("_TtC10SWCPackage12CommonLoader")
 @end
 
 
-SWIFT_CLASS("_TtC10SWCPackage23SWCBackgroundDownloader")
-@interface SWCBackgroundDownloader : NSObject
+/// Used to manage Download functionalatiy
+SWIFT_CLASS("_TtC10SWCPackage17SWCDownloadEngine")
+@interface SWCDownloadEngine : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
 @class NSURLSession;
-@class NSURLSessionDownloadTask;
-@class NSURL;
-@class NSURLSessionTask;
-
-@interface SWCBackgroundDownloader (SWIFT_EXTENSION(SWCPackage)) <NSURLSessionDownloadDelegate>
-- (void)URLSession:(NSURLSession * _Nonnull)session downloadTask:(NSURLSessionDownloadTask * _Nonnull)downloadTask didFinishDownloadingToURL:(NSURL * _Nonnull)location;
-- (void)URLSession:(NSURLSession * _Nonnull)session task:(NSURLSessionTask * _Nonnull)task didCompleteWithError:(NSError * _Nullable)error;
-@end
-
 @class NSURLAuthenticationChallenge;
 @class NSURLCredential;
-
-@interface SWCBackgroundDownloader (SWIFT_EXTENSION(SWCPackage)) <NSURLSessionDelegate>
-- (void)URLSessionDidFinishEventsForBackgroundURLSession:(NSURLSession * _Nonnull)session;
-- (void)URLSession:(NSURLSession * _Nonnull)session didBecomeInvalidWithError:(NSError * _Nullable)error;
-- (void)URLSession:(NSURLSession * _Nonnull)session didReceiveChallenge:(NSURLAuthenticationChallenge * _Nonnull)challenge completionHandler:(void (^ _Nonnull)(NSURLSessionAuthChallengeDisposition, NSURLCredential * _Nullable))completionHandler;
-@end
-
-
-/// Used to manage Download functionalatiy
-SWIFT_CLASS("_TtC10SWCPackage17SWCDownloadEngine")
-@interface SWCDownloadEngine : NSObject
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
-
 
 @interface SWCDownloadEngine (SWIFT_EXTENSION(SWCPackage)) <NSURLSessionDelegate>
 - (void)URLSession:(NSURLSession * _Nonnull)session didReceiveChallenge:(NSURLAuthenticationChallenge * _Nonnull)challenge completionHandler:(void (^ _Nonnull)(NSURLSessionAuthChallengeDisposition, NSURLCredential * _Nullable))completionHandler;
@@ -681,12 +639,14 @@ SWIFT_CLASS("_TtC10SWCPackage16SWCNetworkEngine")
 
 
 
-/// Per
+/// Wrapper for uploadTask
 SWIFT_CLASS("_TtC10SWCPackage15SWCUploadEngine")
 @interface SWCUploadEngine : NSObject
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
+@class NSURLSessionTask;
 
 @interface SWCUploadEngine (SWIFT_EXTENSION(SWCPackage)) <NSURLSessionTaskDelegate>
 - (void)URLSession:(NSURLSession * _Nonnull)session task:(NSURLSessionTask * _Nonnull)task didSendBodyData:(int64_t)bytesSent totalBytesSent:(int64_t)totalBytesSent totalBytesExpectedToSend:(int64_t)totalBytesExpectedToSend;

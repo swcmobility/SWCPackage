@@ -10,7 +10,7 @@
 		</data>
 		<key>Headers/SWCPackage-Swift.h</key>
 		<data>
-		O2T3M/6quj8E/gHEn+Q46sO3k3s=
+		fkf2tJG1lTnYbRTFUk30GMN4W9w=
 		</data>
 		<key>Headers/SWCPackage.h</key>
 		<data>
@@ -26,43 +26,43 @@
 		</data>
 		<key>Modules/SWCPackage.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		CuQjnV0Bw8XmwkWcuI7bAwBAK1A=
+		3amhvQEslSgx+DbMf3MHA8w3vLo=
 		</data>
 		<key>Modules/SWCPackage.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		gAJQlJpUZF+ZwcdReHYdBMU8DSM=
+		w4ZBvYNA5y+XndVyMy6BkQCB7P8=
 		</data>
 		<key>Modules/SWCPackage.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		jNCtWQyCj7sS1GHA/NaxkwFoOg4=
+		fMBzjco4cDqt/4MmotVguGXcUB8=
 		</data>
 		<key>Modules/SWCPackage.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		gAJQlJpUZF+ZwcdReHYdBMU8DSM=
+		w4ZBvYNA5y+XndVyMy6BkQCB7P8=
 		</data>
 		<key>Modules/SWCPackage.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		ZD0LgpTlRzh88FFpkfWvsyWayKk=
+		xHGTICydLXFNTLUYN+MEEB3nzcc=
 		</data>
 		<key>Modules/SWCPackage.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		CuQjnV0Bw8XmwkWcuI7bAwBAK1A=
+		3amhvQEslSgx+DbMf3MHA8w3vLo=
 		</data>
 		<key>Modules/SWCPackage.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		6keOaoLWrMRtN/3VKzydai0Q3oQ=
+		A3ieRR6joLu1Fg9jVaIYBae3ytA=
 		</data>
 		<key>Modules/SWCPackage.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		cD9GM1BI+zxtCdKi+G3lfTuSO7A=
+		QTRcVD9yNNCtu6VDQ5tfn/GcTaM=
 		</data>
 		<key>Modules/SWCPackage.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		6keOaoLWrMRtN/3VKzydai0Q3oQ=
+		A3ieRR6joLu1Fg9jVaIYBae3ytA=
 		</data>
 		<key>Modules/SWCPackage.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		yo3bEMd1zsO9wUzqyLZwq3JGXEw=
+		Dl+YvFxHZ+Y2ioxqiExnWoFjG+U=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -82,7 +82,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			5rMivraHSM7ZdA3SO0LM5eGgjlcHYL9DK8f4iiZmrW4=
+			n3UXxuh87zdgYM0dOkx4Kqg1/H6BaY3rM3g1/Z4xoxo=
 			</data>
 		</dict>
 		<key>Headers/SWCPackage.h</key>
@@ -103,70 +103,70 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			wjaHbPEilIgPslf6Xy8gEtzjUT8nmn3OiE0Z/1YX8Co=
+			Md7unWQQk5o2KV4qwS3fdzKoTCHdJ1IxhKH3fS+Q9nE=
 			</data>
 		</dict>
 		<key>Modules/SWCPackage.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			bZOoRM3s/J/fhTvcWGYS8lUCxY14OaakEA7G0oCSbgQ=
+			bZt4hKEsiv3Sek6zS1YqCJNZWcvedjd3seysRwYIoAA=
 			</data>
 		</dict>
 		<key>Modules/SWCPackage.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			pehFccV+N8RXBntJnAi9LI+5bMKb0wh1o8UZJwytwmI=
+			9ee05zUQkZ769n2ockTipT7STEUU5Q3ZxAdk1uD4xyU=
 			</data>
 		</dict>
 		<key>Modules/SWCPackage.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			bZOoRM3s/J/fhTvcWGYS8lUCxY14OaakEA7G0oCSbgQ=
+			bZt4hKEsiv3Sek6zS1YqCJNZWcvedjd3seysRwYIoAA=
 			</data>
 		</dict>
 		<key>Modules/SWCPackage.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Ch1eInhAYaupZ5V9DKmpYlctuejLtya0WCMQjMfQXnU=
+			AQSzx3lo1pfd9WQND/BBxid4OGW6vJUxpomGUG60RtQ=
 			</data>
 		</dict>
 		<key>Modules/SWCPackage.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			wjaHbPEilIgPslf6Xy8gEtzjUT8nmn3OiE0Z/1YX8Co=
+			Md7unWQQk5o2KV4qwS3fdzKoTCHdJ1IxhKH3fS+Q9nE=
 			</data>
 		</dict>
 		<key>Modules/SWCPackage.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			suYkqaviGBF6vFGWan5EIfy1grB22FjQ2lRddiVAPgE=
+			VUfBhziBYIBikhnOz5zEmACBzw4S1eEruyS/1ptHGqY=
 			</data>
 		</dict>
 		<key>Modules/SWCPackage.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			SIIO1dAi6l+TBOJ02aDISlT8StEay0EH8KygJ55zEd8=
+			2RteptxrAiSKJblJlz4eAi9fj/aOMwXqSsLBLYSn/+E=
 			</data>
 		</dict>
 		<key>Modules/SWCPackage.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			suYkqaviGBF6vFGWan5EIfy1grB22FjQ2lRddiVAPgE=
+			VUfBhziBYIBikhnOz5zEmACBzw4S1eEruyS/1ptHGqY=
 			</data>
 		</dict>
 		<key>Modules/SWCPackage.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			kW7vLl47FUMDWfhwaNPw7aXbukvKPyHd4NRPJTiN92c=
+			4LY2dKxDgtDfEBtaJsvMJPiE9Vfgwt2eVJ6MOgl1bpU=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

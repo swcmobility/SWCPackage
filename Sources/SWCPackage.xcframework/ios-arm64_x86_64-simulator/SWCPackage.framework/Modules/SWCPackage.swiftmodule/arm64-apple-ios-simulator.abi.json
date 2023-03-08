@@ -228,45 +228,270 @@
       },
       {
         "kind": "TypeDecl",
-        "name": "ContentTypes",
-        "printedName": "ContentTypes",
+        "name": "HTTPHeaderValue",
+        "printedName": "HTTPHeaderValue",
         "children": [
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:10SWCPackage15HTTPHeaderValueV03rawC0SSvp",
+            "mangledName": "$s10SWCPackage15HTTPHeaderValueV03rawC0SSvp",
+            "moduleName": "SWCPackage",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10SWCPackage15HTTPHeaderValueV03rawC0SSvg",
+                "mangledName": "$s10SWCPackage15HTTPHeaderValueV03rawC0SSvg",
+                "moduleName": "SWCPackage",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10SWCPackage15HTTPHeaderValueV03rawC0SSvs",
+                "mangledName": "$s10SWCPackage15HTTPHeaderValueV03rawC0SSvs",
+                "moduleName": "SWCPackage",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10SWCPackage15HTTPHeaderValueV03rawC0SSvM",
+                "mangledName": "$s10SWCPackage15HTTPHeaderValueV03rawC0SSvM",
+                "moduleName": "SWCPackage",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(stringLiteral:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "HTTPHeaderValue",
+                "printedName": "SWCPackage.HTTPHeaderValue",
+                "usr": "s:10SWCPackage15HTTPHeaderValueV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:10SWCPackage15HTTPHeaderValueV13stringLiteralACSS_tcfc",
+            "mangledName": "$s10SWCPackage15HTTPHeaderValueV13stringLiteralACSS_tcfc",
+            "moduleName": "SWCPackage",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10SWCPackage15HTTPHeaderValueV4hash4intoys6HasherVz_tF",
+            "mangledName": "$s10SWCPackage15HTTPHeaderValueV4hash4intoys6HasherVz_tF",
+            "moduleName": "SWCPackage",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:10SWCPackage15HTTPHeaderValueV04hashC0Sivp",
+            "mangledName": "$s10SWCPackage15HTTPHeaderValueV04hashC0Sivp",
+            "moduleName": "SWCPackage",
+            "implicit": true,
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10SWCPackage15HTTPHeaderValueV04hashC0Sivg",
+                "mangledName": "$s10SWCPackage15HTTPHeaderValueV04hashC0Sivg",
+                "moduleName": "SWCPackage",
+                "implicit": true,
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "HTTPHeaderValue",
+                "printedName": "SWCPackage.HTTPHeaderValue",
+                "usr": "s:10SWCPackage15HTTPHeaderValueV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "HTTPHeaderValue",
+                "printedName": "SWCPackage.HTTPHeaderValue",
+                "usr": "s:10SWCPackage15HTTPHeaderValueV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10SWCPackage15HTTPHeaderValueV2eeoiySbAC_ACtFZ",
+            "mangledName": "$s10SWCPackage15HTTPHeaderValueV2eeoiySbAC_ACtFZ",
+            "moduleName": "SWCPackage",
+            "static": true,
+            "implicit": true,
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
           {
             "kind": "Var",
             "name": "json",
             "printedName": "json",
             "children": [
               {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(SWCPackage.ContentTypes.Type) -> SWCPackage.ContentTypes",
+                "kind": "TypeNominal",
+                "name": "HTTPHeaderValue",
+                "printedName": "SWCPackage.HTTPHeaderValue",
+                "usr": "s:10SWCPackage15HTTPHeaderValueV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:10SWCPackage15HTTPHeaderValueV4jsonACvpZ",
+            "mangledName": "$s10SWCPackage15HTTPHeaderValueV4jsonACvpZ",
+            "moduleName": "SWCPackage",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage"
+            ],
+            "isFromExtension": true,
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "ContentTypes",
-                    "printedName": "SWCPackage.ContentTypes",
-                    "usr": "s:10SWCPackage12ContentTypesO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "SWCPackage.ContentTypes.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "ContentTypes",
-                        "printedName": "SWCPackage.ContentTypes",
-                        "usr": "s:10SWCPackage12ContentTypesO"
-                      }
-                    ]
+                    "name": "HTTPHeaderValue",
+                    "printedName": "SWCPackage.HTTPHeaderValue",
+                    "usr": "s:10SWCPackage15HTTPHeaderValueV"
                   }
-                ]
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10SWCPackage15HTTPHeaderValueV4jsonACvgZ",
+                "mangledName": "$s10SWCPackage15HTTPHeaderValueV4jsonACvgZ",
+                "moduleName": "SWCPackage",
+                "static": true,
+                "implicit": true,
+                "isFromExtension": true,
+                "accessorKind": "get"
               }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:10SWCPackage12ContentTypesO4jsonyA2CmF",
-            "mangledName": "$s10SWCPackage12ContentTypesO4jsonyA2CmF",
-            "moduleName": "SWCPackage"
+            ]
           },
           {
             "kind": "Var",
@@ -274,70 +499,145 @@
             "printedName": "jsonOdataVerbose",
             "children": [
               {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(SWCPackage.ContentTypes.Type) -> SWCPackage.ContentTypes",
+                "kind": "TypeNominal",
+                "name": "HTTPHeaderValue",
+                "printedName": "SWCPackage.HTTPHeaderValue",
+                "usr": "s:10SWCPackage15HTTPHeaderValueV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:10SWCPackage15HTTPHeaderValueV16jsonOdataVerboseACvpZ",
+            "mangledName": "$s10SWCPackage15HTTPHeaderValueV16jsonOdataVerboseACvpZ",
+            "moduleName": "SWCPackage",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage"
+            ],
+            "isFromExtension": true,
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "ContentTypes",
-                    "printedName": "SWCPackage.ContentTypes",
-                    "usr": "s:10SWCPackage12ContentTypesO"
-                  },
+                    "name": "HTTPHeaderValue",
+                    "printedName": "SWCPackage.HTTPHeaderValue",
+                    "usr": "s:10SWCPackage15HTTPHeaderValueV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10SWCPackage15HTTPHeaderValueV16jsonOdataVerboseACvgZ",
+                "mangledName": "$s10SWCPackage15HTTPHeaderValueV16jsonOdataVerboseACvgZ",
+                "moduleName": "SWCPackage",
+                "static": true,
+                "implicit": true,
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:10SWCPackage15HTTPHeaderValueV",
+        "mangledName": "$s10SWCPackage15HTTPHeaderValueV",
+        "moduleName": "SWCPackage",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "ExpressibleByStringLiteral",
+            "printedName": "ExpressibleByStringLiteral",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "StringLiteralType",
+                "printedName": "StringLiteralType",
+                "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "SWCPackage.ContentTypes.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "ContentTypes",
-                        "printedName": "SWCPackage.ContentTypes",
-                        "usr": "s:10SWCPackage12ContentTypesO"
-                      }
-                    ]
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
                   }
                 ]
               }
             ],
-            "declKind": "EnumElement",
-            "usr": "s:10SWCPackage12ContentTypesO16jsonOdataVerboseyA2CmF",
-            "mangledName": "$s10SWCPackage12ContentTypesO16jsonOdataVerboseyA2CmF",
-            "moduleName": "SWCPackage"
+            "usr": "s:s26ExpressibleByStringLiteralP",
+            "mangledName": "$ss26ExpressibleByStringLiteralP"
           },
           {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init(rawValue:)",
+            "kind": "Conformance",
+            "name": "ExpressibleByExtendedGraphemeClusterLiteral",
+            "printedName": "ExpressibleByExtendedGraphemeClusterLiteral",
             "children": [
               {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "SWCPackage.ContentTypes?",
+                "kind": "TypeWitness",
+                "name": "ExtendedGraphemeClusterLiteralType",
+                "printedName": "ExtendedGraphemeClusterLiteralType",
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "ContentTypes",
-                    "printedName": "SWCPackage.ContentTypes",
-                    "usr": "s:10SWCPackage12ContentTypesO"
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
                   }
-                ],
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
+                ]
               }
             ],
-            "declKind": "Constructor",
-            "usr": "s:10SWCPackage12ContentTypesO8rawValueACSgSS_tcfc",
-            "mangledName": "$s10SWCPackage12ContentTypesO8rawValueACSgSS_tcfc",
-            "moduleName": "SWCPackage",
-            "implicit": true,
-            "init_kind": "Designated"
+            "usr": "s:s43ExpressibleByExtendedGraphemeClusterLiteralP",
+            "mangledName": "$ss43ExpressibleByExtendedGraphemeClusterLiteralP"
           },
+          {
+            "kind": "Conformance",
+            "name": "ExpressibleByUnicodeScalarLiteral",
+            "printedName": "ExpressibleByUnicodeScalarLiteral",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "UnicodeScalarLiteralType",
+                "printedName": "UnicodeScalarLiteralType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s33ExpressibleByUnicodeScalarLiteralP",
+            "mangledName": "$ss33ExpressibleByUnicodeScalarLiteralP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "HTTPHeader",
+        "printedName": "HTTPHeader",
+        "children": [
           {
             "kind": "Var",
             "name": "rawValue",
@@ -351,10 +651,14 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:10SWCPackage12ContentTypesO8rawValueSSvp",
-            "mangledName": "$s10SWCPackage12ContentTypesO8rawValueSSvp",
+            "usr": "s:10SWCPackage10HTTPHeaderV8rawValueSSvp",
+            "mangledName": "$s10SWCPackage10HTTPHeaderV8rawValueSSvp",
             "moduleName": "SWCPackage",
-            "implicit": true,
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
             "accessors": [
               {
                 "kind": "Accessor",
@@ -369,103 +673,232 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:10SWCPackage12ContentTypesO8rawValueSSvg",
-                "mangledName": "$s10SWCPackage12ContentTypesO8rawValueSSvg",
+                "usr": "s:10SWCPackage10HTTPHeaderV8rawValueSSvg",
+                "mangledName": "$s10SWCPackage10HTTPHeaderV8rawValueSSvg",
                 "moduleName": "SWCPackage",
                 "implicit": true,
                 "accessorKind": "get"
-              }
-            ]
-          }
-        ],
-        "declKind": "Enum",
-        "usr": "s:10SWCPackage12ContentTypesO",
-        "mangledName": "$s10SWCPackage12ContentTypesO",
-        "moduleName": "SWCPackage",
-        "declAttributes": [
-          "AccessControl"
-        ],
-        "enumRawTypeName": "String",
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Hashable",
-            "printedName": "Hashable",
-            "usr": "s:SH",
-            "mangledName": "$sSH"
-          },
-          {
-            "kind": "Conformance",
-            "name": "RawRepresentable",
-            "printedName": "RawRepresentable",
-            "children": [
+              },
               {
-                "kind": "TypeWitness",
-                "name": "RawValue",
-                "printedName": "RawValue",
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
                 "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
                   {
                     "kind": "TypeNominal",
                     "name": "String",
                     "printedName": "Swift.String",
                     "usr": "s:SS"
                   }
-                ]
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10SWCPackage10HTTPHeaderV8rawValueSSvs",
+                "mangledName": "$s10SWCPackage10HTTPHeaderV8rawValueSSvs",
+                "moduleName": "SWCPackage",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10SWCPackage10HTTPHeaderV8rawValueSSvM",
+                "mangledName": "$s10SWCPackage10HTTPHeaderV8rawValueSSvM",
+                "moduleName": "SWCPackage",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(stringLiteral:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "HTTPHeader",
+                "printedName": "SWCPackage.HTTPHeader",
+                "usr": "s:10SWCPackage10HTTPHeaderV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
               }
             ],
-            "usr": "s:SY",
-            "mangledName": "$sSY"
-          }
-        ]
-      },
-      {
-        "kind": "TypeDecl",
-        "name": "HTTPHeaders",
-        "printedName": "HTTPHeaders",
-        "children": [
+            "declKind": "Constructor",
+            "usr": "s:10SWCPackage10HTTPHeaderV13stringLiteralACSS_tcfc",
+            "mangledName": "$s10SWCPackage10HTTPHeaderV13stringLiteralACSS_tcfc",
+            "moduleName": "SWCPackage",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10SWCPackage10HTTPHeaderV4hash4intoys6HasherVz_tF",
+            "mangledName": "$s10SWCPackage10HTTPHeaderV4hash4intoys6HasherVz_tF",
+            "moduleName": "SWCPackage",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:10SWCPackage10HTTPHeaderV9hashValueSivp",
+            "mangledName": "$s10SWCPackage10HTTPHeaderV9hashValueSivp",
+            "moduleName": "SWCPackage",
+            "implicit": true,
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10SWCPackage10HTTPHeaderV9hashValueSivg",
+                "mangledName": "$s10SWCPackage10HTTPHeaderV9hashValueSivg",
+                "moduleName": "SWCPackage",
+                "implicit": true,
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "HTTPHeader",
+                "printedName": "SWCPackage.HTTPHeader",
+                "usr": "s:10SWCPackage10HTTPHeaderV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "HTTPHeader",
+                "printedName": "SWCPackage.HTTPHeader",
+                "usr": "s:10SWCPackage10HTTPHeaderV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10SWCPackage10HTTPHeaderV2eeoiySbAC_ACtFZ",
+            "mangledName": "$s10SWCPackage10HTTPHeaderV2eeoiySbAC_ACtFZ",
+            "moduleName": "SWCPackage",
+            "static": true,
+            "implicit": true,
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
           {
             "kind": "Var",
             "name": "accept",
             "printedName": "accept",
             "children": [
               {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(SWCPackage.HTTPHeaders.Type) -> SWCPackage.HTTPHeaders",
+                "kind": "TypeNominal",
+                "name": "HTTPHeader",
+                "printedName": "SWCPackage.HTTPHeader",
+                "usr": "s:10SWCPackage10HTTPHeaderV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:10SWCPackage10HTTPHeaderV6acceptACvpZ",
+            "mangledName": "$s10SWCPackage10HTTPHeaderV6acceptACvpZ",
+            "moduleName": "SWCPackage",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage"
+            ],
+            "isFromExtension": true,
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "HTTPHeaders",
-                    "printedName": "SWCPackage.HTTPHeaders",
-                    "usr": "s:10SWCPackage11HTTPHeadersO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "SWCPackage.HTTPHeaders.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "HTTPHeaders",
-                        "printedName": "SWCPackage.HTTPHeaders",
-                        "usr": "s:10SWCPackage11HTTPHeadersO"
-                      }
-                    ]
+                    "name": "HTTPHeader",
+                    "printedName": "SWCPackage.HTTPHeader",
+                    "usr": "s:10SWCPackage10HTTPHeaderV"
                   }
-                ]
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10SWCPackage10HTTPHeaderV6acceptACvgZ",
+                "mangledName": "$s10SWCPackage10HTTPHeaderV6acceptACvgZ",
+                "moduleName": "SWCPackage",
+                "static": true,
+                "implicit": true,
+                "isFromExtension": true,
+                "accessorKind": "get"
               }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:10SWCPackage11HTTPHeadersO6acceptyA2CmF",
-            "mangledName": "$s10SWCPackage11HTTPHeadersO6acceptyA2CmF",
-            "moduleName": "SWCPackage"
+            ]
           },
           {
             "kind": "Var",
@@ -473,198 +906,24 @@
             "printedName": "contentType",
             "children": [
               {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(SWCPackage.HTTPHeaders.Type) -> SWCPackage.HTTPHeaders",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "HTTPHeaders",
-                    "printedName": "SWCPackage.HTTPHeaders",
-                    "usr": "s:10SWCPackage11HTTPHeadersO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "SWCPackage.HTTPHeaders.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "HTTPHeaders",
-                        "printedName": "SWCPackage.HTTPHeaders",
-                        "usr": "s:10SWCPackage11HTTPHeadersO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:10SWCPackage11HTTPHeadersO11contentTypeyA2CmF",
-            "mangledName": "$s10SWCPackage11HTTPHeadersO11contentTypeyA2CmF",
-            "moduleName": "SWCPackage"
-          },
-          {
-            "kind": "Var",
-            "name": "xRequestDigest",
-            "printedName": "xRequestDigest",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(SWCPackage.HTTPHeaders.Type) -> SWCPackage.HTTPHeaders",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "HTTPHeaders",
-                    "printedName": "SWCPackage.HTTPHeaders",
-                    "usr": "s:10SWCPackage11HTTPHeadersO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "SWCPackage.HTTPHeaders.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "HTTPHeaders",
-                        "printedName": "SWCPackage.HTTPHeaders",
-                        "usr": "s:10SWCPackage11HTTPHeadersO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:10SWCPackage11HTTPHeadersO14xRequestDigestyA2CmF",
-            "mangledName": "$s10SWCPackage11HTTPHeadersO14xRequestDigestyA2CmF",
-            "moduleName": "SWCPackage"
-          },
-          {
-            "kind": "Var",
-            "name": "XHTTPMethod",
-            "printedName": "XHTTPMethod",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(SWCPackage.HTTPHeaders.Type) -> SWCPackage.HTTPHeaders",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "HTTPHeaders",
-                    "printedName": "SWCPackage.HTTPHeaders",
-                    "usr": "s:10SWCPackage11HTTPHeadersO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "SWCPackage.HTTPHeaders.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "HTTPHeaders",
-                        "printedName": "SWCPackage.HTTPHeaders",
-                        "usr": "s:10SWCPackage11HTTPHeadersO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:10SWCPackage11HTTPHeadersO11XHTTPMethodyA2CmF",
-            "mangledName": "$s10SWCPackage11HTTPHeadersO11XHTTPMethodyA2CmF",
-            "moduleName": "SWCPackage"
-          },
-          {
-            "kind": "Var",
-            "name": "iFMATCH",
-            "printedName": "iFMATCH",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(SWCPackage.HTTPHeaders.Type) -> SWCPackage.HTTPHeaders",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "HTTPHeaders",
-                    "printedName": "SWCPackage.HTTPHeaders",
-                    "usr": "s:10SWCPackage11HTTPHeadersO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "SWCPackage.HTTPHeaders.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "HTTPHeaders",
-                        "printedName": "SWCPackage.HTTPHeaders",
-                        "usr": "s:10SWCPackage11HTTPHeadersO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:10SWCPackage11HTTPHeadersO7iFMATCHyA2CmF",
-            "mangledName": "$s10SWCPackage11HTTPHeadersO7iFMATCHyA2CmF",
-            "moduleName": "SWCPackage"
-          },
-          {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init(rawValue:)",
-            "children": [
-              {
                 "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "SWCPackage.HTTPHeaders?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "HTTPHeaders",
-                    "printedName": "SWCPackage.HTTPHeaders",
-                    "usr": "s:10SWCPackage11HTTPHeadersO"
-                  }
-                ],
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Constructor",
-            "usr": "s:10SWCPackage11HTTPHeadersO8rawValueACSgSS_tcfc",
-            "mangledName": "$s10SWCPackage11HTTPHeadersO8rawValueACSgSS_tcfc",
-            "moduleName": "SWCPackage",
-            "implicit": true,
-            "init_kind": "Designated"
-          },
-          {
-            "kind": "Var",
-            "name": "rawValue",
-            "printedName": "rawValue",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
+                "name": "HTTPHeader",
+                "printedName": "SWCPackage.HTTPHeader",
+                "usr": "s:10SWCPackage10HTTPHeaderV"
               }
             ],
             "declKind": "Var",
-            "usr": "s:10SWCPackage11HTTPHeadersO8rawValueSSvp",
-            "mangledName": "$s10SWCPackage11HTTPHeadersO8rawValueSSvp",
+            "usr": "s:10SWCPackage10HTTPHeaderV11contentTypeACvpZ",
+            "mangledName": "$s10SWCPackage10HTTPHeaderV11contentTypeACvpZ",
             "moduleName": "SWCPackage",
-            "implicit": true,
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage"
+            ],
+            "isFromExtension": true,
+            "isLet": true,
+            "hasStorage": true,
             "accessors": [
               {
                 "kind": "Accessor",
@@ -673,36 +932,241 @@
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
+                    "name": "HTTPHeader",
+                    "printedName": "SWCPackage.HTTPHeader",
+                    "usr": "s:10SWCPackage10HTTPHeaderV"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:10SWCPackage11HTTPHeadersO8rawValueSSvg",
-                "mangledName": "$s10SWCPackage11HTTPHeadersO8rawValueSSvg",
+                "usr": "s:10SWCPackage10HTTPHeaderV11contentTypeACvgZ",
+                "mangledName": "$s10SWCPackage10HTTPHeaderV11contentTypeACvgZ",
                 "moduleName": "SWCPackage",
+                "static": true,
                 "implicit": true,
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "xRequestDigest",
+            "printedName": "xRequestDigest",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "HTTPHeader",
+                "printedName": "SWCPackage.HTTPHeader",
+                "usr": "s:10SWCPackage10HTTPHeaderV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:10SWCPackage10HTTPHeaderV14xRequestDigestACvpZ",
+            "mangledName": "$s10SWCPackage10HTTPHeaderV14xRequestDigestACvpZ",
+            "moduleName": "SWCPackage",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage"
+            ],
+            "isFromExtension": true,
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "HTTPHeader",
+                    "printedName": "SWCPackage.HTTPHeader",
+                    "usr": "s:10SWCPackage10HTTPHeaderV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10SWCPackage10HTTPHeaderV14xRequestDigestACvgZ",
+                "mangledName": "$s10SWCPackage10HTTPHeaderV14xRequestDigestACvgZ",
+                "moduleName": "SWCPackage",
+                "static": true,
+                "implicit": true,
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "XHTTPMethod",
+            "printedName": "XHTTPMethod",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "HTTPHeader",
+                "printedName": "SWCPackage.HTTPHeader",
+                "usr": "s:10SWCPackage10HTTPHeaderV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:10SWCPackage10HTTPHeaderV11XHTTPMethodACvpZ",
+            "mangledName": "$s10SWCPackage10HTTPHeaderV11XHTTPMethodACvpZ",
+            "moduleName": "SWCPackage",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage"
+            ],
+            "isFromExtension": true,
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "HTTPHeader",
+                    "printedName": "SWCPackage.HTTPHeader",
+                    "usr": "s:10SWCPackage10HTTPHeaderV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10SWCPackage10HTTPHeaderV11XHTTPMethodACvgZ",
+                "mangledName": "$s10SWCPackage10HTTPHeaderV11XHTTPMethodACvgZ",
+                "moduleName": "SWCPackage",
+                "static": true,
+                "implicit": true,
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "iFMATCH",
+            "printedName": "iFMATCH",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "HTTPHeader",
+                "printedName": "SWCPackage.HTTPHeader",
+                "usr": "s:10SWCPackage10HTTPHeaderV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:10SWCPackage10HTTPHeaderV7iFMATCHACvpZ",
+            "mangledName": "$s10SWCPackage10HTTPHeaderV7iFMATCHACvpZ",
+            "moduleName": "SWCPackage",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage"
+            ],
+            "isFromExtension": true,
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "HTTPHeader",
+                    "printedName": "SWCPackage.HTTPHeader",
+                    "usr": "s:10SWCPackage10HTTPHeaderV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10SWCPackage10HTTPHeaderV7iFMATCHACvgZ",
+                "mangledName": "$s10SWCPackage10HTTPHeaderV7iFMATCHACvgZ",
+                "moduleName": "SWCPackage",
+                "static": true,
+                "implicit": true,
+                "isFromExtension": true,
                 "accessorKind": "get"
               }
             ]
           }
         ],
-        "declKind": "Enum",
-        "usr": "s:10SWCPackage11HTTPHeadersO",
-        "mangledName": "$s10SWCPackage11HTTPHeadersO",
+        "declKind": "Struct",
+        "usr": "s:10SWCPackage10HTTPHeaderV",
+        "mangledName": "$s10SWCPackage10HTTPHeaderV",
         "moduleName": "SWCPackage",
         "declAttributes": [
-          "AccessControl"
+          "AccessControl",
+          "RawDocComment"
         ],
-        "enumRawTypeName": "String",
         "conformances": [
           {
             "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
+            "name": "ExpressibleByStringLiteral",
+            "printedName": "ExpressibleByStringLiteral",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "StringLiteralType",
+                "printedName": "StringLiteralType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s26ExpressibleByStringLiteralP",
+            "mangledName": "$ss26ExpressibleByStringLiteralP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ExpressibleByExtendedGraphemeClusterLiteral",
+            "printedName": "ExpressibleByExtendedGraphemeClusterLiteral",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "ExtendedGraphemeClusterLiteralType",
+                "printedName": "ExtendedGraphemeClusterLiteralType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s43ExpressibleByExtendedGraphemeClusterLiteralP",
+            "mangledName": "$ss43ExpressibleByExtendedGraphemeClusterLiteralP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ExpressibleByUnicodeScalarLiteral",
+            "printedName": "ExpressibleByUnicodeScalarLiteral",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "UnicodeScalarLiteralType",
+                "printedName": "UnicodeScalarLiteralType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s33ExpressibleByUnicodeScalarLiteralP",
+            "mangledName": "$ss33ExpressibleByUnicodeScalarLiteralP"
           },
           {
             "kind": "Conformance",
@@ -713,25 +1177,10 @@
           },
           {
             "kind": "Conformance",
-            "name": "RawRepresentable",
-            "printedName": "RawRepresentable",
-            "children": [
-              {
-                "kind": "TypeWitness",
-                "name": "RawValue",
-                "printedName": "RawValue",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ]
-              }
-            ],
-            "usr": "s:SY",
-            "mangledName": "$sSY"
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
           }
         ]
       },
@@ -742,113 +1191,6 @@
         "children": [
           {
             "kind": "Var",
-            "name": "post",
-            "printedName": "post",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(SWCPackage.HTTPMethod.Type) -> SWCPackage.HTTPMethod",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "HTTPMethod",
-                    "printedName": "SWCPackage.HTTPMethod",
-                    "usr": "s:10SWCPackage10HTTPMethodO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "SWCPackage.HTTPMethod.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "HTTPMethod",
-                        "printedName": "SWCPackage.HTTPMethod",
-                        "usr": "s:10SWCPackage10HTTPMethodO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:10SWCPackage10HTTPMethodO4postyA2CmF",
-            "mangledName": "$s10SWCPackage10HTTPMethodO4postyA2CmF",
-            "moduleName": "SWCPackage"
-          },
-          {
-            "kind": "Var",
-            "name": "get",
-            "printedName": "get",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(SWCPackage.HTTPMethod.Type) -> SWCPackage.HTTPMethod",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "HTTPMethod",
-                    "printedName": "SWCPackage.HTTPMethod",
-                    "usr": "s:10SWCPackage10HTTPMethodO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "SWCPackage.HTTPMethod.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "HTTPMethod",
-                        "printedName": "SWCPackage.HTTPMethod",
-                        "usr": "s:10SWCPackage10HTTPMethodO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:10SWCPackage10HTTPMethodO3getyA2CmF",
-            "mangledName": "$s10SWCPackage10HTTPMethodO3getyA2CmF",
-            "moduleName": "SWCPackage"
-          },
-          {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init(rawValue:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "SWCPackage.HTTPMethod?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "HTTPMethod",
-                    "printedName": "SWCPackage.HTTPMethod",
-                    "usr": "s:10SWCPackage10HTTPMethodO"
-                  }
-                ],
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Constructor",
-            "usr": "s:10SWCPackage10HTTPMethodO8rawValueACSgSS_tcfc",
-            "mangledName": "$s10SWCPackage10HTTPMethodO8rawValueACSgSS_tcfc",
-            "moduleName": "SWCPackage",
-            "implicit": true,
-            "init_kind": "Designated"
-          },
-          {
-            "kind": "Var",
             "name": "rawValue",
             "printedName": "rawValue",
             "children": [
@@ -860,10 +1202,14 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:10SWCPackage10HTTPMethodO8rawValueSSvp",
-            "mangledName": "$s10SWCPackage10HTTPMethodO8rawValueSSvp",
+            "usr": "s:10SWCPackage10HTTPMethodV8rawValueSSvp",
+            "mangledName": "$s10SWCPackage10HTTPMethodV8rawValueSSvp",
             "moduleName": "SWCPackage",
-            "implicit": true,
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
             "accessors": [
               {
                 "kind": "Accessor",
@@ -878,47 +1224,300 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:10SWCPackage10HTTPMethodO8rawValueSSvg",
-                "mangledName": "$s10SWCPackage10HTTPMethodO8rawValueSSvg",
+                "usr": "s:10SWCPackage10HTTPMethodV8rawValueSSvg",
+                "mangledName": "$s10SWCPackage10HTTPMethodV8rawValueSSvg",
                 "moduleName": "SWCPackage",
                 "implicit": true,
                 "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10SWCPackage10HTTPMethodV8rawValueSSvs",
+                "mangledName": "$s10SWCPackage10HTTPMethodV8rawValueSSvs",
+                "moduleName": "SWCPackage",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10SWCPackage10HTTPMethodV8rawValueSSvM",
+                "mangledName": "$s10SWCPackage10HTTPMethodV8rawValueSSvM",
+                "moduleName": "SWCPackage",
+                "implicit": true,
+                "accessorKind": "_modify"
               }
             ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(stringLiteral:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "HTTPMethod",
+                "printedName": "SWCPackage.HTTPMethod",
+                "usr": "s:10SWCPackage10HTTPMethodV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:10SWCPackage10HTTPMethodV13stringLiteralACSS_tcfc",
+            "mangledName": "$s10SWCPackage10HTTPMethodV13stringLiteralACSS_tcfc",
+            "moduleName": "SWCPackage",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "post",
+            "printedName": "post",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "HTTPMethod",
+                "printedName": "SWCPackage.HTTPMethod",
+                "usr": "s:10SWCPackage10HTTPMethodV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:10SWCPackage10HTTPMethodV4postACvpZ",
+            "mangledName": "$s10SWCPackage10HTTPMethodV4postACvpZ",
+            "moduleName": "SWCPackage",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage"
+            ],
+            "isFromExtension": true,
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "HTTPMethod",
+                    "printedName": "SWCPackage.HTTPMethod",
+                    "usr": "s:10SWCPackage10HTTPMethodV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10SWCPackage10HTTPMethodV4postACvgZ",
+                "mangledName": "$s10SWCPackage10HTTPMethodV4postACvgZ",
+                "moduleName": "SWCPackage",
+                "static": true,
+                "implicit": true,
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "get",
+            "printedName": "get",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "HTTPMethod",
+                "printedName": "SWCPackage.HTTPMethod",
+                "usr": "s:10SWCPackage10HTTPMethodV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:10SWCPackage10HTTPMethodV3getACvpZ",
+            "mangledName": "$s10SWCPackage10HTTPMethodV3getACvpZ",
+            "moduleName": "SWCPackage",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage"
+            ],
+            "isFromExtension": true,
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "HTTPMethod",
+                    "printedName": "SWCPackage.HTTPMethod",
+                    "usr": "s:10SWCPackage10HTTPMethodV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10SWCPackage10HTTPMethodV3getACvgZ",
+                "mangledName": "$s10SWCPackage10HTTPMethodV3getACvgZ",
+                "moduleName": "SWCPackage",
+                "static": true,
+                "implicit": true,
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10SWCPackage10HTTPMethodV4hash4intoys6HasherVz_tF",
+            "mangledName": "$s10SWCPackage10HTTPMethodV4hash4intoys6HasherVz_tF",
+            "moduleName": "SWCPackage",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:10SWCPackage10HTTPMethodV9hashValueSivp",
+            "mangledName": "$s10SWCPackage10HTTPMethodV9hashValueSivp",
+            "moduleName": "SWCPackage",
+            "implicit": true,
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10SWCPackage10HTTPMethodV9hashValueSivg",
+                "mangledName": "$s10SWCPackage10HTTPMethodV9hashValueSivg",
+                "moduleName": "SWCPackage",
+                "implicit": true,
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "HTTPMethod",
+                "printedName": "SWCPackage.HTTPMethod",
+                "usr": "s:10SWCPackage10HTTPMethodV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "HTTPMethod",
+                "printedName": "SWCPackage.HTTPMethod",
+                "usr": "s:10SWCPackage10HTTPMethodV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10SWCPackage10HTTPMethodV2eeoiySbAC_ACtFZ",
+            "mangledName": "$s10SWCPackage10HTTPMethodV2eeoiySbAC_ACtFZ",
+            "moduleName": "SWCPackage",
+            "static": true,
+            "implicit": true,
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
           }
         ],
-        "declKind": "Enum",
-        "usr": "s:10SWCPackage10HTTPMethodO",
-        "mangledName": "$s10SWCPackage10HTTPMethodO",
+        "declKind": "Struct",
+        "usr": "s:10SWCPackage10HTTPMethodV",
+        "mangledName": "$s10SWCPackage10HTTPMethodV",
         "moduleName": "SWCPackage",
         "declAttributes": [
-          "AccessControl"
+          "AccessControl",
+          "RawDocComment"
         ],
-        "enumRawTypeName": "String",
         "conformances": [
           {
             "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Hashable",
-            "printedName": "Hashable",
-            "usr": "s:SH",
-            "mangledName": "$sSH"
-          },
-          {
-            "kind": "Conformance",
-            "name": "RawRepresentable",
-            "printedName": "RawRepresentable",
+            "name": "ExpressibleByStringLiteral",
+            "printedName": "ExpressibleByStringLiteral",
             "children": [
               {
                 "kind": "TypeWitness",
-                "name": "RawValue",
-                "printedName": "RawValue",
+                "name": "StringLiteralType",
+                "printedName": "StringLiteralType",
                 "children": [
                   {
                     "kind": "TypeNominal",
@@ -929,8 +1528,66 @@
                 ]
               }
             ],
-            "usr": "s:SY",
-            "mangledName": "$sSY"
+            "usr": "s:s26ExpressibleByStringLiteralP",
+            "mangledName": "$ss26ExpressibleByStringLiteralP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ExpressibleByExtendedGraphemeClusterLiteral",
+            "printedName": "ExpressibleByExtendedGraphemeClusterLiteral",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "ExtendedGraphemeClusterLiteralType",
+                "printedName": "ExtendedGraphemeClusterLiteralType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s43ExpressibleByExtendedGraphemeClusterLiteralP",
+            "mangledName": "$ss43ExpressibleByExtendedGraphemeClusterLiteralP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ExpressibleByUnicodeScalarLiteral",
+            "printedName": "ExpressibleByUnicodeScalarLiteral",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "UnicodeScalarLiteralType",
+                "printedName": "UnicodeScalarLiteralType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s33ExpressibleByUnicodeScalarLiteralP",
+            "mangledName": "$ss33ExpressibleByUnicodeScalarLiteralP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
           }
         ]
       },
@@ -1631,8 +2288,8 @@
         "children": [
           {
             "kind": "Var",
-            "name": "shared",
-            "printedName": "shared",
+            "name": "prepare",
+            "printedName": "prepare",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -1642,8 +2299,8 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:10SWCPackage15SWCUploadEngineC6sharedACvpZ",
-            "mangledName": "$s10SWCPackage15SWCUploadEngineC6sharedACvpZ",
+            "usr": "s:10SWCPackage15SWCUploadEngineC7prepareACvpZ",
+            "mangledName": "$s10SWCPackage15SWCUploadEngineC7prepareACvpZ",
             "moduleName": "SWCPackage",
             "static": true,
             "declAttributes": [
@@ -1668,8 +2325,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:10SWCPackage15SWCUploadEngineC6sharedACvgZ",
-                "mangledName": "$s10SWCPackage15SWCUploadEngineC6sharedACvgZ",
+                "usr": "s:10SWCPackage15SWCUploadEngineC7prepareACvgZ",
+                "mangledName": "$s10SWCPackage15SWCUploadEngineC7prepareACvgZ",
                 "moduleName": "SWCPackage",
                 "static": true,
                 "implicit": true,
@@ -1716,37 +2373,12 @@
             "mangledName": "$s10SWCPackage15SWCUploadEngineC6upload4with7Combine12AnyPublisherVySdAA15SWCNetworkErrorOGx_tAA0B6SourceRzlF",
             "moduleName": "SWCPackage",
             "genericSig": "<τ_0_0 where τ_0_0 : SWCPackage.SWCUploadSource>",
-            "sugared_genericSig": "<T where T : SWCPackage.SWCUploadSource>",
             "declAttributes": [
-              "AccessControl"
+              "Final",
+              "AccessControl",
+              "RawDocComment"
             ],
             "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "SWCUploadEngine",
-                "printedName": "SWCPackage.SWCUploadEngine",
-                "usr": "c:@M@SWCPackage@objc(cs)SWCUploadEngine"
-              }
-            ],
-            "declKind": "Constructor",
-            "usr": "c:@M@SWCPackage@objc(cs)SWCUploadEngine(im)init",
-            "mangledName": "$s10SWCPackage15SWCUploadEngineCACycfc",
-            "moduleName": "SWCPackage",
-            "overriding": true,
-            "implicit": true,
-            "objc_name": "init",
-            "declAttributes": [
-              "Dynamic",
-              "ObjC",
-              "Override"
-            ],
-            "init_kind": "Designated"
           },
           {
             "kind": "Function",
@@ -1795,7 +2427,7 @@
             "moduleName": "SWCPackage",
             "objc_name": "URLSession:task:didSendBodyData:totalBytesSent:totalBytesExpectedToSend:",
             "declAttributes": [
-              "Dynamic",
+              "Final",
               "ObjC",
               "AccessControl"
             ],
@@ -1870,7 +2502,7 @@
             "moduleName": "SWCPackage",
             "objc_name": "URLSession:didReceiveChallenge:completionHandler:",
             "declAttributes": [
-              "Dynamic",
+              "Final",
               "ObjC",
               "AccessControl"
             ],
@@ -1883,11 +2515,13 @@
         "mangledName": "$s10SWCPackage15SWCUploadEngineC",
         "moduleName": "SWCPackage",
         "declAttributes": [
+          "Final",
           "AccessControl",
           "RawDocComment",
           "ObjC"
         ],
         "superclassUsr": "c:objc(cs)NSObject",
+        "hasMissingDesignatedInitializers": true,
         "inheritsConvenienceInitializers": true,
         "superclassNames": [
           "ObjectiveC.NSObject"
@@ -3365,270 +3999,6 @@
             "printedName": "Encodable",
             "usr": "s:SE",
             "mangledName": "$sSE"
-          }
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "SWCPackage",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "TypeDecl",
-        "name": "DDriveUploadGenerator",
-        "printedName": "DDriveUploadGenerator",
-        "children": [
-          {
-            "kind": "Var",
-            "name": "showLoader",
-            "printedName": "showLoader",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "usr": "s:Sb"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:10SWCPackage21DDriveUploadGeneratorV10showLoaderSbvp",
-            "mangledName": "$s10SWCPackage21DDriveUploadGeneratorV10showLoaderSbvp",
-            "moduleName": "SWCPackage",
-            "declAttributes": [
-              "HasInitialValue",
-              "HasStorage",
-              "AccessControl"
-            ],
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Bool",
-                    "printedName": "Swift.Bool",
-                    "usr": "s:Sb"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:10SWCPackage21DDriveUploadGeneratorV10showLoaderSbvg",
-                "mangledName": "$s10SWCPackage21DDriveUploadGeneratorV10showLoaderSbvg",
-                "moduleName": "SWCPackage",
-                "implicit": true,
-                "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Bool",
-                    "printedName": "Swift.Bool",
-                    "usr": "s:Sb"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:10SWCPackage21DDriveUploadGeneratorV10showLoaderSbvs",
-                "mangledName": "$s10SWCPackage21DDriveUploadGeneratorV10showLoaderSbvs",
-                "moduleName": "SWCPackage",
-                "implicit": true,
-                "accessorKind": "set"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Modify",
-                "printedName": "Modify()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:10SWCPackage21DDriveUploadGeneratorV10showLoaderSbvM",
-                "mangledName": "$s10SWCPackage21DDriveUploadGeneratorV10showLoaderSbvM",
-                "moduleName": "SWCPackage",
-                "implicit": true,
-                "accessorKind": "_modify"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "fromFileURL",
-            "printedName": "fromFileURL",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "URL",
-                "printedName": "Foundation.URL",
-                "usr": "s:10Foundation3URLV"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:10SWCPackage21DDriveUploadGeneratorV11fromFileURL10Foundation0G0Vvp",
-            "mangledName": "$s10SWCPackage21DDriveUploadGeneratorV11fromFileURL10Foundation0G0Vvp",
-            "moduleName": "SWCPackage",
-            "declAttributes": [
-              "HasStorage",
-              "AccessControl"
-            ],
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "URL",
-                    "printedName": "Foundation.URL",
-                    "usr": "s:10Foundation3URLV"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:10SWCPackage21DDriveUploadGeneratorV11fromFileURL10Foundation0G0Vvg",
-                "mangledName": "$s10SWCPackage21DDriveUploadGeneratorV11fromFileURL10Foundation0G0Vvg",
-                "moduleName": "SWCPackage",
-                "implicit": true,
-                "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "URL",
-                    "printedName": "Foundation.URL",
-                    "usr": "s:10Foundation3URLV"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:10SWCPackage21DDriveUploadGeneratorV11fromFileURL10Foundation0G0Vvs",
-                "mangledName": "$s10SWCPackage21DDriveUploadGeneratorV11fromFileURL10Foundation0G0Vvs",
-                "moduleName": "SWCPackage",
-                "implicit": true,
-                "accessorKind": "set"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Modify",
-                "printedName": "Modify()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:10SWCPackage21DDriveUploadGeneratorV11fromFileURL10Foundation0G0VvM",
-                "mangledName": "$s10SWCPackage21DDriveUploadGeneratorV11fromFileURL10Foundation0G0VvM",
-                "moduleName": "SWCPackage",
-                "implicit": true,
-                "accessorKind": "_modify"
-              }
-            ]
-          },
-          {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init(urlString:fromFileURL:digestKey:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "DDriveUploadGenerator",
-                "printedName": "SWCPackage.DDriveUploadGenerator",
-                "usr": "s:10SWCPackage21DDriveUploadGeneratorV"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "URL",
-                "printedName": "Foundation.URL",
-                "usr": "s:10Foundation3URLV"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Constructor",
-            "usr": "s:10SWCPackage21DDriveUploadGeneratorV9urlString11fromFileURL9digestKeyACSS_10Foundation0I0VSStcfc",
-            "mangledName": "$s10SWCPackage21DDriveUploadGeneratorV9urlString11fromFileURL9digestKeyACSS_10Foundation0I0VSStcfc",
-            "moduleName": "SWCPackage",
-            "declAttributes": [
-              "AccessControl"
-            ],
-            "init_kind": "Designated"
-          },
-          {
-            "kind": "Function",
-            "name": "generateRequest",
-            "printedName": "generateRequest()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "URLRequest",
-                "printedName": "Foundation.URLRequest",
-                "usr": "s:10Foundation10URLRequestV"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:10SWCPackage21DDriveUploadGeneratorV15generateRequest10Foundation10URLRequestVyF",
-            "mangledName": "$s10SWCPackage21DDriveUploadGeneratorV15generateRequest10Foundation10URLRequestVyF",
-            "moduleName": "SWCPackage",
-            "declAttributes": [
-              "AccessControl"
-            ],
-            "funcSelfKind": "NonMutating"
-          }
-        ],
-        "declKind": "Struct",
-        "usr": "s:10SWCPackage21DDriveUploadGeneratorV",
-        "mangledName": "$s10SWCPackage21DDriveUploadGeneratorV",
-        "moduleName": "SWCPackage",
-        "declAttributes": [
-          "AccessControl"
-        ],
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "SWCUploadSource",
-            "printedName": "SWCUploadSource",
-            "usr": "s:10SWCPackage15SWCUploadSourceP",
-            "mangledName": "$s10SWCPackage15SWCUploadSourceP"
           }
         ]
       },
@@ -6767,14 +7137,14 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "ContentTypes",
-                "printedName": "SWCPackage.ContentTypes",
-                "usr": "s:10SWCPackage12ContentTypesO"
+                "name": "HTTPHeaderValue",
+                "printedName": "SWCPackage.HTTPHeaderValue",
+                "usr": "s:10SWCPackage15HTTPHeaderValueV"
               }
             ],
             "declKind": "Var",
-            "usr": "s:10SWCPackage20SWCRequestComponentsV11contentTypeAA12ContentTypesOvp",
-            "mangledName": "$s10SWCPackage20SWCRequestComponentsV11contentTypeAA12ContentTypesOvp",
+            "usr": "s:10SWCPackage20SWCRequestComponentsV11contentTypeAA15HTTPHeaderValueVvp",
+            "mangledName": "$s10SWCPackage20SWCRequestComponentsV11contentTypeAA15HTTPHeaderValueVvp",
             "moduleName": "SWCPackage",
             "declAttributes": [
               "HasInitialValue",
@@ -6790,14 +7160,14 @@
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "ContentTypes",
-                    "printedName": "SWCPackage.ContentTypes",
-                    "usr": "s:10SWCPackage12ContentTypesO"
+                    "name": "HTTPHeaderValue",
+                    "printedName": "SWCPackage.HTTPHeaderValue",
+                    "usr": "s:10SWCPackage15HTTPHeaderValueV"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:10SWCPackage20SWCRequestComponentsV11contentTypeAA12ContentTypesOvg",
-                "mangledName": "$s10SWCPackage20SWCRequestComponentsV11contentTypeAA12ContentTypesOvg",
+                "usr": "s:10SWCPackage20SWCRequestComponentsV11contentTypeAA15HTTPHeaderValueVvg",
+                "mangledName": "$s10SWCPackage20SWCRequestComponentsV11contentTypeAA15HTTPHeaderValueVvg",
                 "moduleName": "SWCPackage",
                 "implicit": true,
                 "accessorKind": "get"
@@ -6814,14 +7184,14 @@
                   },
                   {
                     "kind": "TypeNominal",
-                    "name": "ContentTypes",
-                    "printedName": "SWCPackage.ContentTypes",
-                    "usr": "s:10SWCPackage12ContentTypesO"
+                    "name": "HTTPHeaderValue",
+                    "printedName": "SWCPackage.HTTPHeaderValue",
+                    "usr": "s:10SWCPackage15HTTPHeaderValueV"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:10SWCPackage20SWCRequestComponentsV11contentTypeAA12ContentTypesOvs",
-                "mangledName": "$s10SWCPackage20SWCRequestComponentsV11contentTypeAA12ContentTypesOvs",
+                "usr": "s:10SWCPackage20SWCRequestComponentsV11contentTypeAA15HTTPHeaderValueVvs",
+                "mangledName": "$s10SWCPackage20SWCRequestComponentsV11contentTypeAA15HTTPHeaderValueVvs",
                 "moduleName": "SWCPackage",
                 "implicit": true,
                 "accessorKind": "set"
@@ -6838,8 +7208,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:10SWCPackage20SWCRequestComponentsV11contentTypeAA12ContentTypesOvM",
-                "mangledName": "$s10SWCPackage20SWCRequestComponentsV11contentTypeAA12ContentTypesOvM",
+                "usr": "s:10SWCPackage20SWCRequestComponentsV11contentTypeAA15HTTPHeaderValueVvM",
+                "mangledName": "$s10SWCPackage20SWCRequestComponentsV11contentTypeAA15HTTPHeaderValueVvM",
                 "moduleName": "SWCPackage",
                 "implicit": true,
                 "accessorKind": "_modify"
@@ -6853,14 +7223,14 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "ContentTypes",
-                "printedName": "SWCPackage.ContentTypes",
-                "usr": "s:10SWCPackage12ContentTypesO"
+                "name": "HTTPHeaderValue",
+                "printedName": "SWCPackage.HTTPHeaderValue",
+                "usr": "s:10SWCPackage15HTTPHeaderValueV"
               }
             ],
             "declKind": "Var",
-            "usr": "s:10SWCPackage20SWCRequestComponentsV6acceptAA12ContentTypesOvp",
-            "mangledName": "$s10SWCPackage20SWCRequestComponentsV6acceptAA12ContentTypesOvp",
+            "usr": "s:10SWCPackage20SWCRequestComponentsV6acceptAA15HTTPHeaderValueVvp",
+            "mangledName": "$s10SWCPackage20SWCRequestComponentsV6acceptAA15HTTPHeaderValueVvp",
             "moduleName": "SWCPackage",
             "declAttributes": [
               "HasInitialValue",
@@ -6876,14 +7246,14 @@
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "ContentTypes",
-                    "printedName": "SWCPackage.ContentTypes",
-                    "usr": "s:10SWCPackage12ContentTypesO"
+                    "name": "HTTPHeaderValue",
+                    "printedName": "SWCPackage.HTTPHeaderValue",
+                    "usr": "s:10SWCPackage15HTTPHeaderValueV"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:10SWCPackage20SWCRequestComponentsV6acceptAA12ContentTypesOvg",
-                "mangledName": "$s10SWCPackage20SWCRequestComponentsV6acceptAA12ContentTypesOvg",
+                "usr": "s:10SWCPackage20SWCRequestComponentsV6acceptAA15HTTPHeaderValueVvg",
+                "mangledName": "$s10SWCPackage20SWCRequestComponentsV6acceptAA15HTTPHeaderValueVvg",
                 "moduleName": "SWCPackage",
                 "implicit": true,
                 "accessorKind": "get"
@@ -6900,14 +7270,14 @@
                   },
                   {
                     "kind": "TypeNominal",
-                    "name": "ContentTypes",
-                    "printedName": "SWCPackage.ContentTypes",
-                    "usr": "s:10SWCPackage12ContentTypesO"
+                    "name": "HTTPHeaderValue",
+                    "printedName": "SWCPackage.HTTPHeaderValue",
+                    "usr": "s:10SWCPackage15HTTPHeaderValueV"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:10SWCPackage20SWCRequestComponentsV6acceptAA12ContentTypesOvs",
-                "mangledName": "$s10SWCPackage20SWCRequestComponentsV6acceptAA12ContentTypesOvs",
+                "usr": "s:10SWCPackage20SWCRequestComponentsV6acceptAA15HTTPHeaderValueVvs",
+                "mangledName": "$s10SWCPackage20SWCRequestComponentsV6acceptAA15HTTPHeaderValueVvs",
                 "moduleName": "SWCPackage",
                 "implicit": true,
                 "accessorKind": "set"
@@ -6924,8 +7294,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:10SWCPackage20SWCRequestComponentsV6acceptAA12ContentTypesOvM",
-                "mangledName": "$s10SWCPackage20SWCRequestComponentsV6acceptAA12ContentTypesOvM",
+                "usr": "s:10SWCPackage20SWCRequestComponentsV6acceptAA15HTTPHeaderValueVvM",
+                "mangledName": "$s10SWCPackage20SWCRequestComponentsV6acceptAA15HTTPHeaderValueVvM",
                 "moduleName": "SWCPackage",
                 "implicit": true,
                 "accessorKind": "_modify"
@@ -6941,12 +7311,12 @@
                 "kind": "TypeNominal",
                 "name": "HTTPMethod",
                 "printedName": "SWCPackage.HTTPMethod",
-                "usr": "s:10SWCPackage10HTTPMethodO"
+                "usr": "s:10SWCPackage10HTTPMethodV"
               }
             ],
             "declKind": "Var",
-            "usr": "s:10SWCPackage20SWCRequestComponentsV10httpMethodAA10HTTPMethodOvp",
-            "mangledName": "$s10SWCPackage20SWCRequestComponentsV10httpMethodAA10HTTPMethodOvp",
+            "usr": "s:10SWCPackage20SWCRequestComponentsV10httpMethodAA10HTTPMethodVvp",
+            "mangledName": "$s10SWCPackage20SWCRequestComponentsV10httpMethodAA10HTTPMethodVvp",
             "moduleName": "SWCPackage",
             "declAttributes": [
               "HasInitialValue",
@@ -6964,12 +7334,12 @@
                     "kind": "TypeNominal",
                     "name": "HTTPMethod",
                     "printedName": "SWCPackage.HTTPMethod",
-                    "usr": "s:10SWCPackage10HTTPMethodO"
+                    "usr": "s:10SWCPackage10HTTPMethodV"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:10SWCPackage20SWCRequestComponentsV10httpMethodAA10HTTPMethodOvg",
-                "mangledName": "$s10SWCPackage20SWCRequestComponentsV10httpMethodAA10HTTPMethodOvg",
+                "usr": "s:10SWCPackage20SWCRequestComponentsV10httpMethodAA10HTTPMethodVvg",
+                "mangledName": "$s10SWCPackage20SWCRequestComponentsV10httpMethodAA10HTTPMethodVvg",
                 "moduleName": "SWCPackage",
                 "implicit": true,
                 "accessorKind": "get"
@@ -6988,12 +7358,12 @@
                     "kind": "TypeNominal",
                     "name": "HTTPMethod",
                     "printedName": "SWCPackage.HTTPMethod",
-                    "usr": "s:10SWCPackage10HTTPMethodO"
+                    "usr": "s:10SWCPackage10HTTPMethodV"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:10SWCPackage20SWCRequestComponentsV10httpMethodAA10HTTPMethodOvs",
-                "mangledName": "$s10SWCPackage20SWCRequestComponentsV10httpMethodAA10HTTPMethodOvs",
+                "usr": "s:10SWCPackage20SWCRequestComponentsV10httpMethodAA10HTTPMethodVvs",
+                "mangledName": "$s10SWCPackage20SWCRequestComponentsV10httpMethodAA10HTTPMethodVvs",
                 "moduleName": "SWCPackage",
                 "implicit": true,
                 "accessorKind": "set"
@@ -7010,8 +7380,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:10SWCPackage20SWCRequestComponentsV10httpMethodAA10HTTPMethodOvM",
-                "mangledName": "$s10SWCPackage20SWCRequestComponentsV10httpMethodAA10HTTPMethodOvM",
+                "usr": "s:10SWCPackage20SWCRequestComponentsV10httpMethodAA10HTTPMethodVvM",
+                "mangledName": "$s10SWCPackage20SWCRequestComponentsV10httpMethodAA10HTTPMethodVvM",
                 "moduleName": "SWCPackage",
                 "implicit": true,
                 "accessorKind": "_modify"
@@ -8606,6 +8976,7 @@
         "mangledName": "$s10SWCPackage11AppLanguageC",
         "moduleName": "SWCPackage",
         "declAttributes": [
+          "Final",
           "AccessControl"
         ],
         "hasMissingDesignatedInitializers": true
@@ -14018,12 +14389,11 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:10SWCPackage0A7HandlerC21generateSWCIdentifier3forSSSgSS_tFZ",
-            "mangledName": "$s10SWCPackage0A7HandlerC21generateSWCIdentifier3forSSSgSS_tFZ",
+            "usr": "s:10SWCPackage0A7HandlerV21generateSWCIdentifier3forSSSgSS_tFZ",
+            "mangledName": "$s10SWCPackage0A7HandlerV21generateSWCIdentifier3forSSSgSS_tFZ",
             "moduleName": "SWCPackage",
             "static": true,
             "declAttributes": [
-              "Final",
               "AccessControl"
             ],
             "funcSelfKind": "NonMutating"
@@ -14047,7 +14417,7 @@
                     "kind": "TypeNominal",
                     "name": "Configuration",
                     "printedName": "SWCPackage.SWCPackageHandler.Configuration",
-                    "usr": "s:10SWCPackage0A7HandlerC13ConfigurationV"
+                    "usr": "s:10SWCPackage0A7HandlerV13ConfigurationV"
                   }
                 ],
                 "hasDefaultArg": true,
@@ -14055,12 +14425,33 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:10SWCPackage0A7HandlerC9configureyyAC13ConfigurationVSgFZ",
-            "mangledName": "$s10SWCPackage0A7HandlerC9configureyyAC13ConfigurationVSgFZ",
+            "usr": "s:10SWCPackage0A7HandlerV9configureyyAC13ConfigurationVSgFZ",
+            "mangledName": "$s10SWCPackage0A7HandlerV9configureyyAC13ConfigurationVSgFZ",
             "moduleName": "SWCPackage",
             "static": true,
             "declAttributes": [
-              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setToDebugMode",
+            "printedName": "setToDebugMode()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10SWCPackage0A7HandlerV14setToDebugModeyyFZ",
+            "mangledName": "$s10SWCPackage0A7HandlerV14setToDebugModeyyFZ",
+            "moduleName": "SWCPackage",
+            "static": true,
+            "declAttributes": [
               "AccessControl",
               "RawDocComment"
             ],
@@ -14090,12 +14481,11 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:10SWCPackage0A7HandlerC3set5token9timeStampySS_SStFZ",
-            "mangledName": "$s10SWCPackage0A7HandlerC3set5token9timeStampySS_SStFZ",
+            "usr": "s:10SWCPackage0A7HandlerV3set5token9timeStampySS_SStFZ",
+            "mangledName": "$s10SWCPackage0A7HandlerV3set5token9timeStampySS_SStFZ",
             "moduleName": "SWCPackage",
             "static": true,
             "declAttributes": [
-              "Final",
               "AccessControl"
             ],
             "funcSelfKind": "NonMutating"
@@ -14114,16 +14504,45 @@
                 "kind": "TypeNominal",
                 "name": "UserData",
                 "printedName": "SWCPackage.SWCPackageHandler.UserData",
-                "usr": "s:10SWCPackage0A7HandlerC8UserDataV"
+                "usr": "s:10SWCPackage0A7HandlerV8UserDataV"
               }
             ],
             "declKind": "Func",
-            "usr": "s:10SWCPackage0A7HandlerC3set8userDatayAC04UserE0V_tFZ",
-            "mangledName": "$s10SWCPackage0A7HandlerC3set8userDatayAC04UserE0V_tFZ",
+            "usr": "s:10SWCPackage0A7HandlerV3set8userDatayAC04UserE0V_tFZ",
+            "mangledName": "$s10SWCPackage0A7HandlerV3set8userDatayAC04UserE0V_tFZ",
             "moduleName": "SWCPackage",
             "static": true,
             "declAttributes": [
-              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getUserData",
+            "printedName": "getUserData()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "SWCPackage.SWCPackageHandler.UserData?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UserData",
+                    "printedName": "SWCPackage.SWCPackageHandler.UserData",
+                    "usr": "s:10SWCPackage0A7HandlerV8UserDataV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10SWCPackage0A7HandlerV11getUserDataAC0dE0VSgyFZ",
+            "mangledName": "$s10SWCPackage0A7HandlerV11getUserDataAC0dE0VSgyFZ",
+            "moduleName": "SWCPackage",
+            "static": true,
+            "declAttributes": [
               "AccessControl"
             ],
             "funcSelfKind": "NonMutating"
@@ -14152,12 +14571,11 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:10SWCPackage0A7HandlerC3set6aesKey0D2IVySS_SStFZ",
-            "mangledName": "$s10SWCPackage0A7HandlerC3set6aesKey0D2IVySS_SStFZ",
+            "usr": "s:10SWCPackage0A7HandlerV3set6aesKey0D2IVySS_SStFZ",
+            "mangledName": "$s10SWCPackage0A7HandlerV3set6aesKey0D2IVySS_SStFZ",
             "moduleName": "SWCPackage",
             "static": true,
             "declAttributes": [
-              "Final",
               "AccessControl"
             ],
             "funcSelfKind": "NonMutating"
@@ -14180,12 +14598,11 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:10SWCPackage0A7HandlerC3set12rsaPublicKeyySS_tFZ",
-            "mangledName": "$s10SWCPackage0A7HandlerC3set12rsaPublicKeyySS_tFZ",
+            "usr": "s:10SWCPackage0A7HandlerV3set12rsaPublicKeyySS_tFZ",
+            "mangledName": "$s10SWCPackage0A7HandlerV3set12rsaPublicKeyySS_tFZ",
             "moduleName": "SWCPackage",
             "static": true,
             "declAttributes": [
-              "Final",
               "AccessControl"
             ],
             "funcSelfKind": "NonMutating"
@@ -14208,12 +14625,11 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:10SWCPackage0A7HandlerC3set12moduleApiKeyySS_tFZ",
-            "mangledName": "$s10SWCPackage0A7HandlerC3set12moduleApiKeyySS_tFZ",
+            "usr": "s:10SWCPackage0A7HandlerV3set12moduleApiKeyySS_tFZ",
+            "mangledName": "$s10SWCPackage0A7HandlerV3set12moduleApiKeyySS_tFZ",
             "moduleName": "SWCPackage",
             "static": true,
             "declAttributes": [
-              "Final",
               "AccessControl"
             ],
             "funcSelfKind": "NonMutating"
@@ -14236,12 +14652,11 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:10SWCPackage0A7HandlerC6update8passwordySS_tFZ",
-            "mangledName": "$s10SWCPackage0A7HandlerC6update8passwordySS_tFZ",
+            "usr": "s:10SWCPackage0A7HandlerV6update8passwordySS_tFZ",
+            "mangledName": "$s10SWCPackage0A7HandlerV6update8passwordySS_tFZ",
             "moduleName": "SWCPackage",
             "static": true,
             "declAttributes": [
-              "Final",
               "AccessControl"
             ],
             "funcSelfKind": "NonMutating"
@@ -14260,7 +14675,7 @@
                     "kind": "TypeNominal",
                     "name": "UserData",
                     "printedName": "SWCPackage.SWCPackageHandler.UserData",
-                    "usr": "s:10SWCPackage0A7HandlerC8UserDataV"
+                    "usr": "s:10SWCPackage0A7HandlerV8UserDataV"
                   },
                   {
                     "kind": "TypeNominal",
@@ -14297,8 +14712,8 @@
                   }
                 ],
                 "declKind": "Constructor",
-                "usr": "s:10SWCPackage0A7HandlerC8UserDataV8userName8password0E4GUID8prNumberAESS_S3SSgtcfc",
-                "mangledName": "$s10SWCPackage0A7HandlerC8UserDataV8userName8password0E4GUID8prNumberAESS_S3SSgtcfc",
+                "usr": "s:10SWCPackage0A7HandlerV8UserDataV8userName8password0E4GUID8prNumberAESS_S3SSgtcfc",
+                "mangledName": "$s10SWCPackage0A7HandlerV8UserDataV8userName8password0E4GUID8prNumberAESS_S3SSgtcfc",
                 "moduleName": "SWCPackage",
                 "declAttributes": [
                   "AccessControl"
@@ -14307,8 +14722,8 @@
               }
             ],
             "declKind": "Struct",
-            "usr": "s:10SWCPackage0A7HandlerC8UserDataV",
-            "mangledName": "$s10SWCPackage0A7HandlerC8UserDataV",
+            "usr": "s:10SWCPackage0A7HandlerV8UserDataV",
+            "mangledName": "$s10SWCPackage0A7HandlerV8UserDataV",
             "moduleName": "SWCPackage",
             "declAttributes": [
               "AccessControl"
@@ -14329,7 +14744,7 @@
                     "kind": "TypeNominal",
                     "name": "Configuration",
                     "printedName": "SWCPackage.SWCPackageHandler.Configuration",
-                    "usr": "s:10SWCPackage0A7HandlerC13ConfigurationV"
+                    "usr": "s:10SWCPackage0A7HandlerV13ConfigurationV"
                   },
                   {
                     "kind": "TypeNominal",
@@ -14339,8 +14754,8 @@
                   }
                 ],
                 "declKind": "Constructor",
-                "usr": "s:10SWCPackage0A7HandlerC13ConfigurationV8tokenURLAESS_tcfc",
-                "mangledName": "$s10SWCPackage0A7HandlerC13ConfigurationV8tokenURLAESS_tcfc",
+                "usr": "s:10SWCPackage0A7HandlerV13ConfigurationV8tokenURLAESS_tcfc",
+                "mangledName": "$s10SWCPackage0A7HandlerV13ConfigurationV8tokenURLAESS_tcfc",
                 "moduleName": "SWCPackage",
                 "declAttributes": [
                   "AccessControl"
@@ -14349,8 +14764,8 @@
               }
             ],
             "declKind": "Struct",
-            "usr": "s:10SWCPackage0A7HandlerC13ConfigurationV",
-            "mangledName": "$s10SWCPackage0A7HandlerC13ConfigurationV",
+            "usr": "s:10SWCPackage0A7HandlerV13ConfigurationV",
+            "mangledName": "$s10SWCPackage0A7HandlerV13ConfigurationV",
             "moduleName": "SWCPackage",
             "declAttributes": [
               "AccessControl"
@@ -14358,15 +14773,13 @@
             "isFromExtension": true
           }
         ],
-        "declKind": "Class",
-        "usr": "s:10SWCPackage0A7HandlerC",
-        "mangledName": "$s10SWCPackage0A7HandlerC",
+        "declKind": "Struct",
+        "usr": "s:10SWCPackage0A7HandlerV",
+        "mangledName": "$s10SWCPackage0A7HandlerV",
         "moduleName": "SWCPackage",
         "declAttributes": [
-          "Final",
           "AccessControl"
-        ],
-        "hasMissingDesignatedInitializers": true
+        ]
       },
       {
         "kind": "Import",
@@ -16747,647 +17160,6 @@
         "moduleName": "SWCPackage",
         "declAttributes": [
           "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "SWCPackage",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "TypeDecl",
-        "name": "SWCBackgroundDownloaderDelegate",
-        "printedName": "SWCBackgroundDownloaderDelegate",
-        "children": [
-          {
-            "kind": "Function",
-            "name": "backgroundDownload",
-            "printedName": "backgroundDownload(didCompleteWithError:identifier:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Error",
-                "printedName": "Swift.Error",
-                "usr": "s:s5ErrorP"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:10SWCPackage31SWCBackgroundDownloaderDelegateP18backgroundDownload20didCompleteWithError10identifierys0J0_p_SStF",
-            "mangledName": "$s10SWCPackage31SWCBackgroundDownloaderDelegateP18backgroundDownload20didCompleteWithError10identifierys0J0_p_SStF",
-            "moduleName": "SWCPackage",
-            "genericSig": "<τ_0_0 where τ_0_0 : SWCPackage.SWCBackgroundDownloaderDelegate>",
-            "sugared_genericSig": "<Self where Self : SWCPackage.SWCBackgroundDownloaderDelegate>",
-            "protocolReq": true,
-            "reqNewWitnessTableEntry": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "backgroundDownload",
-            "printedName": "backgroundDownload(didFinishDownloadingTo:identifier:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "URL",
-                "printedName": "Foundation.URL",
-                "usr": "s:10Foundation3URLV"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:10SWCPackage31SWCBackgroundDownloaderDelegateP18backgroundDownload22didFinishDownloadingTo10identifiery10Foundation3URLV_SStF",
-            "mangledName": "$s10SWCPackage31SWCBackgroundDownloaderDelegateP18backgroundDownload22didFinishDownloadingTo10identifiery10Foundation3URLV_SStF",
-            "moduleName": "SWCPackage",
-            "genericSig": "<τ_0_0 where τ_0_0 : SWCPackage.SWCBackgroundDownloaderDelegate>",
-            "sugared_genericSig": "<Self where Self : SWCPackage.SWCBackgroundDownloaderDelegate>",
-            "protocolReq": true,
-            "reqNewWitnessTableEntry": true,
-            "funcSelfKind": "NonMutating"
-          }
-        ],
-        "declKind": "Protocol",
-        "usr": "s:10SWCPackage31SWCBackgroundDownloaderDelegateP",
-        "mangledName": "$s10SWCPackage31SWCBackgroundDownloaderDelegateP",
-        "moduleName": "SWCPackage",
-        "genericSig": "<τ_0_0 : AnyObject>",
-        "sugared_genericSig": "<Self : AnyObject>",
-        "declAttributes": [
-          "AccessControl"
-        ]
-      },
-      {
-        "kind": "TypeDecl",
-        "name": "SWCBackgroundDownloader",
-        "printedName": "SWCBackgroundDownloader",
-        "children": [
-          {
-            "kind": "Var",
-            "name": "backgroundCompletionHandler",
-            "printedName": "backgroundCompletionHandler",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "(() -> ())?",
-                "children": [
-                  {
-                    "kind": "TypeFunc",
-                    "name": "Function",
-                    "printedName": "() -> ()",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Void",
-                        "printedName": "()"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Void",
-                        "printedName": "()"
-                      }
-                    ]
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:10SWCPackage23SWCBackgroundDownloaderC27backgroundCompletionHandleryycSgvp",
-            "mangledName": "$s10SWCPackage23SWCBackgroundDownloaderC27backgroundCompletionHandleryycSgvp",
-            "moduleName": "SWCPackage",
-            "declAttributes": [
-              "HasInitialValue",
-              "HasStorage",
-              "AccessControl"
-            ],
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "(() -> ())?",
-                    "children": [
-                      {
-                        "kind": "TypeFunc",
-                        "name": "Function",
-                        "printedName": "() -> ()",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "Void",
-                            "printedName": "()"
-                          },
-                          {
-                            "kind": "TypeNominal",
-                            "name": "Void",
-                            "printedName": "()"
-                          }
-                        ]
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:10SWCPackage23SWCBackgroundDownloaderC27backgroundCompletionHandleryycSgvg",
-                "mangledName": "$s10SWCPackage23SWCBackgroundDownloaderC27backgroundCompletionHandleryycSgvg",
-                "moduleName": "SWCPackage",
-                "implicit": true,
-                "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "(() -> ())?",
-                    "children": [
-                      {
-                        "kind": "TypeFunc",
-                        "name": "Function",
-                        "printedName": "() -> ()",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "Void",
-                            "printedName": "()"
-                          },
-                          {
-                            "kind": "TypeNominal",
-                            "name": "Void",
-                            "printedName": "()"
-                          }
-                        ]
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:10SWCPackage23SWCBackgroundDownloaderC27backgroundCompletionHandleryycSgvs",
-                "mangledName": "$s10SWCPackage23SWCBackgroundDownloaderC27backgroundCompletionHandleryycSgvs",
-                "moduleName": "SWCPackage",
-                "implicit": true,
-                "accessorKind": "set"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Modify",
-                "printedName": "Modify()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:10SWCPackage23SWCBackgroundDownloaderC27backgroundCompletionHandleryycSgvM",
-                "mangledName": "$s10SWCPackage23SWCBackgroundDownloaderC27backgroundCompletionHandleryycSgvM",
-                "moduleName": "SWCPackage",
-                "implicit": true,
-                "accessorKind": "_modify"
-              }
-            ]
-          },
-          {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init(identifier:urlString:delegate:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "SWCBackgroundDownloader",
-                "printedName": "SWCPackage.SWCBackgroundDownloader",
-                "usr": "c:@M@SWCPackage@objc(cs)SWCBackgroundDownloader"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "SWCPackage.SWCBackgroundDownloaderDelegate?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "SWCBackgroundDownloaderDelegate",
-                    "printedName": "SWCPackage.SWCBackgroundDownloaderDelegate",
-                    "usr": "s:10SWCPackage31SWCBackgroundDownloaderDelegateP"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Constructor",
-            "usr": "s:10SWCPackage23SWCBackgroundDownloaderC10identifier9urlString8delegateACSS_SSAA0bC8Delegate_pSgtcfc",
-            "mangledName": "$s10SWCPackage23SWCBackgroundDownloaderC10identifier9urlString8delegateACSS_SSAA0bC8Delegate_pSgtcfc",
-            "moduleName": "SWCPackage",
-            "declAttributes": [
-              "AccessControl"
-            ],
-            "init_kind": "Designated"
-          },
-          {
-            "kind": "Function",
-            "name": "start",
-            "printedName": "start()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "URLSessionDownloadTask",
-                "printedName": "Foundation.URLSessionDownloadTask",
-                "usr": "c:objc(cs)NSURLSessionDownloadTask"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:10SWCPackage23SWCBackgroundDownloaderC5startSo24NSURLSessionDownloadTaskCyF",
-            "mangledName": "$s10SWCPackage23SWCBackgroundDownloaderC5startSo24NSURLSessionDownloadTaskCyF",
-            "moduleName": "SWCPackage",
-            "declAttributes": [
-              "AccessControl",
-              "DiscardableResult"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "SWCBackgroundDownloader",
-                "printedName": "SWCPackage.SWCBackgroundDownloader",
-                "usr": "c:@M@SWCPackage@objc(cs)SWCBackgroundDownloader"
-              }
-            ],
-            "declKind": "Constructor",
-            "usr": "c:@M@SWCPackage@objc(cs)SWCBackgroundDownloader(im)init",
-            "mangledName": "$s10SWCPackage23SWCBackgroundDownloaderCACycfc",
-            "moduleName": "SWCPackage",
-            "overriding": true,
-            "implicit": true,
-            "objc_name": "init",
-            "declAttributes": [
-              "Dynamic",
-              "ObjC",
-              "Override"
-            ],
-            "init_kind": "Designated"
-          },
-          {
-            "kind": "Function",
-            "name": "urlSessionDidFinishEvents",
-            "printedName": "urlSessionDidFinishEvents(forBackgroundURLSession:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "URLSession",
-                "printedName": "Foundation.URLSession",
-                "usr": "c:objc(cs)NSURLSession"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@CM@SWCPackage@objc(cs)SWCBackgroundDownloader(im)URLSessionDidFinishEventsForBackgroundURLSession:",
-            "mangledName": "$s10SWCPackage23SWCBackgroundDownloaderC25urlSessionDidFinishEvents23forBackgroundURLSessionySo12NSURLSessionC_tF",
-            "moduleName": "SWCPackage",
-            "objc_name": "URLSessionDidFinishEventsForBackgroundURLSession:",
-            "declAttributes": [
-              "Dynamic",
-              "ObjC",
-              "AccessControl"
-            ],
-            "isFromExtension": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "urlSession",
-            "printedName": "urlSession(_:didBecomeInvalidWithError:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "URLSession",
-                "printedName": "Foundation.URLSession",
-                "usr": "c:objc(cs)NSURLSession"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.Error?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Error",
-                    "printedName": "Swift.Error",
-                    "usr": "s:s5ErrorP"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@CM@SWCPackage@objc(cs)SWCBackgroundDownloader(im)URLSession:didBecomeInvalidWithError:",
-            "mangledName": "$s10SWCPackage23SWCBackgroundDownloaderC10urlSession_25didBecomeInvalidWithErrorySo12NSURLSessionC_s0J0_pSgtF",
-            "moduleName": "SWCPackage",
-            "objc_name": "URLSession:didBecomeInvalidWithError:",
-            "declAttributes": [
-              "Dynamic",
-              "ObjC",
-              "AccessControl"
-            ],
-            "isFromExtension": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "urlSession",
-            "printedName": "urlSession(_:didReceive:completionHandler:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "URLSession",
-                "printedName": "Foundation.URLSession",
-                "usr": "c:objc(cs)NSURLSession"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "URLAuthenticationChallenge",
-                "printedName": "Foundation.URLAuthenticationChallenge",
-                "usr": "c:objc(cs)NSURLAuthenticationChallenge"
-              },
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(Foundation.URLSession.AuthChallengeDisposition, Foundation.URLCredential?) -> ()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Tuple",
-                    "printedName": "(Foundation.URLSession.AuthChallengeDisposition, Foundation.URLCredential?)",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "AuthChallengeDisposition",
-                        "printedName": "Foundation.URLSession.AuthChallengeDisposition",
-                        "usr": "c:@E@NSURLSessionAuthChallengeDisposition"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Optional",
-                        "printedName": "Foundation.URLCredential?",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "URLCredential",
-                            "printedName": "Foundation.URLCredential",
-                            "usr": "c:objc(cs)NSURLCredential"
-                          }
-                        ],
-                        "usr": "s:Sq"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@CM@SWCPackage@objc(cs)SWCBackgroundDownloader(im)URLSession:didReceiveChallenge:completionHandler:",
-            "mangledName": "$s10SWCPackage23SWCBackgroundDownloaderC10urlSession_10didReceive17completionHandlerySo12NSURLSessionC_So28NSURLAuthenticationChallengeCySo0j4AuthL11DispositionV_So15NSURLCredentialCSgtctF",
-            "moduleName": "SWCPackage",
-            "objc_name": "URLSession:didReceiveChallenge:completionHandler:",
-            "declAttributes": [
-              "Dynamic",
-              "ObjC",
-              "AccessControl"
-            ],
-            "isFromExtension": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "urlSession",
-            "printedName": "urlSession(_:downloadTask:didFinishDownloadingTo:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "URLSession",
-                "printedName": "Foundation.URLSession",
-                "usr": "c:objc(cs)NSURLSession"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "URLSessionDownloadTask",
-                "printedName": "Foundation.URLSessionDownloadTask",
-                "usr": "c:objc(cs)NSURLSessionDownloadTask"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "URL",
-                "printedName": "Foundation.URL",
-                "usr": "s:10Foundation3URLV"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@CM@SWCPackage@objc(cs)SWCBackgroundDownloader(im)URLSession:downloadTask:didFinishDownloadingToURL:",
-            "mangledName": "$s10SWCPackage23SWCBackgroundDownloaderC10urlSession_12downloadTask22didFinishDownloadingToySo12NSURLSessionC_So0l8DownloadG0C10Foundation3URLVtF",
-            "moduleName": "SWCPackage",
-            "objc_name": "URLSession:downloadTask:didFinishDownloadingToURL:",
-            "declAttributes": [
-              "Dynamic",
-              "ObjC",
-              "AccessControl"
-            ],
-            "isFromExtension": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "urlSession",
-            "printedName": "urlSession(_:task:didCompleteWithError:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "URLSession",
-                "printedName": "Foundation.URLSession",
-                "usr": "c:objc(cs)NSURLSession"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "URLSessionTask",
-                "printedName": "Foundation.URLSessionTask",
-                "usr": "c:objc(cs)NSURLSessionTask"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.Error?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Error",
-                    "printedName": "Swift.Error",
-                    "usr": "s:s5ErrorP"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@CM@SWCPackage@objc(cs)SWCBackgroundDownloader(im)URLSession:task:didCompleteWithError:",
-            "mangledName": "$s10SWCPackage23SWCBackgroundDownloaderC10urlSession_4task20didCompleteWithErrorySo12NSURLSessionC_So0K4TaskCs0J0_pSgtF",
-            "moduleName": "SWCPackage",
-            "objc_name": "URLSession:task:didCompleteWithError:",
-            "declAttributes": [
-              "Dynamic",
-              "ObjC",
-              "AccessControl"
-            ],
-            "isFromExtension": true,
-            "funcSelfKind": "NonMutating"
-          }
-        ],
-        "declKind": "Class",
-        "usr": "c:@M@SWCPackage@objc(cs)SWCBackgroundDownloader",
-        "mangledName": "$s10SWCPackage23SWCBackgroundDownloaderC",
-        "moduleName": "SWCPackage",
-        "declAttributes": [
-          "AccessControl",
-          "ObjC"
-        ],
-        "superclassUsr": "c:objc(cs)NSObject",
-        "superclassNames": [
-          "ObjectiveC.NSObject"
-        ],
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Hashable",
-            "printedName": "Hashable",
-            "usr": "s:SH",
-            "mangledName": "$sSH"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CVarArg",
-            "printedName": "CVarArg",
-            "usr": "s:s7CVarArgP",
-            "mangledName": "$ss7CVarArgP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "_KeyValueCodingAndObservingPublishing",
-            "printedName": "_KeyValueCodingAndObservingPublishing",
-            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
-            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "_KeyValueCodingAndObserving",
-            "printedName": "_KeyValueCodingAndObserving",
-            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
-            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomStringConvertible",
-            "printedName": "CustomStringConvertible",
-            "usr": "s:s23CustomStringConvertibleP",
-            "mangledName": "$ss23CustomStringConvertibleP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomDebugStringConvertible",
-            "printedName": "CustomDebugStringConvertible",
-            "usr": "s:s28CustomDebugStringConvertibleP",
-            "mangledName": "$ss28CustomDebugStringConvertibleP"
-          }
         ]
       },
       {
@@ -19919,6 +19691,7 @@
             "moduleName": "SWCPackage",
             "static": true,
             "declAttributes": [
+              "Final",
               "AccessControl"
             ],
             "funcSelfKind": "NonMutating"
@@ -19949,6 +19722,7 @@
             "moduleName": "SWCPackage",
             "static": true,
             "declAttributes": [
+              "Final",
               "AccessControl"
             ],
             "accessors": [
@@ -19977,6 +19751,9 @@
                 "mangledName": "$s10SWCPackage12CommonLoaderC6windowSo8UIWindowCSgvgZ",
                 "moduleName": "SWCPackage",
                 "static": true,
+                "declAttributes": [
+                  "Final"
+                ],
                 "accessorKind": "get"
               }
             ]
@@ -19998,6 +19775,7 @@
             "moduleName": "SWCPackage",
             "static": true,
             "declAttributes": [
+              "Final",
               "AccessControl"
             ],
             "funcSelfKind": "NonMutating"
@@ -20034,6 +19812,7 @@
         "mangledName": "$s10SWCPackage12CommonLoaderC",
         "moduleName": "SWCPackage",
         "declAttributes": [
+          "Final",
           "AccessControl",
           "ObjC"
         ],
@@ -20538,6 +20317,7 @@
             "mangledName": "$s10SWCPackage17SWCDownloadEngineC7sessionSo12NSURLSessionCvp",
             "moduleName": "SWCPackage",
             "declAttributes": [
+              "Final",
               "Lazy",
               "AccessControl"
             ],
@@ -20559,6 +20339,9 @@
                 "mangledName": "$s10SWCPackage17SWCDownloadEngineC7sessionSo12NSURLSessionCvg",
                 "moduleName": "SWCPackage",
                 "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
                 "accessorKind": "get"
               },
               {
@@ -20583,6 +20366,9 @@
                 "mangledName": "$s10SWCPackage17SWCDownloadEngineC7sessionSo12NSURLSessionCvs",
                 "moduleName": "SWCPackage",
                 "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
                 "accessorKind": "set"
               },
               {
@@ -20601,14 +20387,17 @@
                 "mangledName": "$s10SWCPackage17SWCDownloadEngineC7sessionSo12NSURLSessionCvM",
                 "moduleName": "SWCPackage",
                 "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
                 "accessorKind": "_modify"
               }
             ]
           },
           {
             "kind": "Var",
-            "name": "shared",
-            "printedName": "shared",
+            "name": "prepare",
+            "printedName": "prepare",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -20618,8 +20407,8 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:10SWCPackage17SWCDownloadEngineC6sharedACvpZ",
-            "mangledName": "$s10SWCPackage17SWCDownloadEngineC6sharedACvpZ",
+            "usr": "s:10SWCPackage17SWCDownloadEngineC7prepareACvpZ",
+            "mangledName": "$s10SWCPackage17SWCDownloadEngineC7prepareACvpZ",
             "moduleName": "SWCPackage",
             "static": true,
             "declAttributes": [
@@ -20644,8 +20433,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:10SWCPackage17SWCDownloadEngineC6sharedACvgZ",
-                "mangledName": "$s10SWCPackage17SWCDownloadEngineC6sharedACvgZ",
+                "usr": "s:10SWCPackage17SWCDownloadEngineC7prepareACvgZ",
+                "mangledName": "$s10SWCPackage17SWCDownloadEngineC7prepareACvgZ",
                 "moduleName": "SWCPackage",
                 "static": true,
                 "implicit": true,
@@ -20658,8 +20447,8 @@
           },
           {
             "kind": "Function",
-            "name": "downloadTaskPublisher",
-            "printedName": "downloadTaskPublisher(with:showLoader:)",
+            "name": "download",
+            "printedName": "download(from:showLoader:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -20696,40 +20485,15 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:10SWCPackage17SWCDownloadEngineC21downloadTaskPublisher4with10showLoader7Combine03AnyF0VyAA0B6OutputOs5Error_pGSS_SbtF",
-            "mangledName": "$s10SWCPackage17SWCDownloadEngineC21downloadTaskPublisher4with10showLoader7Combine03AnyF0VyAA0B6OutputOs5Error_pGSS_SbtF",
+            "usr": "s:10SWCPackage17SWCDownloadEngineC8download4from10showLoader7Combine12AnyPublisherVyAA0B6OutputOs5Error_pGSS_SbtF",
+            "mangledName": "$s10SWCPackage17SWCDownloadEngineC8download4from10showLoader7Combine12AnyPublisherVyAA0B6OutputOs5Error_pGSS_SbtF",
             "moduleName": "SWCPackage",
             "declAttributes": [
+              "Final",
               "AccessControl",
               "RawDocComment"
             ],
             "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "SWCDownloadEngine",
-                "printedName": "SWCPackage.SWCDownloadEngine",
-                "usr": "c:@M@SWCPackage@objc(cs)SWCDownloadEngine"
-              }
-            ],
-            "declKind": "Constructor",
-            "usr": "c:@M@SWCPackage@objc(cs)SWCDownloadEngine(im)init",
-            "mangledName": "$s10SWCPackage17SWCDownloadEngineCACycfc",
-            "moduleName": "SWCPackage",
-            "overriding": true,
-            "implicit": true,
-            "objc_name": "init",
-            "declAttributes": [
-              "Dynamic",
-              "ObjC",
-              "Override"
-            ],
-            "init_kind": "Designated"
           },
           {
             "kind": "Function",
@@ -20799,7 +20563,7 @@
             "moduleName": "SWCPackage",
             "objc_name": "URLSession:didReceiveChallenge:completionHandler:",
             "declAttributes": [
-              "Dynamic",
+              "Final",
               "ObjC",
               "AccessControl"
             ],
@@ -20812,11 +20576,13 @@
         "mangledName": "$s10SWCPackage17SWCDownloadEngineC",
         "moduleName": "SWCPackage",
         "declAttributes": [
+          "Final",
           "AccessControl",
           "RawDocComment",
           "ObjC"
         ],
         "superclassUsr": "c:objc(cs)NSObject",
+        "hasMissingDesignatedInitializers": true,
         "inheritsConvenienceInitializers": true,
         "superclassNames": [
           "ObjectiveC.NSObject"
@@ -22229,7 +21995,8 @@
             "declAttributes": [
               "HasInitialValue",
               "HasStorage",
-              "AccessControl"
+              "AccessControl",
+              "RawDocComment"
             ],
             "hasStorage": true,
             "accessors": [
@@ -22331,7 +22098,8 @@
             "declAttributes": [
               "HasInitialValue",
               "HasStorage",
-              "AccessControl"
+              "AccessControl",
+              "RawDocComment"
             ],
             "hasStorage": true,
             "accessors": [
@@ -22405,19 +22173,20 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "ContentTypes",
-                "printedName": "SWCPackage.ContentTypes",
-                "usr": "s:10SWCPackage12ContentTypesO"
+                "name": "HTTPHeaderValue",
+                "printedName": "SWCPackage.HTTPHeaderValue",
+                "usr": "s:10SWCPackage15HTTPHeaderValueV"
               }
             ],
             "declKind": "Var",
-            "usr": "s:10SWCPackage27SWCExternalRequestGeneratorV11contentTypeAA12ContentTypesOvp",
-            "mangledName": "$s10SWCPackage27SWCExternalRequestGeneratorV11contentTypeAA12ContentTypesOvp",
+            "usr": "s:10SWCPackage27SWCExternalRequestGeneratorV11contentTypeAA15HTTPHeaderValueVvp",
+            "mangledName": "$s10SWCPackage27SWCExternalRequestGeneratorV11contentTypeAA15HTTPHeaderValueVvp",
             "moduleName": "SWCPackage",
             "declAttributes": [
               "HasInitialValue",
               "HasStorage",
-              "AccessControl"
+              "AccessControl",
+              "RawDocComment"
             ],
             "hasStorage": true,
             "accessors": [
@@ -22428,14 +22197,14 @@
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "ContentTypes",
-                    "printedName": "SWCPackage.ContentTypes",
-                    "usr": "s:10SWCPackage12ContentTypesO"
+                    "name": "HTTPHeaderValue",
+                    "printedName": "SWCPackage.HTTPHeaderValue",
+                    "usr": "s:10SWCPackage15HTTPHeaderValueV"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:10SWCPackage27SWCExternalRequestGeneratorV11contentTypeAA12ContentTypesOvg",
-                "mangledName": "$s10SWCPackage27SWCExternalRequestGeneratorV11contentTypeAA12ContentTypesOvg",
+                "usr": "s:10SWCPackage27SWCExternalRequestGeneratorV11contentTypeAA15HTTPHeaderValueVvg",
+                "mangledName": "$s10SWCPackage27SWCExternalRequestGeneratorV11contentTypeAA15HTTPHeaderValueVvg",
                 "moduleName": "SWCPackage",
                 "implicit": true,
                 "accessorKind": "get"
@@ -22452,14 +22221,14 @@
                   },
                   {
                     "kind": "TypeNominal",
-                    "name": "ContentTypes",
-                    "printedName": "SWCPackage.ContentTypes",
-                    "usr": "s:10SWCPackage12ContentTypesO"
+                    "name": "HTTPHeaderValue",
+                    "printedName": "SWCPackage.HTTPHeaderValue",
+                    "usr": "s:10SWCPackage15HTTPHeaderValueV"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:10SWCPackage27SWCExternalRequestGeneratorV11contentTypeAA12ContentTypesOvs",
-                "mangledName": "$s10SWCPackage27SWCExternalRequestGeneratorV11contentTypeAA12ContentTypesOvs",
+                "usr": "s:10SWCPackage27SWCExternalRequestGeneratorV11contentTypeAA15HTTPHeaderValueVvs",
+                "mangledName": "$s10SWCPackage27SWCExternalRequestGeneratorV11contentTypeAA15HTTPHeaderValueVvs",
                 "moduleName": "SWCPackage",
                 "implicit": true,
                 "accessorKind": "set"
@@ -22476,8 +22245,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:10SWCPackage27SWCExternalRequestGeneratorV11contentTypeAA12ContentTypesOvM",
-                "mangledName": "$s10SWCPackage27SWCExternalRequestGeneratorV11contentTypeAA12ContentTypesOvM",
+                "usr": "s:10SWCPackage27SWCExternalRequestGeneratorV11contentTypeAA15HTTPHeaderValueVvM",
+                "mangledName": "$s10SWCPackage27SWCExternalRequestGeneratorV11contentTypeAA15HTTPHeaderValueVvM",
                 "moduleName": "SWCPackage",
                 "implicit": true,
                 "accessorKind": "_modify"
@@ -22491,19 +22260,20 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "ContentTypes",
-                "printedName": "SWCPackage.ContentTypes",
-                "usr": "s:10SWCPackage12ContentTypesO"
+                "name": "HTTPHeaderValue",
+                "printedName": "SWCPackage.HTTPHeaderValue",
+                "usr": "s:10SWCPackage15HTTPHeaderValueV"
               }
             ],
             "declKind": "Var",
-            "usr": "s:10SWCPackage27SWCExternalRequestGeneratorV6acceptAA12ContentTypesOvp",
-            "mangledName": "$s10SWCPackage27SWCExternalRequestGeneratorV6acceptAA12ContentTypesOvp",
+            "usr": "s:10SWCPackage27SWCExternalRequestGeneratorV6acceptAA15HTTPHeaderValueVvp",
+            "mangledName": "$s10SWCPackage27SWCExternalRequestGeneratorV6acceptAA15HTTPHeaderValueVvp",
             "moduleName": "SWCPackage",
             "declAttributes": [
               "HasInitialValue",
               "HasStorage",
-              "AccessControl"
+              "AccessControl",
+              "RawDocComment"
             ],
             "hasStorage": true,
             "accessors": [
@@ -22514,14 +22284,14 @@
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "ContentTypes",
-                    "printedName": "SWCPackage.ContentTypes",
-                    "usr": "s:10SWCPackage12ContentTypesO"
+                    "name": "HTTPHeaderValue",
+                    "printedName": "SWCPackage.HTTPHeaderValue",
+                    "usr": "s:10SWCPackage15HTTPHeaderValueV"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:10SWCPackage27SWCExternalRequestGeneratorV6acceptAA12ContentTypesOvg",
-                "mangledName": "$s10SWCPackage27SWCExternalRequestGeneratorV6acceptAA12ContentTypesOvg",
+                "usr": "s:10SWCPackage27SWCExternalRequestGeneratorV6acceptAA15HTTPHeaderValueVvg",
+                "mangledName": "$s10SWCPackage27SWCExternalRequestGeneratorV6acceptAA15HTTPHeaderValueVvg",
                 "moduleName": "SWCPackage",
                 "implicit": true,
                 "accessorKind": "get"
@@ -22538,14 +22308,14 @@
                   },
                   {
                     "kind": "TypeNominal",
-                    "name": "ContentTypes",
-                    "printedName": "SWCPackage.ContentTypes",
-                    "usr": "s:10SWCPackage12ContentTypesO"
+                    "name": "HTTPHeaderValue",
+                    "printedName": "SWCPackage.HTTPHeaderValue",
+                    "usr": "s:10SWCPackage15HTTPHeaderValueV"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:10SWCPackage27SWCExternalRequestGeneratorV6acceptAA12ContentTypesOvs",
-                "mangledName": "$s10SWCPackage27SWCExternalRequestGeneratorV6acceptAA12ContentTypesOvs",
+                "usr": "s:10SWCPackage27SWCExternalRequestGeneratorV6acceptAA15HTTPHeaderValueVvs",
+                "mangledName": "$s10SWCPackage27SWCExternalRequestGeneratorV6acceptAA15HTTPHeaderValueVvs",
                 "moduleName": "SWCPackage",
                 "implicit": true,
                 "accessorKind": "set"
@@ -22562,8 +22332,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:10SWCPackage27SWCExternalRequestGeneratorV6acceptAA12ContentTypesOvM",
-                "mangledName": "$s10SWCPackage27SWCExternalRequestGeneratorV6acceptAA12ContentTypesOvM",
+                "usr": "s:10SWCPackage27SWCExternalRequestGeneratorV6acceptAA15HTTPHeaderValueVvM",
+                "mangledName": "$s10SWCPackage27SWCExternalRequestGeneratorV6acceptAA15HTTPHeaderValueVvM",
                 "moduleName": "SWCPackage",
                 "implicit": true,
                 "accessorKind": "_modify"
@@ -22579,17 +22349,18 @@
                 "kind": "TypeNominal",
                 "name": "HTTPMethod",
                 "printedName": "SWCPackage.HTTPMethod",
-                "usr": "s:10SWCPackage10HTTPMethodO"
+                "usr": "s:10SWCPackage10HTTPMethodV"
               }
             ],
             "declKind": "Var",
-            "usr": "s:10SWCPackage27SWCExternalRequestGeneratorV10httpMethodAA10HTTPMethodOvp",
-            "mangledName": "$s10SWCPackage27SWCExternalRequestGeneratorV10httpMethodAA10HTTPMethodOvp",
+            "usr": "s:10SWCPackage27SWCExternalRequestGeneratorV10httpMethodAA10HTTPMethodVvp",
+            "mangledName": "$s10SWCPackage27SWCExternalRequestGeneratorV10httpMethodAA10HTTPMethodVvp",
             "moduleName": "SWCPackage",
             "declAttributes": [
               "HasInitialValue",
               "HasStorage",
-              "AccessControl"
+              "AccessControl",
+              "RawDocComment"
             ],
             "hasStorage": true,
             "accessors": [
@@ -22602,12 +22373,12 @@
                     "kind": "TypeNominal",
                     "name": "HTTPMethod",
                     "printedName": "SWCPackage.HTTPMethod",
-                    "usr": "s:10SWCPackage10HTTPMethodO"
+                    "usr": "s:10SWCPackage10HTTPMethodV"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:10SWCPackage27SWCExternalRequestGeneratorV10httpMethodAA10HTTPMethodOvg",
-                "mangledName": "$s10SWCPackage27SWCExternalRequestGeneratorV10httpMethodAA10HTTPMethodOvg",
+                "usr": "s:10SWCPackage27SWCExternalRequestGeneratorV10httpMethodAA10HTTPMethodVvg",
+                "mangledName": "$s10SWCPackage27SWCExternalRequestGeneratorV10httpMethodAA10HTTPMethodVvg",
                 "moduleName": "SWCPackage",
                 "implicit": true,
                 "accessorKind": "get"
@@ -22626,12 +22397,12 @@
                     "kind": "TypeNominal",
                     "name": "HTTPMethod",
                     "printedName": "SWCPackage.HTTPMethod",
-                    "usr": "s:10SWCPackage10HTTPMethodO"
+                    "usr": "s:10SWCPackage10HTTPMethodV"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:10SWCPackage27SWCExternalRequestGeneratorV10httpMethodAA10HTTPMethodOvs",
-                "mangledName": "$s10SWCPackage27SWCExternalRequestGeneratorV10httpMethodAA10HTTPMethodOvs",
+                "usr": "s:10SWCPackage27SWCExternalRequestGeneratorV10httpMethodAA10HTTPMethodVvs",
+                "mangledName": "$s10SWCPackage27SWCExternalRequestGeneratorV10httpMethodAA10HTTPMethodVvs",
                 "moduleName": "SWCPackage",
                 "implicit": true,
                 "accessorKind": "set"
@@ -22648,8 +22419,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:10SWCPackage27SWCExternalRequestGeneratorV10httpMethodAA10HTTPMethodOvM",
-                "mangledName": "$s10SWCPackage27SWCExternalRequestGeneratorV10httpMethodAA10HTTPMethodOvM",
+                "usr": "s:10SWCPackage27SWCExternalRequestGeneratorV10httpMethodAA10HTTPMethodVvM",
+                "mangledName": "$s10SWCPackage27SWCExternalRequestGeneratorV10httpMethodAA10HTTPMethodVvM",
                 "moduleName": "SWCPackage",
                 "implicit": true,
                 "accessorKind": "_modify"
@@ -22722,24 +22493,25 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
+                "name": "HTTPHeaderValue",
+                "printedName": "SWCPackage.HTTPHeaderValue",
+                "usr": "s:10SWCPackage15HTTPHeaderValueV"
               },
               {
                 "kind": "TypeNominal",
-                "name": "HTTPHeaders",
-                "printedName": "SWCPackage.HTTPHeaders",
-                "usr": "s:10SWCPackage11HTTPHeadersO"
+                "name": "HTTPHeader",
+                "printedName": "SWCPackage.HTTPHeader",
+                "usr": "s:10SWCPackage10HTTPHeaderV"
               }
             ],
             "declKind": "Func",
-            "usr": "s:10SWCPackage27SWCExternalRequestGeneratorV9setHeader5value5fieldySS_AA11HTTPHeadersOtF",
-            "mangledName": "$s10SWCPackage27SWCExternalRequestGeneratorV9setHeader5value5fieldySS_AA11HTTPHeadersOtF",
+            "usr": "s:10SWCPackage27SWCExternalRequestGeneratorV9setHeader5value5fieldyAA15HTTPHeaderValueV_AA0I0VtF",
+            "mangledName": "$s10SWCPackage27SWCExternalRequestGeneratorV9setHeader5value5fieldyAA15HTTPHeaderValueV_AA0I0VtF",
             "moduleName": "SWCPackage",
             "declAttributes": [
               "AccessControl",
-              "Mutating"
+              "Mutating",
+              "RawDocComment"
             ],
             "funcSelfKind": "Mutating"
           },
@@ -22813,7 +22585,8 @@
         "mangledName": "$s10SWCPackage27SWCExternalRequestGeneratorV",
         "moduleName": "SWCPackage",
         "declAttributes": [
-          "AccessControl"
+          "AccessControl",
+          "RawDocComment"
         ],
         "conformances": [
           {
@@ -28257,100 +28030,65 @@
     {
       "filePath": "\/Users\/yasheed\/Documents\/SmartOffice\/SWCPackage\/SWCFrameworkDemo\/SWCPackage\/Source\/NetworkEngine\/Constants\/SWCNetworkConstants.swift",
       "kind": "StringLiteral",
-      "offset": 172,
+      "offset": 725,
       "length": 18,
       "value": "\"application\/json\""
     },
     {
       "filePath": "\/Users\/yasheed\/Documents\/SmartOffice\/SWCPackage\/SWCFrameworkDemo\/SWCPackage\/Source\/NetworkEngine\/Constants\/SWCNetworkConstants.swift",
       "kind": "StringLiteral",
-      "offset": 219,
+      "offset": 795,
       "length": 32,
       "value": "\"application\/json;odata=verbose\""
     },
     {
       "filePath": "\/Users\/yasheed\/Documents\/SmartOffice\/SWCPackage\/SWCFrameworkDemo\/SWCPackage\/Source\/NetworkEngine\/Constants\/SWCNetworkConstants.swift",
       "kind": "StringLiteral",
-      "offset": 172,
-      "length": 18,
-      "value": "\"application\/json\""
-    },
-    {
-      "filePath": "\/Users\/yasheed\/Documents\/SmartOffice\/SWCPackage\/SWCFrameworkDemo\/SWCPackage\/Source\/NetworkEngine\/Constants\/SWCNetworkConstants.swift",
-      "kind": "StringLiteral",
-      "offset": 219,
-      "length": 32,
-      "value": "\"application\/json;odata=verbose\""
-    },
-    {
-      "filePath": "\/Users\/yasheed\/Documents\/SmartOffice\/SWCPackage\/SWCFrameworkDemo\/SWCPackage\/Source\/NetworkEngine\/Constants\/SWCNetworkConstants.swift",
-      "kind": "StringLiteral",
-      "offset": 307,
+      "offset": 1400,
       "length": 8,
       "value": "\"Accept\""
     },
     {
       "filePath": "\/Users\/yasheed\/Documents\/SmartOffice\/SWCPackage\/SWCFrameworkDemo\/SWCPackage\/Source\/NetworkEngine\/Constants\/SWCNetworkConstants.swift",
       "kind": "StringLiteral",
-      "offset": 339,
+      "offset": 1450,
       "length": 14,
       "value": "\"Content-Type\""
     },
     {
       "filePath": "\/Users\/yasheed\/Documents\/SmartOffice\/SWCPackage\/SWCFrameworkDemo\/SWCPackage\/Source\/NetworkEngine\/Constants\/SWCNetworkConstants.swift",
       "kind": "StringLiteral",
-      "offset": 380,
+      "offset": 1509,
       "length": 17,
       "value": "\"X-RequestDigest\""
     },
     {
       "filePath": "\/Users\/yasheed\/Documents\/SmartOffice\/SWCPackage\/SWCFrameworkDemo\/SWCPackage\/Source\/NetworkEngine\/Constants\/SWCNetworkConstants.swift",
       "kind": "StringLiteral",
-      "offset": 421,
+      "offset": 1568,
       "length": 15,
       "value": "\"X-HTTP-Method\""
     },
     {
       "filePath": "\/Users\/yasheed\/Documents\/SmartOffice\/SWCPackage\/SWCFrameworkDemo\/SWCPackage\/Source\/NetworkEngine\/Constants\/SWCNetworkConstants.swift",
       "kind": "StringLiteral",
-      "offset": 456,
+      "offset": 1621,
       "length": 10,
       "value": "\"IF-MATCH\""
     },
     {
       "filePath": "\/Users\/yasheed\/Documents\/SmartOffice\/SWCPackage\/SWCFrameworkDemo\/SWCPackage\/Source\/NetworkEngine\/Constants\/SWCNetworkConstants.swift",
       "kind": "StringLiteral",
-      "offset": 307,
-      "length": 8,
-      "value": "\"Accept\""
+      "offset": 2068,
+      "length": 6,
+      "value": "\"POST\""
     },
     {
       "filePath": "\/Users\/yasheed\/Documents\/SmartOffice\/SWCPackage\/SWCFrameworkDemo\/SWCPackage\/Source\/NetworkEngine\/Constants\/SWCNetworkConstants.swift",
       "kind": "StringLiteral",
-      "offset": 339,
-      "length": 14,
-      "value": "\"Content-Type\""
-    },
-    {
-      "filePath": "\/Users\/yasheed\/Documents\/SmartOffice\/SWCPackage\/SWCFrameworkDemo\/SWCPackage\/Source\/NetworkEngine\/Constants\/SWCNetworkConstants.swift",
-      "kind": "StringLiteral",
-      "offset": 380,
-      "length": 17,
-      "value": "\"X-RequestDigest\""
-    },
-    {
-      "filePath": "\/Users\/yasheed\/Documents\/SmartOffice\/SWCPackage\/SWCFrameworkDemo\/SWCPackage\/Source\/NetworkEngine\/Constants\/SWCNetworkConstants.swift",
-      "kind": "StringLiteral",
-      "offset": 421,
-      "length": 15,
-      "value": "\"X-HTTP-Method\""
-    },
-    {
-      "filePath": "\/Users\/yasheed\/Documents\/SmartOffice\/SWCPackage\/SWCFrameworkDemo\/SWCPackage\/Source\/NetworkEngine\/Constants\/SWCNetworkConstants.swift",
-      "kind": "StringLiteral",
-      "offset": 456,
-      "length": 10,
-      "value": "\"IF-MATCH\""
+      "offset": 2108,
+      "length": 5,
+      "value": "\"GET\""
     },
     {
       "filePath": "\/Users\/yasheed\/Documents\/SmartOffice\/SWCPackage\/SWCFrameworkDemo\/SWCPackage\/Source\/NetworkEngine\/SupportingModels\/SWCResponseValidator.swift",
@@ -28421,13 +28159,6 @@
       "offset": 2534,
       "length": 9,
       "value": "\"reqGuid\""
-    },
-    {
-      "filePath": "\/Users\/yasheed\/Documents\/SmartOffice\/SWCPackage\/SWCFrameworkDemo\/SWCPackage\/Source\/NetworkEngine\/Generator\/DDriveUploadGenerator.swift",
-      "kind": "BooleanLiteral",
-      "offset": 219,
-      "length": 4,
-      "value": "true"
     },
     {
       "filePath": "\/Users\/yasheed\/Documents\/SmartOffice\/SWCPackage\/SWCFrameworkDemo\/SWCPackage\/Source\/LocalStorage\/SwiftKeychainWrapper\/SWCKeychainWrapper.swift",
@@ -28582,6 +28313,13 @@
       "offset": 435,
       "length": 2,
       "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/yasheed\/Documents\/SmartOffice\/SWCPackage\/SWCFrameworkDemo\/SWCPackage\/Source\/NetworkEngine\/DataHandlers\/SONetworkDataContainer.swift",
+      "kind": "BooleanLiteral",
+      "offset": 532,
+      "length": 5,
+      "value": "false"
     },
     {
       "filePath": "\/Users\/yasheed\/Documents\/SmartOffice\/SWCPackage\/SWCFrameworkDemo\/SWCPackage\/Source\/NetworkEngine\/Constants\/SWCResponseCode.swift",
@@ -29300,140 +29038,140 @@
     {
       "filePath": "\/Users\/yasheed\/Documents\/SmartOffice\/SWCPackage\/SWCFrameworkDemo\/SWCPackage\/Source\/Colors\/UIColorExtension.swift",
       "kind": "StringLiteral",
-      "offset": 2822,
+      "offset": 2821,
       "length": 15,
       "value": "\"SWCActiveTabs\""
     },
     {
       "filePath": "\/Users\/yasheed\/Documents\/SmartOffice\/SWCPackage\/SWCFrameworkDemo\/SWCPackage\/Source\/Colors\/UIColorExtension.swift",
       "kind": "StringLiteral",
-      "offset": 2938,
+      "offset": 2937,
       "length": 11,
       "value": "\"SWCArrows\""
     },
     {
       "filePath": "\/Users\/yasheed\/Documents\/SmartOffice\/SWCPackage\/SWCFrameworkDemo\/SWCPackage\/Source\/Colors\/UIColorExtension.swift",
       "kind": "StringLiteral",
-      "offset": 3054,
+      "offset": 3053,
       "length": 15,
       "value": "\"SWCBackground\""
     },
     {
       "filePath": "\/Users\/yasheed\/Documents\/SmartOffice\/SWCPackage\/SWCFrameworkDemo\/SWCPackage\/Source\/Colors\/UIColorExtension.swift",
       "kind": "StringLiteral",
-      "offset": 3168,
+      "offset": 3167,
       "length": 9,
       "value": "\"SWCBlue\""
     },
     {
       "filePath": "\/Users\/yasheed\/Documents\/SmartOffice\/SWCPackage\/SWCFrameworkDemo\/SWCPackage\/Source\/Colors\/UIColorExtension.swift",
       "kind": "StringLiteral",
-      "offset": 3282,
+      "offset": 3281,
       "length": 15,
       "value": "\"SWCCardBorder\""
     },
     {
       "filePath": "\/Users\/yasheed\/Documents\/SmartOffice\/SWCPackage\/SWCFrameworkDemo\/SWCPackage\/Source\/Colors\/UIColorExtension.swift",
       "kind": "StringLiteral",
-      "offset": 3397,
+      "offset": 3396,
       "length": 10,
       "value": "\"SWCCards\""
     },
     {
       "filePath": "\/Users\/yasheed\/Documents\/SmartOffice\/SWCPackage\/SWCFrameworkDemo\/SWCPackage\/Source\/Colors\/UIColorExtension.swift",
       "kind": "StringLiteral",
-      "offset": 3507,
+      "offset": 3506,
       "length": 10,
       "value": "\"SWCError\""
     },
     {
       "filePath": "\/Users\/yasheed\/Documents\/SmartOffice\/SWCPackage\/SWCFrameworkDemo\/SWCPackage\/Source\/Colors\/UIColorExtension.swift",
       "kind": "StringLiteral",
-      "offset": 3621,
+      "offset": 3620,
       "length": 14,
       "value": "\"SWCGreyIcons\""
     },
     {
       "filePath": "\/Users\/yasheed\/Documents\/SmartOffice\/SWCPackage\/SWCFrameworkDemo\/SWCPackage\/Source\/Colors\/UIColorExtension.swift",
       "kind": "StringLiteral",
-      "offset": 3736,
+      "offset": 3735,
       "length": 11,
       "value": "\"SWCHeader\""
     },
     {
       "filePath": "\/Users\/yasheed\/Documents\/SmartOffice\/SWCPackage\/SWCFrameworkDemo\/SWCPackage\/Source\/Colors\/UIColorExtension.swift",
       "kind": "StringLiteral",
-      "offset": 3853,
+      "offset": 3852,
       "length": 16,
       "value": "\"SWCInputFields\""
     },
     {
       "filePath": "\/Users\/yasheed\/Documents\/SmartOffice\/SWCPackage\/SWCFrameworkDemo\/SWCPackage\/Source\/Colors\/UIColorExtension.swift",
       "kind": "StringLiteral",
-      "offset": 3969,
+      "offset": 3968,
       "length": 10,
       "value": "\"SWCLines\""
     },
     {
       "filePath": "\/Users\/yasheed\/Documents\/SmartOffice\/SWCPackage\/SWCFrameworkDemo\/SWCPackage\/Source\/Colors\/UIColorExtension.swift",
       "kind": "StringLiteral",
-      "offset": 4080,
+      "offset": 4079,
       "length": 11,
       "value": "\"SWCOrange\""
     },
     {
       "filePath": "\/Users\/yasheed\/Documents\/SmartOffice\/SWCPackage\/SWCFrameworkDemo\/SWCPackage\/Source\/Colors\/UIColorExtension.swift",
       "kind": "StringLiteral",
-      "offset": 4197,
+      "offset": 4196,
       "length": 16,
       "value": "\"SWCPlaceholder\""
     },
     {
       "filePath": "\/Users\/yasheed\/Documents\/SmartOffice\/SWCPackage\/SWCFrameworkDemo\/SWCPackage\/Source\/Colors\/UIColorExtension.swift",
       "kind": "StringLiteral",
-      "offset": 4315,
+      "offset": 4314,
       "length": 12,
       "value": "\"SWCPrimary\""
     },
     {
       "filePath": "\/Users\/yasheed\/Documents\/SmartOffice\/SWCPackage\/SWCFrameworkDemo\/SWCPackage\/Source\/Colors\/UIColorExtension.swift",
       "kind": "StringLiteral",
-      "offset": 4433,
+      "offset": 4432,
       "length": 16,
       "value": "\"SWCPrimaryText\""
     },
     {
       "filePath": "\/Users\/yasheed\/Documents\/SmartOffice\/SWCPackage\/SWCFrameworkDemo\/SWCPackage\/Source\/Colors\/UIColorExtension.swift",
       "kind": "StringLiteral",
-      "offset": 4557,
+      "offset": 4556,
       "length": 18,
       "value": "\"SWCSecondaryText\""
     },
     {
       "filePath": "\/Users\/yasheed\/Documents\/SmartOffice\/SWCPackage\/SWCFrameworkDemo\/SWCPackage\/Source\/Colors\/UIColorExtension.swift",
       "kind": "StringLiteral",
-      "offset": 4674,
+      "offset": 4673,
       "length": 9,
       "value": "\"SWCTabs\""
     },
     {
       "filePath": "\/Users\/yasheed\/Documents\/SmartOffice\/SWCPackage\/SWCFrameworkDemo\/SWCPackage\/Source\/Colors\/UIColorExtension.swift",
       "kind": "StringLiteral",
-      "offset": 4791,
+      "offset": 4790,
       "length": 18,
       "value": "\"SWCUserCharacter\""
     },
     {
       "filePath": "\/Users\/yasheed\/Documents\/SmartOffice\/SWCPackage\/SWCFrameworkDemo\/SWCPackage\/Source\/Colors\/UIColorExtension.swift",
       "kind": "StringLiteral",
-      "offset": 4914,
+      "offset": 4913,
       "length": 15,
       "value": "\"SWCUserIconBg\""
     },
     {
       "filePath": "\/Users\/yasheed\/Documents\/SmartOffice\/SWCPackage\/SWCFrameworkDemo\/SWCPackage\/Source\/Colors\/UIColorExtension.swift",
       "kind": "StringLiteral",
-      "offset": 5031,
+      "offset": 5030,
       "length": 12,
       "value": "\"SWCWarning\""
     },
@@ -29508,34 +29246,6 @@
       "value": "true"
     },
     {
-      "filePath": "\/Users\/yasheed\/Documents\/SmartOffice\/SWCPackage\/SWCFrameworkDemo\/SWCPackage\/Source\/NetworkEngine\/Engine\/SWCBackgroundDownload.swift",
-      "kind": "StringLiteral",
-      "offset": 585,
-      "length": 39,
-      "value": "\"ae.gov.dewa.smartoffice.\""
-    },
-    {
-      "filePath": "\/Users\/yasheed\/Documents\/SmartOffice\/SWCPackage\/SWCFrameworkDemo\/SWCPackage\/Source\/NetworkEngine\/Engine\/SWCBackgroundDownload.swift",
-      "kind": "StringLiteral",
-      "offset": 623,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/yasheed\/Documents\/SmartOffice\/SWCPackage\/SWCFrameworkDemo\/SWCPackage\/Source\/NetworkEngine\/Engine\/SWCBackgroundDownload.swift",
-      "kind": "BooleanLiteral",
-      "offset": 668,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/yasheed\/Documents\/SmartOffice\/SWCPackage\/SWCFrameworkDemo\/SWCPackage\/Source\/NetworkEngine\/Engine\/SWCBackgroundDownload.swift",
-      "kind": "StringLiteral",
-      "offset": 371,
-      "length": 23,
-      "value": "\"SWCPackage.SWCBackgroundDownloader\""
-    },
-    {
       "filePath": "\/Users\/yasheed\/Documents\/SmartOffice\/SWCPackage\/SWCFrameworkDemo\/SWCPackage\/Source\/NetworkEngine\/Engine\/SWCNetworkEngine.swift",
       "kind": "BooleanLiteral",
       "offset": 449,
@@ -29566,28 +29276,28 @@
     {
       "filePath": "\/Users\/yasheed\/Documents\/SmartOffice\/SWCPackage\/SWCFrameworkDemo\/SWCPackage\/Source\/NetworkEngine\/Engine\/SWCDownloadEngine.swift",
       "kind": "BooleanLiteral",
-      "offset": 1277,
+      "offset": 1334,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/yasheed\/Documents\/SmartOffice\/SWCPackage\/SWCFrameworkDemo\/SWCPackage\/Source\/NetworkEngine\/SupportingModels\/SODefaultSessionManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 315,
+      "offset": 321,
       "length": 3,
       "value": "120"
     },
     {
       "filePath": "\/Users\/yasheed\/Documents\/SmartOffice\/SWCPackage\/SWCFrameworkDemo\/SWCPackage\/Source\/NetworkEngine\/Generator\/SWCExternalRequestGenerator.swift",
       "kind": "BooleanLiteral",
-      "offset": 274,
+      "offset": 500,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/yasheed\/Documents\/SmartOffice\/SWCPackage\/SWCFrameworkDemo\/SWCPackage\/Source\/NetworkEngine\/Generator\/SWCExternalRequestGenerator.swift",
       "kind": "Dictionary",
-      "offset": 472,
+      "offset": 934,
       "length": 3,
       "value": "[]"
     },
@@ -29615,91 +29325,91 @@
     {
       "filePath": "\/Users\/yasheed\/Documents\/SmartOffice\/SWCPackage\/SWCFrameworkDemo\/SWCPackage\/Source\/NetworkEngine\/SOEngineLocalDataHandler\/SOEngineLocalDataHandler.swift",
       "kind": "StringLiteral",
-      "offset": 4709,
+      "offset": 5422,
       "length": 13,
       "value": "\"SWCUserName\""
     },
     {
       "filePath": "\/Users\/yasheed\/Documents\/SmartOffice\/SWCPackage\/SWCFrameworkDemo\/SWCPackage\/Source\/NetworkEngine\/SOEngineLocalDataHandler\/SOEngineLocalDataHandler.swift",
       "kind": "StringLiteral",
-      "offset": 4765,
+      "offset": 5478,
       "length": 13,
       "value": "\"SWCPassword\""
     },
     {
       "filePath": "\/Users\/yasheed\/Documents\/SmartOffice\/SWCPackage\/SWCFrameworkDemo\/SWCPackage\/Source\/NetworkEngine\/SOEngineLocalDataHandler\/SOEngineLocalDataHandler.swift",
       "kind": "StringLiteral",
-      "offset": 4821,
+      "offset": 5534,
       "length": 13,
       "value": "\"SWCDeviceID\""
     },
     {
       "filePath": "\/Users\/yasheed\/Documents\/SmartOffice\/SWCPackage\/SWCFrameworkDemo\/SWCPackage\/Source\/NetworkEngine\/SOEngineLocalDataHandler\/SOEngineLocalDataHandler.swift",
       "kind": "StringLiteral",
-      "offset": 4874,
+      "offset": 5587,
       "length": 10,
       "value": "\"SWCToken\""
     },
     {
       "filePath": "\/Users\/yasheed\/Documents\/SmartOffice\/SWCPackage\/SWCFrameworkDemo\/SWCPackage\/Source\/NetworkEngine\/SOEngineLocalDataHandler\/SOEngineLocalDataHandler.swift",
       "kind": "StringLiteral",
-      "offset": 4925,
+      "offset": 5638,
       "length": 11,
       "value": "\"SWCAESKey\""
     },
     {
       "filePath": "\/Users\/yasheed\/Documents\/SmartOffice\/SWCPackage\/SWCFrameworkDemo\/SWCPackage\/Source\/NetworkEngine\/SOEngineLocalDataHandler\/SOEngineLocalDataHandler.swift",
       "kind": "StringLiteral",
-      "offset": 5028,
+      "offset": 5741,
       "length": 13,
       "value": "\"SWCUserGuId\""
     },
     {
       "filePath": "\/Users\/yasheed\/Documents\/SmartOffice\/SWCPackage\/SWCFrameworkDemo\/SWCPackage\/Source\/NetworkEngine\/SOEngineLocalDataHandler\/SOEngineLocalDataHandler.swift",
       "kind": "StringLiteral",
-      "offset": 5088,
+      "offset": 5801,
       "length": 13,
       "value": "\"SWCPRNumber\""
     },
     {
       "filePath": "\/Users\/yasheed\/Documents\/SmartOffice\/SWCPackage\/SWCFrameworkDemo\/SWCPackage\/Source\/NetworkEngine\/SOEngineLocalDataHandler\/SOEngineLocalDataHandler.swift",
       "kind": "StringLiteral",
-      "offset": 5154,
+      "offset": 5867,
       "length": 19,
       "value": "\"SWCTokenTimeStamp\""
     },
     {
       "filePath": "\/Users\/yasheed\/Documents\/SmartOffice\/SWCPackage\/SWCFrameworkDemo\/SWCPackage\/Source\/NetworkEngine\/SOEngineLocalDataHandler\/SOEngineLocalDataHandler.swift",
       "kind": "StringLiteral",
-      "offset": 5258,
+      "offset": 5971,
       "length": 18,
       "value": "\"SWCRenewTokenURL\""
     },
     {
       "filePath": "\/Users\/yasheed\/Documents\/SmartOffice\/SWCPackage\/SWCFrameworkDemo\/SWCPackage\/Source\/NetworkEngine\/SOEngineLocalDataHandler\/SOEngineLocalDataHandler.swift",
       "kind": "StringLiteral",
-      "offset": 5348,
+      "offset": 6061,
       "length": 22,
       "value": "\"SWCLastKnownBundleID\""
     },
     {
       "filePath": "\/Users\/yasheed\/Documents\/SmartOffice\/SWCPackage\/SWCFrameworkDemo\/SWCPackage\/Source\/NetworkEngine\/SOEngineLocalDataHandler\/SOEngineLocalDataHandler.swift",
       "kind": "StringLiteral",
-      "offset": 5422,
+      "offset": 6135,
       "length": 18,
       "value": "\"SWCDidCallConfig\""
     },
     {
       "filePath": "\/Users\/yasheed\/Documents\/SmartOffice\/SWCPackage\/SWCFrameworkDemo\/SWCPackage\/Source\/NetworkEngine\/SOEngineLocalDataHandler\/SOEngineLocalDataHandler.swift",
       "kind": "StringLiteral",
-      "offset": 5509,
+      "offset": 6222,
       "length": 12,
       "value": "\"SWCThakkol\""
     },
     {
       "filePath": "\/Users\/yasheed\/Documents\/SmartOffice\/SWCPackage\/SWCFrameworkDemo\/SWCPackage\/Source\/NetworkEngine\/SOEngineLocalDataHandler\/SOEngineLocalDataHandler.swift",
       "kind": "StringLiteral",
-      "offset": 5568,
+      "offset": 6281,
       "length": 17,
       "value": "\"SWCPothuThakkol\""
     }
