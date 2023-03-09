@@ -12,7 +12,7 @@
 ### Swift Package Manager
 
 - Package -> Package.swift -> Add Dependency
-- Add `https://github.com/dewamobility/SWCPackage.git`
+- Add `https://github.com/swcmobility/SWCPackage.git`
 - Select "Up to Next Major" with "1.0.0"
 
 
