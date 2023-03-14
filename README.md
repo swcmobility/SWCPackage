@@ -41,7 +41,7 @@
                                            "key two": ["key abc": "value abc"]]
         generator.request.body.additionalChunks = customChunks
         do {
-            let user = try await engine.getResponse(with: generator, responseType: ExpectedResponseModel.self)
+            let response = try await engine.getResponse(with: generator, responseType: ExpectedResponseModel.self)
         } catch let error {
             print(error.localizedDescription)
         }
