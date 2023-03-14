@@ -37,6 +37,9 @@
         var generator = SWCRequestGenerator(url: "End Point")
         generator.request.body.values = [.init(value: "Value 1",
                                                propertyName: "Property Name 1")]
+        let customChunks: [String: Any] = ["key one": "value one",
+                                           "key two": ["key abc": "value abc"]]
+        generator.request.body.additionalChunks = customChunks
         do {
             let user = try await engine.getResponse(with: generator, responseType: ExpectedResponseModel.self)
         } catch let error {
@@ -178,6 +181,22 @@
             }
 
 ```
+### Setting values to SWCPackage
+
+* Use `SWCPackageHandler.set` metohd to provide values.
+* Example
+
+```
+        let userData = SWCPackageHandler.UserData(userName: "abc", password: "bacdef", userGUID: "abc", prNumber: "123")
+        SWCPackageHandler.set(userData: userData)
+        
+        SWCPackageHandler.set(aesKey: "key", aesIV: "iv")
+        
+```
+
+### Retrieving values
+
+* To get UserData use `SWCPackageHandler.getUserData()` method
 
 ### Local Storage
 
